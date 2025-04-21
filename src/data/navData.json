@@ -1,0 +1,132 @@
+{
+  "nav": [
+    {
+      "nav_name": "Home",
+      "link": "/digital-marketing",
+      "type": "megamenu",
+      "full_width": false,
+      "sub_nav": [
+        {
+          "title": "Agency",
+          "data": [
+            {
+              "name": "Digital Marketing",
+              "link": "/digital-marketing"
+            },
+            {
+              "name": "Design Studio",
+              "link": "/design-studio"
+            },
+            {
+              "name": "Digital Agency",
+              "link": "/digital-agency"
+            },
+            {
+              "name": "Creative Agency",
+              "link": "/creative-agency"
+            },
+            {
+              "name": "Startup Agency",
+              "link": "/startup-agency"
+            },
+            {
+              "name": "Modern Agency",
+              "link": "/modern-agency"
+            },
+            {
+              "name": "Personal Portfolio",
+              "link": "/personal-portfolio"
+            }
+          ]
+        },
+        {
+          "title": "Agency Dark",
+          "data": [
+            {
+              "name": "Digital Marketing",
+              "link": "/digital-marketing-dark"
+            },
+            {
+              "name": "Design Studio",
+              "link": "/design-studio-dark"
+            },
+            {
+              "name": "Digital Agency",
+              "link": "/digital-agency-dark"
+            },
+            {
+              "name": "Creative Agency",
+              "link": "/creative-agency-dark"
+            },
+            {
+              "name": "Startup Agency",
+              "link": "/startup-agency-dark"
+            },
+            {
+              "name": "Modern Agency",
+              "link": "/modern-agency-dark"
+            },
+            {
+              "name": "Personal Portfolio",
+              "link": "/personal-portfolio-dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nav_name": "OUR STORY",
+      "link": "/about",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "PRODUCTS",
+      "link": "/shop-grid",
+      "type": "megamenu",
+      "full_width": true,
+      "sub_nav": [
+        {
+          "title": "Dessert",
+          "data": [
+            {
+              "name": "Chocolate",
+              "link": "/service"
+            },
+            {
+              "name": "Service Dark",
+              "link": "/service-dark"
+            },
+            {
+              "name": "Service V2",
+              "link": "/service-v2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nav_name": "CATALOG",
+      "link": "/service",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "Download",
+          "link": "/service",
+          "sub_dropdown_nav": [
+            {
+              "name": "Service Dark",
+              "link": "/service-dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nav_name": "CONTACT",
+      "link": "/contact",
+      "type": "",
+      "sub_nav": []
+    }
+  ]
+}
