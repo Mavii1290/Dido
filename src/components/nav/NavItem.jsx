@@ -44,22 +44,6 @@ export default function NavItem({ nav, navStyle = "" }) {
                 <li className="has-megamenu" key={i}>
                   <Link href={el.link}>{el.nav_name}</Link>
                   <ul className={el.full_width ? "mega-menu" : "mega-menu-2"}>
-                    {el.sub_nav.map((subEl, index) => {
-                      return (
-                        <li key={index}>
-                          <div className="menu-heading">{subEl.title}</div>
-                          <ul>
-                            {subEl.data.map((elData, elIndex) => {
-                              return (
-                                <li key={elIndex}>
-                                  <Link href={elData.link}>{elData.name}</Link>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </li>
-                      );
-                    })}
                   </ul>
                 </li>
               );

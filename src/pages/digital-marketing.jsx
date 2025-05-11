@@ -3,19 +3,15 @@ import RootLayout from "@/components/common/layout/RootLayout";
 import DigitalMarketingHero from "@/components/hero/DigitalMarketingHero";
 import DigitalMarketingBrand from "@/components/brand/DigitalMarketingBrand";
 import DigitalMarketingAbout from "@/components/about/DigitalMarketingAbout";
-import DigitalMarketingService from "@/components/service/DigitalMarketingService";
-import DigitalMarketingProtfolio from "@/components/portfolio/DigitalMarketingProtfolio";
-import DigitalMarketingTestimonial from "@/components/testimonial/DigitalMarketingTestimonial";
-import DigitalMarketingWorkflow from "@/components/workflow/DigitalMarketingWorkflow";
-import DigitalMarketingPrice from "@/components/price/DigitalMarketingPrice";
-import DigitalMarketingBlog from "@/components/blog/DigitalMarketingBlog";
+import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
+
 
 export default function DigitalMarketing() {
   return (
     <div>
       <Head>
-        <title>Digital Marketing</title>
-        <meta name="description" content="Digital Marketing Description" />
+        <title>Dido Distributions</title>
+        <meta name="description" content="Ny Distributor" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
@@ -23,7 +19,7 @@ export default function DigitalMarketing() {
           <DigitalMarketingHero />
           <DigitalMarketingBrand />
           <DigitalMarketingAbout />
-          <DigitalMarketingPrice />
+          <DigitalAgencyCTA />
         </RootLayout>
       </main>
     </div>

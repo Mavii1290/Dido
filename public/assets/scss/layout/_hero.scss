@@ -28,137 +28,30 @@
       height: auto;
       animation: wcRotate 18s infinite linear;
     }
-    // update v0.2 
-    &-2 {
-      background-image: url(/assets/imgs/bg/lines.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: var(--black-2);
-      overflow: hidden;
-      position: relative;
-
-      .hero2-shape {
-        position: absolute;
-        left: 30%;
-        top: 41%;
-        max-width: 41%;
-        overflow: hidden;
-
-        @media #{$xl} {
-          top: 37%;
-          left: 33%;
-          max-width: 36%;
-        }
-
-        @media #{$lg} {
-          top: 32%;
-          left: 31%;
-          max-width: 40%;
-        }
-
-        @media #{$md} {
-          left: 30%;
-          top: 34%;
-          max-width: 40%;
-        }
-
-        @media #{$sm} {
-          left: 5%;
-          top: 30%;
-          max-width: 90%;
-        }
-
-        img {
-          max-width: 100%;
-        }
-      }
-
-      .sec-title {
-        &-3 {
-          color: var(--white);
-          padding-right: 30px;
-
-          @media #{$md} {
-            padding-top: 7px;
-          }
-
-          @media #{$sm} {
-            padding-bottom: 40px;
-            padding-right: 75px;
-          }
-
-          &:last-child {
-            text-align: right;
-            padding-top: 110px;
-            padding-right: 0;
-            margin-top: 30px;
-
-            @media #{$xxl} {
-              padding-top: 90px;
-            }
-
-            @media #{$xl} {
-              padding-top: 90px;
-            }
-
-            @media #{$lg} {
-              padding-top: 50px;
-            }
-
-            @media #{$md} {
-              padding-top: 40px;
-            }
-
-            @media #{$sm} {
-              padding-top: 0;
-            }
-          }
-        }
-
-        &-wrapper {
-          display: flex;
-          justify-content: space-between;
-
-          @media #{$sm} {
-            flex-direction: column;
-          }
-          // update v0.2 
-          .bg-shape {
-            background-image: url(/assets/imgs/shape/10.png);
-            background-repeat: no-repeat;
-            background-position: right top;
-          }
-        }
-      }
-    }
 
     &-3 {
-      padding-top: 190px;
-      padding-bottom: 125px;
+      padding-top: 24vh;
+      padding-bottom: 15vh;
       position: relative;
       overflow: hidden;
 
       @media #{$xxl} {
-        padding-top: 160px;
-        padding-bottom: 110px;
+
       }
 
       @media #{$xl} {
-        padding-top: 140px;
-        padding-bottom: 110px;
+       
       }
 
       @media #{$lg} {
-        padding-bottom: 100px;
       }
 
       @media #{$md} {
-        padding-top: 140px;
+       padding-bottom:10vh;
+
       }
 
       @media #{$sm} {
-        padding-top: 130px;
-        padding-bottom: 0;
       }
       // update v0.2 
       &::before {
@@ -181,7 +74,6 @@
         height: 50px;
         right: 50px;
         top: 140px;
-        background-image: url(/assets/imgs/shape/6.png);
         background-repeat: no-repeat;
         background-position: right top;
       }
@@ -190,6 +82,8 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        padding-top: 15vh;
+
 
         @media #{$xxl} {
           max-width: 1000px;
@@ -197,6 +91,7 @@
 
         @media #{$xl} {
           max-width: 1000px;
+          bottom: -55px;
         }
 
         @media #{$lg} {
@@ -205,12 +100,18 @@
 
         @media #{$md} {
           max-width: 720px;
-          top:185px;
         }
 
         @media #{$sm} {
           max-width: 100vw;
-          position: unset;
+          padding-top: 0;
+          opacity: 50%;
+        }
+
+        @media only screen and (max-width: 675px) {
+          max-width: 100vw;
+          bottom: 120px;
+          opacity: 50%;
         }
 
         &-anim {
@@ -262,7 +163,7 @@
         }
 
         @media #{$xl} {
-          font-size: 260px;
+          font-size: 200px;
         }
 
         @media #{$lg} {
@@ -289,11 +190,12 @@
         color: #183e24;
 
         @media #{$xxl} {
-          font-size: 150px;
+          font-size: 130px;
+          right: -100;
         }
 
         @media #{$xl} {
-          font-size: 80px;
+          font-size: 110px;
         }
 
         @media #{$lg} {
@@ -1342,6 +1244,141 @@
   }
 }
 
+
+.title-center {
+  z-index: 2;
+  font-weight: 600;
+  font-size: 306px;
+  line-height: 0;
+  text-transform: uppercase;
+  position: absolute;
+  right: 15vh;
+  color: #fff;
+  text-shadow:
+  0 0  5px black, 
+  0 0  10px black, 
+  0 0  15px black, 
+  0 0  20px black, 
+  0 0  35px black, 
+  0 0  40px black, 
+  0 0  60px black, 
+  0 0  90px black; 
+
+  @media #{$xxl} {
+    font-size: 260px;
+    right: 35vh;
+  }
+
+  @media #{$xl} {
+    font-size: 260px;
+  }
+
+  @media #{$lg} {
+    font-size: 180px;
+    right: 28vh;
+  }
+
+  @media #{$md} {
+    font-size: 130px;
+    right: 23vh;
+
+  }
+
+  @media #{$sm} {
+    right: 10vh;
+    font-size: 7em; 
+  }
+}
+
+// .title-right {
+//   position: absolute;
+//   right: 0;
+//   font-size: 150px;
+//   z-index: 2;
+//   font-weight: 600;
+//   line-height: 1;
+//   text-transform: uppercase;
+
+
+//   @media #{$xxl} {
+//     font-size: 150px;
+//   }
+
+//   @media #{$xl} {
+//     font-size: 90px;
+//     line-height: 3.5;
+//   }
+
+//   @media #{$lg} {
+//     font-size: 80px;
+//     line-height: 3.5;
+//   }
+
+//   @media #{$md} {
+//     font-size: 60px;
+//     line-height: 2.75;
+//   }
+
+//   @media #{$sm} {
+//     font-size: 45px;
+//     right: 20px;
+//     line-height: 2.75;
+
+//   }
+// }
+
+#hero {
+  &_texture {
+    position: relative;
+  }
+
+  &_canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+.portfolio__big {
+  text-align: center;
+  padding-bottom: 395px;
+
+  @media #{$xl} {
+    padding-bottom: 200px;
+  }
+
+  @media #{$lg} {
+    padding-bottom: 120px;
+  }
+
+  @media #{$md} {
+    padding-bottom: 120px;
+  }
+
+  @media #{$sm} {
+    padding-bottom: 60px;
+  }
+
+  img {
+    margin-top: -90px;
+
+    @media #{$lg} {
+      margin-top: 90px;
+    }
+
+    @media #{$md} {
+      margin-top: 60px;
+    }
+
+    @media #{$sm} {
+      margin-top: 0;
+    }
+  }
+}
+
 .bodypadding {
   padding: 110px 100px;
 
@@ -1362,18 +1399,3 @@
   }
 }
 
-
-
-
-// Dark Version
-.dark {
-  .hero__content-8 .scroll-down {
-    img {
-      filter: invert(1);
-    }
-
-    span {
-      color: var(--white);
-    }
-  }
-}

@@ -3,82 +3,12 @@
     {
       "nav_name": "Home",
       "link": "/digital-marketing",
-      "type": "megamenu",
-      "full_width": false,
-      "sub_nav": [
-        {
-          "title": "Agency",
-          "data": [
-            {
-              "name": "Digital Marketing",
-              "link": "/digital-marketing"
-            },
-            {
-              "name": "Design Studio",
-              "link": "/design-studio"
-            },
-            {
-              "name": "Digital Agency",
-              "link": "/digital-agency"
-            },
-            {
-              "name": "Creative Agency",
-              "link": "/creative-agency"
-            },
-            {
-              "name": "Startup Agency",
-              "link": "/startup-agency"
-            },
-            {
-              "name": "Modern Agency",
-              "link": "/modern-agency"
-            },
-            {
-              "name": "Personal Portfolio",
-              "link": "/personal-portfolio"
-            }
-          ]
-        },
-        {
-          "title": "Agency Dark",
-          "data": [
-            {
-              "name": "Digital Marketing",
-              "link": "/digital-marketing-dark"
-            },
-            {
-              "name": "Design Studio",
-              "link": "/design-studio-dark"
-            },
-            {
-              "name": "Digital Agency",
-              "link": "/digital-agency-dark"
-            },
-            {
-              "name": "Creative Agency",
-              "link": "/creative-agency-dark"
-            },
-            {
-              "name": "Startup Agency",
-              "link": "/startup-agency-dark"
-            },
-            {
-              "name": "Modern Agency",
-              "link": "/modern-agency-dark"
-            },
-            {
-              "name": "Personal Portfolio",
-              "link": "/personal-portfolio-dark"
-            }
-          ]
-        }
-      ]
+      "type": ""
     },
     {
       "nav_name": "OUR STORY",
       "link": "/about",
-      "type": "",
-      "sub_nav": []
+      "type": ""
     },
     {
       "nav_name": "PRODUCTS",
@@ -125,8 +55,7 @@
     {
       "nav_name": "CONTACT",
       "link": "/contact",
-      "type": "",
-      "sub_nav": []
+      "type": ""
     }
   ]
 }
