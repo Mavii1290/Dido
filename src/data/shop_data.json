@@ -1,16 +1,5 @@
 [
     {
-      "id": 1,
-      "img": "/assets//imgs/dido/Partanna.png",
-      "badge_colro": "warning",
-      "badge_text": "Sale",
-      "title": "Wooden Tool",
-      "new_price": 9.89,
-      "old_price": 13.42,
-      "btn_color": "primary",
-      "btn_text": "Add to Cart"
-    },
-    {
       "id": 2,
       "img": "/assets/img/bg-img/p2.jpg",
       "badge_colro": "primary",

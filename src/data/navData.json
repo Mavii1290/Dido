@@ -13,90 +13,99 @@
     {
       "nav_name": "PRODUCTS",
       "link": "/shop-grid",
-      "type": "megamenu",
-      "full_width": true,
+      "type": "dropdown",
       "sub_nav": [
         {
-          "title": "Pantry Staples",
-          "data": [
+          "name": "PANTRY STAPLES",
+          "link" : "/shop-grid/pantry",
+          "type": "dropdown",
+          "sub_dropdown_nav": [
             {
-              "name": "Oil",
-              "link": "/service"
-            },
-            {
-              "name": "Olives & Pickled Jars",
-              "link": "/service-dark"
-            },
-            {
-              "name": "Pasta",
-              "link": "/service-v2"
-            },
-            {
-              "name": "Spices & Seasoning",
+              "name": "OIL",
               "link": "/"
             },
             {
-              "name": "Syrup, Honey & Spreads",
+              "name": "OLIVES & PICKLED JARS",
+              "link": "/"
+            },
+            {
+              "name": "PASTA",
+              "link": "/"
+            },
+            {
+              "name": "SPICES & SEASONING",
+              "link": "/"
+            },
+            {
+              "name": "SYRUP, HONEY & SPREADS",
               "link": "/"
             }
           ]
-        }
-      ],
-      "sub_nav": [
+        },
         {
-          "title": "Dairy & Refrigerated",
-          "data": [
+          "name": "DAIRY & REFRIDGERATED",
+          "link": "/shop-grid#dair",
+          "type": "dropdown",
+          "sub_dropdown_nav": [
             {
-              "name": "Dairy",
-              "link": "/service"
+              "name": "DAIRY",
+              "link": "/shop-grid/dairy"
             }
           ]
-        }
-      ],
-      "sub_nav": [
+        },
         {
-          "title": "Frozen",
-          "data": [
+          "name": "FROZEN",
+          "link": "/shop-grid/frozen",
+          "type": "dropdown",
+          "sub_dropdown_nav": [
             {
-              "name": "Frozen",
-              "link": "/service"
+              "name": "FROZEN",
+              "link": "/shop-grid/frozen"
             }
           ]
-        }
-      ],
-      "sub_nav": [
+        },
         {
-          "title": "Sweets",
-          "data": [
+          "name": "SWEETS",
+          "link": "/shop-grid/sweets",
+          "type": "dropdown",
+          "sub_dropdown_nav": [
             {
-              "name": "Desserts",
-              "link": "/service"
+              "name": "DESSERTS",
+              "link": "/"
             },
             {
-              "name": "Chocolate",
+              "name": "CHOCOLATE",
               "link": "/shop-grid"
             }
           ]
-        }
-      ],
-      "sub_nav": [
+        },
         {
-          "title": "Beverages",
-          "data": [
+          "name": "BEVERAGES",
+          "link": "/shop-grid/beverages",
+          "type": "dropdown",
+          "sub_dropdown_nav": [
             {
-              "name": "Beverages",
-              "link": "/shop-grid#beverages"
+              "name": "JUICES",
+              "link": "/beverages/juices"
+            },
+            {
+              "name": "SOFT DRINKS",
+              "link": "/beverages/soft-drinks"
+            },
+            {
+              "name": "TEA & COFFEE",
+              "link": "/beverages/tea-coffee"
             }
           ]
-        }
-      ],
-      "sub_nav": [
+        },
         {
-          "title": "Paper Goods",
-          "data": [
+          "name": "PAPER GOODS",
+          "link": "/shop-grid#papergoods",
+          "type": "dropdown",
+          "sub_dropdown_nav": [
             {
-              "name": "Paper Goods",
-              "link": "/service"
+              "name": "PAPER GOODS",
+              "link": "/papergoods/"
             }
           ]
         }
@@ -108,11 +117,11 @@
       "type": "dropdown",
       "sub_nav": [
         {
-          "name": "Download",
+          "name": "VIEW",
           "link": "/service",
           "sub_dropdown_nav": [
             {
-              "name": "Service Dark",
+              "name": "DOWNLOAD",
               "link": "/service-dark"
             }
           ]

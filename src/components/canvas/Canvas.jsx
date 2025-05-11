@@ -217,6 +217,31 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                           </li>
                         </ul>
                       </li>
+                      <li className="sub_header_title">
+                        <div className="d-flex justify-content-between">
+                          <Link href={"/team"}>Frozen</Link>
+                          <div className="sub-accordian-btn">
+                            {subAccordion === 4.3 ? (
+                              <a onClick={() => openSubData(4)}>-</a>
+                            ) : (
+                              <a onClick={() => openSubData(4.3)}>+</a>
+                            )}
+                          </div>
+                        </div>
+                        <ul
+                          className="sub_title_2"
+                          style={
+                            subAccordion === 4.3
+                              ? { display: "" }
+                              : { display: "none" }
+                          }
+                        >
+                          <li>
+                            <Link href={"/team"}>Frozen</Link>
+                          </li>
+                        </ul>
+                      </li>
+
 
                       <li className="sub_header_title">
                         <div className="d-flex justify-content-between">
