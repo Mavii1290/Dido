@@ -64,30 +64,34 @@ export default function Header1({ navData }) {
     inputData.value = "";
   };
   useEffect(() => {
+    if (!searchContent.current) return; // ✅ Make sure the ref is set
+  
     if (searchData && Object.keys(searchData).length) {
+      let parentDiv = searchContent.current;
+  
+      parentDiv.innerHTML = ""; // ✅ Safe now
+  
       if (searchValue) {
-        let parentDiv = searchContent.current;
-        parentDiv.innerHTML = "";
         const allSlug = [];
-        searchData.map((el) => {
-          let result = el.name.includes(searchValue);
-          if (result) {
+  
+        searchData.forEach((el) => {
+          if (el.name.includes(searchValue)) {
             allSlug.push(el.slug);
-            let createTag = document.createElement("p");
+  
+            const createTag = document.createElement("p");
             createTag.innerHTML = el.name;
             createTag.classList.add("search-name");
+  
             parentDiv.appendChild(createTag);
           }
         });
+  
         setSearchSlug(allSlug);
       } else {
-        let parentDiv = searchContent.current;
-        parentDiv.innerHTML = "";
-        const allSlug = [];
-        setSearchSlug(allSlug);
+        setSearchSlug([]);
       }
     }
-  }, [searchValue, searchData]);
+  }, [searchData, searchValue]); // ✅ Add dependencies
   const searchItem = (event) => {
     event.preventDefault();
     if (searchSlug && searchSlug.length) {

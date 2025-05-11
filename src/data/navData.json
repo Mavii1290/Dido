@@ -17,19 +17,86 @@
       "full_width": true,
       "sub_nav": [
         {
-          "title": "Dessert",
+          "title": "Pantry Staples",
           "data": [
             {
-              "name": "Chocolate",
+              "name": "Oil",
               "link": "/service"
             },
             {
-              "name": "Service Dark",
+              "name": "Olives & Pickled Jars",
               "link": "/service-dark"
             },
             {
-              "name": "Service V2",
+              "name": "Pasta",
               "link": "/service-v2"
+            },
+            {
+              "name": "Spices & Seasoning",
+              "link": "/"
+            },
+            {
+              "name": "Syrup, Honey & Spreads",
+              "link": "/"
+            }
+          ]
+        }
+      ],
+      "sub_nav": [
+        {
+          "title": "Dairy & Refrigerated",
+          "data": [
+            {
+              "name": "Dairy",
+              "link": "/service"
+            }
+          ]
+        }
+      ],
+      "sub_nav": [
+        {
+          "title": "Frozen",
+          "data": [
+            {
+              "name": "Frozen",
+              "link": "/service"
+            }
+          ]
+        }
+      ],
+      "sub_nav": [
+        {
+          "title": "Sweets",
+          "data": [
+            {
+              "name": "Desserts",
+              "link": "/service"
+            },
+            {
+              "name": "Chocolate",
+              "link": "/shop-grid"
+            }
+          ]
+        }
+      ],
+      "sub_nav": [
+        {
+          "title": "Beverages",
+          "data": [
+            {
+              "name": "Beverages",
+              "link": "/shop-grid#beverages"
+            }
+          ]
+        }
+      ],
+      "sub_nav": [
+        {
+          "title": "Paper Goods",
+          "data": [
+            {
+              "name": "Paper Goods",
+              "link": "/service"
             }
           ]
         }

@@ -129,7 +129,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                     >
                       <li className="sub_header_title">
                         <div className="d-flex justify-content-between">
-                          <Link href={"/service"}>Dessert</Link>
+                          <Link href={"/service"}>Pantry Staples</Link>
                           <div className="sub-accordian-btn">
                             {subAccordion === 4.1 ? (
                               <a onClick={() => openSubData(4)}>-</a>
@@ -147,7 +147,22 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                           }
                         >
                           <li>
-                            <Link href={"/service"}>service</Link>
+                            <Link href={"/service"}>Oil</Link>
+                          </li>
+                          <li>
+                            <Link href={"/service"}>Olives & Pickled Jars</Link>
+                          </li>
+                          <li>
+                            <Link href={"/service"}>Pasta</Link>
+                          </li>
+                          <li>
+                            <Link href={"/service"}>Spices & Seasoning</Link>
+                          </li>
+                          <li>
+                            <Link href={"/service"}>Sauce & Condiments</Link>
+                          </li>
+                          <li>
+                            <Link href={"/service"}>Syrup, Honey & Spreads</Link>
                           </li>
                         </ul>
                       </li>
@@ -180,7 +195,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                       </li>
                       <li className="sub_header_title">
                         <div className="d-flex justify-content-between">
-                          <Link href={"/team"}>Oil</Link>
+                          <Link href={"/team"}>Dairy & Refrigerated</Link>
                           <div className="sub-accordian-btn">
                             {subAccordion === 4.3 ? (
                               <a onClick={() => openSubData(4)}>-</a>
@@ -198,17 +213,14 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                           }
                         >
                           <li>
-                            <Link href={"/team"}>Team</Link>
-                          </li>
-                          <li>
-                            <Link href={"/team-dark"}>Team dark</Link>
+                            <Link href={"/team"}>Dairy</Link>
                           </li>
                         </ul>
                       </li>
 
                       <li className="sub_header_title">
                         <div className="d-flex justify-content-between">
-                          <Link href={"#"}>Olives & Pickled Jars</Link>
+                          <Link href={"#"}>Sweets</Link>
                           <div className="sub-accordian-btn">
                             {subAccordion === 4.4 ? (
                               <a onClick={() => openSubData(4)}>-</a>
@@ -217,7 +229,6 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                             )}
                           </div>
                         </div>
-
                         <ul
                           className="sub_title_2"
                           style={
@@ -227,17 +238,17 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                           }
                         >
                           <li>
-                            <Link href={"/about"}>about</Link>
+                            <Link href={"/about"}>Desserts</Link>
                           </li>
                           <li>
-                            <Link href={"/about-dark"}>about dark</Link>
+                            <Link href={"/about-dark"}>Chocolate</Link>
                           </li>
                         </ul>
                       </li>
                       
                       <li className="sub_header_title">
                         <div className="d-flex justify-content-between">
-                          <Link href={"/blog"}>Pasta</Link>
+                          <Link href={"/blog"}>Paper Goods</Link>
                           <div className="sub-accordian-btn">
                             {subAccordion === 4.5 ? (
                               <a onClick={() => openSubData(4)}>-</a>
@@ -246,7 +257,6 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                             )}
                           </div>
                         </div>
-
                         <ul
                           className="sub_title_2"
                           style={
@@ -256,183 +266,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                           }
                         >
                           <li>
-                            <Link href={"/blog"}>blog</Link>
-                          </li>
-                          <li>
-                            <Link href={"/blog-dark"}>blog dark</Link>
-                          </li>
-
-                        </ul>
-                      </li>
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"#"}>Sauce & Condiments</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.6 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.6)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.6
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/about"}>about</Link>
-                          </li>
-                          <li>
-                            <Link href={"/about-dark"}>about dark</Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"#"}>Spices & Seasoning</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.6 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.6)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.6
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/about"}>about</Link>
-                          </li>
-                          <li>
-                            <Link href={"/about-dark"}>about dark</Link>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"#"}>Dairy</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.7 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.7)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.7
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/about"}>about</Link>
-                          </li>
-                          <li>
-                            <Link href={"/about-dark"}>about dark</Link>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"#"}>Frozen</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.8 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.8)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.8
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/about"}>about</Link>
-                          </li>
-                          <li>
-                            <Link href={"/about-dark"}>about dark</Link>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"#"}>Paper Goods</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.9 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.7)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.9
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/about"}>about</Link>
-                          </li>
-                          <li>
-                            <Link href={"/about-dark"}>about dark</Link>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"#"}>Syrup, Honey & Spreads</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.7 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.7)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.7
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/about"}>about</Link>
-                          </li>
-                          <li>
-                            <Link href={"/about-dark"}>about dark</Link>
+                            <Link href={"/blog"}>Paper Goods</Link>
                           </li>
                         </ul>
                       </li>
