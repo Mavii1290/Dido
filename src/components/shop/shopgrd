@@ -1,39 +1,15 @@
-import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollSmoother } from "@/plugins";import Link from "next/link";
+import Link from "next/link";
 import shop_data from "../../data/shop_data";
 import NiceSelect from "../ui/NiceSelect";
-import RootLayout from "@/components/common/layout/RootLayout";
-import Image from "next/image.js";
+import Image from "next/image";
 
-
-gsap.registerPlugin(ScrollSmoother);
 
 const ShopGridArea = () => {
-  const selectHandler = (e) => {};
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      let device_width = window.innerWidth;
-      let tHero = gsap.context(() => {
-        ScrollSmoother.create({
-          smooth: 1.35,
-          effects: device_width < 1025 ? false : true,
-          smoothTouch: false,
-          normalizeScroll: false,
-          ignoreMobileResize: true,
-		  wrapper: "#smooth-wrapper",
-		  content: "#smooth-content",
-        });
-      });
-
-      return () => tHero.revert();
-    }
-  }, []);
+	const selectHandler = (e) => {};
 
 	return (
-		<RootLayout>
-			<section className="page-content-wrapper py-3">
+		<>
+			<div className="page-content-wrapper py-3">
 				{/* <!-- Pagination --> */}
 				<div className="shop-pagination pb-3">
 					<div className="container">
@@ -75,15 +51,10 @@ const ShopGridArea = () => {
 												className="product-thumbnail d-block"
 												href="/shop-details"
 											>
-											<div className="smootherReset768">
-												<Image 
-												priority
-												width= {55}
-												height= {55}
-												src={item.img} 
-												alt={item.title}
-												/>
-												</div>
+												<Image
+												width={55}
+												height={55}	
+												src={item.img} alt={item.title} />
 												{/* <!-- Badge --> */}
 												<span className={`badge bg-${item.badge_colro}`}>
 													{item.badge_text}
@@ -167,8 +138,8 @@ const ShopGridArea = () => {
 						</div>
 					</div>
 				</div>
-			</section>
-		</RootLayout>
+			</div>
+		</>
 	);
 };
 

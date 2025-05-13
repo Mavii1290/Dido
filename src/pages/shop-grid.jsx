@@ -1,22 +1,20 @@
 import RootLayout from "@/components/common/layout/RootLayout";
-import Header1 from "@/components/header/Header1";
-import Footer1 from "@/components/footer/Footer1";
 import ShopGridArea from "@/components/shop/shopGridArea";
 import Head from "next/head";
+import ShopCategory from "@/components/shop/shopCategory";
 
 const ShopGrid = () => {
 	return (
 		<>
 			<Head>
-				<title>About</title>
+				<title>Products</title>
 				<meta name="description" content="About Description" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<main>
-				<RootLayout>
-					<Header1 links="pages" title="Shop Grid" />
+				<RootLayout header="header1" footer="footer1">
 					<ShopGridArea />
-					<Footer1 />
+					<ShopCategory/>
 				</RootLayout>
 			</main>
 		</>
