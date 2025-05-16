@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, ReactNode } from "react";
 import $ from "jquery";
 import { Power2, gsap } from "gsap";
 import {
@@ -7,72 +7,83 @@ import {
   ScrollToPlugin,
   SplitText,
 } from "@/plugins";
+
+// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-const CommonAnimation = ({ children }) => {
+
+interface CommonAnimationProps {
+  children: ReactNode;
+}
+
+const CommonAnimation = ({ children }: CommonAnimationProps): JSX.Element => {
   useEffect(() => {
     if (typeof window !== "undefined") {
+      // Hover animations
       $(".btn-hover").on("mouseenter", function (e) {
-        var x = e.pageX - $(this).offset().left;
-        var y = e.pageY - $(this).offset().top;
+        const offset = $(this).offset();
+        if (!offset) return;
+        const x = e.pageX - offset.left;
+        const y = e.pageY - offset.top;
 
-        $(this).find("span").css({
-          top: y,
-          left: x,
-        });
+        $(this).find("span").css({ top: y, left: x });
       });
 
       $(".btn-hover").on("mouseout", function (e) {
-        var x = e.pageX - $(this).offset().left;
-        var y = e.pageY - $(this).offset().top;
+        const offset = $(this).offset();
+        if (!offset) return;
+        const x = e.pageX - offset.left;
+        const y = e.pageY - offset.top;
 
-        $(this).find("span").css({
-          top: y,
-          left: x,
-        });
+        $(this).find("span").css({ top: y, left: x });
       });
 
       // Common Animation
-
-      let tHero = gsap.context(() => {
+      const tHero = gsap.context(() => {
         try {
-          const all_btns = gsap.utils.toArray(".btn_wrapper");
-          if (all_btns.length > 0) {
-            var all_btn = gsap.utils.toArray(".btn_wrapper");
-          } else {
-            var all_btn = gsap.utils.toArray("#btn_wrapper");
-          }
-          const all_btn_cirlce = gsap.utils.toArray(".btn-item");
+          const all_btns = gsap.utils.toArray<HTMLElement>(".btn_wrapper");
+          const fallback_btns = gsap.utils.toArray<HTMLElement>("#btn_wrapper");
+          const all_btn = all_btns.length > 0 ? all_btns : fallback_btns;
+
+          const all_btn_circle = gsap.utils.toArray<HTMLElement>(".btn-item");
+
           all_btn.forEach((btn, i) => {
-            $(btn).mousemove(function (e) {
-              callParallax(e);
-            });
-            function callParallax(e) {
-              parallaxIt(e, all_btn_cirlce[i], 80);
-            }
-
-            function parallaxIt(e, target, movement) {
-              var $this = $(btn);
-              var relX = e.pageX - $this.offset().left;
-              var relY = e.pageY - $this.offset().top;
-
-              gsap.to(target, 0.5, {
-                x: ((relX - $this.width() / 2) / $this.width()) * movement,
-                y: ((relY - $this.height() / 2) / $this.height()) * movement,
-                ease: Power2.easeOut,
-              });
-            }
-            $(btn).mouseleave(function (e) {
-              gsap.to(all_btn_cirlce[i], 0.5, {
+            $(btn).on("mousemove", (e) => callParallax(e));
+            $(btn).on("mouseleave", () => {
+              gsap.to(all_btn_circle[i], 0.5, {
                 x: 0,
                 y: 0,
                 ease: Power2.easeOut,
               });
             });
+
+            function callParallax(e: JQuery.MouseMoveEvent) {
+              parallaxIt(e, all_btn_circle[i], 80);
+            }
+
+            function parallaxIt(
+              e: JQuery.MouseMoveEvent,
+              target: HTMLElement,
+              movement: number
+            ) {
+              const $this = $(btn);
+              const offset = $this.offset();
+              if (!offset) return;
+              const relX = e.pageX - offset.left;
+              const relY = e.pageY - offset.top;
+
+              gsap.to(target, {
+                duration: 0.5,
+                x: ((relX - $this.width() / 2) / $this.width()) * movement,
+                y: ((relY - $this.height() / 2) / $this.height()) * movement,
+                ease: Power2.easeOut,
+              });
+            }
           });
 
-          let arr1 = gsap.utils.toArray("#btn_wrapper");
-          let arr2 = gsap.utils.toArray(".btn_wrapper");
-          const all_buttons = arr1.concat(arr2);
+          const all_buttons = [
+            ...gsap.utils.toArray<HTMLElement>("#btn_wrapper"),
+            ...gsap.utils.toArray<HTMLElement>(".btn_wrapper"),
+          ];
 
           all_buttons.forEach((btn) => {
             if (!btn.classList.contains("hero__button")) {
@@ -89,12 +100,12 @@ const CommonAnimation = ({ children }) => {
               });
             }
           });
-          let splitTitleLines = gsap.utils.toArray(".title-anim");
 
-          splitTitleLines.forEach((splitTextLine) => {
+          const splitTitleLines = gsap.utils.toArray<HTMLElement>(".title-anim");
+          splitTitleLines.forEach((line) => {
             const tl = gsap.timeline({
               scrollTrigger: {
-                trigger: splitTextLine,
+                trigger: line,
                 start: "top 90%",
                 end: "bottom 60%",
                 scrub: false,
@@ -103,11 +114,12 @@ const CommonAnimation = ({ children }) => {
               },
             });
 
-            const itemSplitted = new SplitText(splitTextLine, {
+            const itemSplitted = new SplitText(line, {
               type: "words, lines",
             });
-            gsap.set(splitTextLine, { perspective: 400 });
+            gsap.set(line, { perspective: 400 });
             itemSplitted.split({ type: "lines" });
+
             tl.from(itemSplitted.lines, {
               duration: 1,
               delay: 0.3,
@@ -118,14 +130,13 @@ const CommonAnimation = ({ children }) => {
               stagger: 0.1,
             });
           });
-          let splitTextLines = gsap.utils.toArray(".text-anim p");
 
-          splitTextLines.forEach((splitTextLine) => {
+          const splitTextLines = gsap.utils.toArray<HTMLElement>(".text-anim p");
+          splitTextLines.forEach((line) => {
             const tl = gsap.timeline({
               scrollTrigger: {
-                trigger: splitTextLine,
+                trigger: line,
                 start: "top 90%",
-                duration: 2,
                 end: "bottom 60%",
                 scrub: false,
                 markers: false,
@@ -133,11 +144,12 @@ const CommonAnimation = ({ children }) => {
               },
             });
 
-            const itemSplitted = new SplitText(splitTextLine, {
+            const itemSplitted = new SplitText(line, {
               type: "lines",
             });
-            gsap.set(splitTextLine, { perspective: 400 });
+            gsap.set(line, { perspective: 400 });
             itemSplitted.split({ type: "lines" });
+
             tl.from(itemSplitted.lines, {
               duration: 1,
               delay: 0.5,
@@ -149,13 +161,15 @@ const CommonAnimation = ({ children }) => {
             });
           });
         } catch (e) {
-          console.log(e);
+          console.error(e);
         }
       });
+
       return () => tHero.revert();
     }
   }, []);
-  return children;
+
+  return <>{children}</>;
 };
 
 export default CommonAnimation;

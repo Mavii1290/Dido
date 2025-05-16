@@ -2,7 +2,7 @@
   "nav": [
     {
       "nav_name": "Home",
-      "link": "/digital-marketing",
+      "link": "/dido",
       "type": ""
     },
     {
@@ -12,39 +12,39 @@
     },
     {
       "nav_name": "PRODUCTS",
-      "link": "/shop-grid",
+      "link": "/shop",
       "type": "dropdown",
       "sub_nav": [
         {
           "name": "PANTRY STAPLES",
-          "link" : "/shop-grid/pantry",
+          "link" : "/shop/pantry",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "OIL",
-              "link": "/"
+              "link": "/shop/oil"
             },
             {
               "name": "OLIVES & PICKLED JARS",
-              "link": "/"
+              "link": "/shop/pickledjars"
             },
             {
               "name": "PASTA",
-              "link": "/"
+              "link": "/shop/pasta"
             },
             {
               "name": "SPICES & SEASONING",
-              "link": "/"
+              "link": "/shop/spices"
             },
             {
               "name": "SYRUP, HONEY & SPREADS",
-              "link": "/"
+              "link": "/shop/syrup"
             }
           ]
         },
         {
           "name": "DAIRY & REFRIDGERATED",
-          "link": "/shop-grid#dair",
+          "link": "/shop/dairy",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
@@ -55,57 +55,57 @@
         },
         {
           "name": "FROZEN",
-          "link": "/shop-grid/frozen",
+          "link": "/shop/frozen",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "FROZEN",
-              "link": "/shop-grid/frozen"
+              "link": "/shop/frozen"
             }
           ]
         },
         {
           "name": "SWEETS",
-          "link": "/shop-grid/sweets",
+          "link": "/shop/sweets",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "DESSERTS",
-              "link": "/"
+              "link": "/shop/desserts"
             },
             {
               "name": "CHOCOLATE",
-              "link": "/shop-grid"
+              "link": "/shop/chocolate"
             }
           ]
         },
         {
           "name": "BEVERAGES",
-          "link": "/shop-grid/beverages",
+          "link": "/shop/beverages",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "JUICES",
-              "link": "/beverages/juices"
+              "link": "/shop/beverages/juices"
             },
             {
               "name": "SOFT DRINKS",
-              "link": "/beverages/soft-drinks"
+              "link": "/shop/beverages/soft-drinks"
             },
             {
               "name": "TEA & COFFEE",
-              "link": "/beverages/tea-coffee"
+              "link": "/shop/beverages/tea-coffee"
             }
           ]
         },
         {
           "name": "PAPER GOODS",
-          "link": "/shop-grid#papergoods",
+          "link": "/shop/papergoods",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "PAPER GOODS",
-              "link": "/papergoods/"
+              "link": "/shop/papergoods/"
             }
           ]
         }
@@ -122,7 +122,7 @@
           "sub_dropdown_nav": [
             {
               "name": "DOWNLOAD",
-              "link": "/service-dark"
+              "link": ""
             }
           ]
         }

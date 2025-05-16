@@ -1,27 +1,35 @@
 import { useEffect, useRef, useState } from "react";
 import Canvas from "../canvas/Canvas";
-import MenuBlack from "../../../public/assets/imgs/icon/menu-black.png";
+import MenuBlack from "../../../public/menu-black.png";
 import Image from "next/image";
 import SearchData from "../../data/searchData.json";
 import { useRouter } from "next/router";
 import NavItem from "../nav/NavItem";
 import LogoItem from "../logo/LogoItem";
-import Logo from "../../../public/assets/imgs/dido/Logo.png"
 
-export default function Header1({ navData }) {
+interface NavData {
+  nav: { name: string; slug: string }[];
+}
+
+interface Header1Props {
+  navData: NavData;
+}
+
+const Header1 = ({ navData }: Header1Props): JSX.Element => {
   const [topScroll, setTopScroll] = useState(0);
-  const [searchData, setSearchData] = useState({});
-  const [searchValue, setSearchValue] = useState("");
-  const [searchSlug, setSearchSlug] = useState([]);
+  const [searchData, setSearchData] = useState<any[]>([]); // Adjust as needed, replace any with the correct type.
+  const [searchValue, setSearchValue] = useState<string>("");
+  const [searchSlug, setSearchSlug] = useState<string[]>([]);
 
-  const ofCanvasArea = useRef();
-  const headerArea = useRef();
-  const headerSearch = useRef();
-  const searchIcon = useRef();
-  const searchClose = useRef();
-  const searchContent = useRef();
+  const ofCanvasArea = useRef<HTMLDivElement | null>(null);
+  const headerArea = useRef<HTMLDivElement | null>(null);
+  const headerSearch = useRef<HTMLDivElement | null>(null);
+  const searchIcon = useRef<HTMLButtonElement | null>(null);
+  const searchClose = useRef<HTMLButtonElement | null>(null);
+  const searchContent = useRef<HTMLDivElement | null>(null);
 
   const router = useRouter();
+
   const handleTopScroll = () => {
     const position = window.pageYOffset;
     setTopScroll(position);
@@ -34,80 +42,98 @@ export default function Header1({ navData }) {
       window.removeEventListener("scroll", handleTopScroll);
     };
   }, []);
-  if (typeof window !== "undefined") {
-    let header_bg_3 = headerArea.current;
-    if (header_bg_3) {
+
+  useEffect(() => {
+    if (headerArea.current) {
       if (topScroll > 20) {
-        header_bg_3.classList.add("sticky-3");
+        headerArea.current.classList.add("sticky-3");
       } else {
-        header_bg_3.classList.remove("sticky-3");
+        headerArea.current.classList.remove("sticky-3");
       }
     }
-  }
+  }, [topScroll]);
 
   const openCanvas = () => {
-    ofCanvasArea.current.style.opacity = "1";
-    ofCanvasArea.current.style.visibility = "visible";
+    if (ofCanvasArea.current) {
+      ofCanvasArea.current.style.opacity = "1";
+      ofCanvasArea.current.style.visibility = "visible";
+    }
   };
 
   const openSearch = () => {
-    headerSearch.current.classList.add("open-search");
-    searchIcon.current.style.display = "none";
-    searchClose.current.style.display = "block";
+    if (headerSearch.current) {
+      headerSearch.current.classList.add("open-search");
+    }
+    if (searchIcon.current) {
+      searchIcon.current.style.display = "none";
+    }
+    if (searchClose.current) {
+      searchClose.current.style.display = "block";
+    }
   };
+
   const closeSearch = () => {
-    headerSearch.current.classList.remove("open-search");
-    searchIcon.current.style.display = "block";
-    searchClose.current.style.display = "none";
+    if (headerSearch.current) {
+      headerSearch.current.classList.remove("open-search");
+    }
+    if (searchIcon.current) {
+      searchIcon.current.style.display = "block";
+    }
+    if (searchClose.current) {
+      searchClose.current.style.display = "none";
+    }
     setSearchValue("");
-    let inputData = document.getElementById("s");
-    inputData.value = "";
+    const inputData = document.getElementById("s") as HTMLInputElement;
+    if (inputData) {
+      inputData.value = "";
+    }
   };
+
   useEffect(() => {
     if (!searchContent.current) return; // ✅ Make sure the ref is set
-  
-    if (searchData && Object.keys(searchData).length) {
-      let parentDiv = searchContent.current;
-  
+
+    if (searchData && searchData.length) {
+      const parentDiv = searchContent.current;
+
       parentDiv.innerHTML = ""; // ✅ Safe now
-  
+
       if (searchValue) {
-        const allSlug = [];
-  
+        const allSlug: string[] = [];
+
         searchData.forEach((el) => {
           if (el.name.includes(searchValue)) {
             allSlug.push(el.slug);
-  
+
             const createTag = document.createElement("p");
             createTag.innerHTML = el.name;
             createTag.classList.add("search-name");
-  
+
             parentDiv.appendChild(createTag);
           }
         });
-  
+
         setSearchSlug(allSlug);
       } else {
         setSearchSlug([]);
       }
     }
   }, [searchData, searchValue]); // ✅ Add dependencies
-  const searchItem = (event) => {
+
+  const searchItem = (event: React.FormEvent) => {
     event.preventDefault();
     if (searchSlug && searchSlug.length) {
       router.push("/" + searchSlug[0]);
     }
   };
+
   return (
     <>
-      {navData && Object.keys(navData).length && (
+      {navData && navData.nav && navData.nav.length > 0 && (
         <>
           <header className="header__area-3" ref={headerArea}>
             <div className="header__inner-3">
               <LogoItem />
-              {navData.nav && navData.nav.length && (
-                <NavItem nav={navData.nav} navStyle={3} />
-              )}
+              <NavItem nav={navData.nav} navStyle={3} />
               <div className="header__nav-icon-3">
                 <button
                   className="search-icon"
@@ -138,13 +164,13 @@ export default function Header1({ navData }) {
             </div>
           </header>
           <div className="header__search" ref={headerSearch}>
-            <form onSubmit={(event) => searchItem(event)}>
+            <form onSubmit={searchItem}>
               <input
                 type="text"
                 name="s"
                 id="s"
                 placeholder="Search.."
-                onChange={(event) => setSearchValue(event.target.value)}
+                onChange={(e) => setSearchValue(e.target.value)}
               />
               <div id="search-value" ref={searchContent}></div>
             </form>
@@ -154,4 +180,6 @@ export default function Header1({ navData }) {
       <Canvas ofCanvasArea={ofCanvasArea} />
     </>
   );
-}
+};
+
+export default Header1;

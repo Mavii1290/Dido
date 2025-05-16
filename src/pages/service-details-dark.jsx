@@ -4,27 +4,27 @@ import ServiceDetailsDevelopment from "@/components/development/ServiceDetailsDe
 import ServiceDetailsWorkflow from "@/components/workflow/ServiceDetailsWorkflow";
 import ServiceDetailsService from "@/components/service/ServiceDetailsService";
 import ServiceDetailsFaq from "@/components/faq/ServiceDetailsFaq";
-import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
+import DigitalAgencyCTA from "@/components/cta/CTA";
 
 const ServiceDetailsDark = () => {
-  return (
-    <>
-      <Head>
-        <title>Service Details Dark</title>
-        <meta name="description" content="Service Details Dark Description" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main>
-        <RootLayout header="header3" footer="footer3" defaultMode="dark">
-          <ServiceDetailsDevelopment />
-          <ServiceDetailsWorkflow />
-          <ServiceDetailsService />
-          <ServiceDetailsFaq />
-          <DigitalAgencyCTA />
-        </RootLayout>
-      </main>
-    </>
-  );
+	return (
+		<>
+			<Head>
+				<title>Service Details Dark</title>
+				<meta name="description" content="Service Details Dark Description" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			<main>
+				<RootLayout header="header3" footer="footer3" defaultMode="dark">
+					<ServiceDetailsDevelopment />
+					<ServiceDetailsWorkflow />
+					<ServiceDetailsService />
+					<ServiceDetailsFaq />
+					<DigitalAgencyCTA />
+				</RootLayout>
+			</main>
+		</>
+	);
 };
 
 export default ServiceDetailsDark;

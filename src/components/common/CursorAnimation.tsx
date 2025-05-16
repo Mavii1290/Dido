@@ -1,13 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, RefObject } from "react";
 import { gsap } from "gsap";
 
-const CursorAnimation = ({ cursor1, cursor2 }) => {
+interface CursorAnimationProps {
+  cursor1: RefObject<HTMLDivElement>;
+  cursor2: RefObject<HTMLDivElement>;
+}
+
+const CursorAnimation = ({ cursor1, cursor2 }: CursorAnimationProps): JSX.Element => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      let tHero = gsap.context(() => {
-        function mousemoveHandler(e) {
+      const tHero = gsap.context(() => {
+        const mousemoveHandler = (e: MouseEvent) => {
           try {
-            let tl = gsap.timeline({
+            const tl = gsap.timeline({
               defaults: {
                 x: e.clientX,
                 y: e.clientY,
@@ -25,14 +30,22 @@ const CursorAnimation = ({ cursor1, cursor2 }) => {
               "-=0.4"
             );
           } catch (error) {
-            console.log(error);
+            console.error(error);
           }
-        }
+        };
+
         document.addEventListener("mousemove", mousemoveHandler);
+
+        // Clean up
+        return () => {
+          document.removeEventListener("mousemove", mousemoveHandler);
+        };
       });
+
       return () => tHero.revert();
     }
   }, []);
+
   return (
     <>
       <div className="cursor1" ref={cursor1}></div>

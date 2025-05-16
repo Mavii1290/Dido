@@ -12,7 +12,7 @@ import Image from "next/image.js";
 
 gsap.registerPlugin(ScrollSmoother);
 
-const DigitalMarketingAbout = () => {
+const AboutHero = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       let device_width = window.innerWidth;
@@ -76,4 +76,4 @@ const DigitalMarketingAbout = () => {
   );
 };
 
-export default DigitalMarketingAbout;
+export default AboutHero;

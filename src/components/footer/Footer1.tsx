@@ -1,43 +1,47 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger, SplitText, chroma } from "@/plugins";
-import Link from "next/link.js";
+import Link from "next/link";
 import SiteLogoWhite from "../../../public/assets/imgs/logo/site-logo-white-2.png";
-import Image from "next/image.js";
-import Logo_White from "../../../public/assets/imgs/dido/Logo_White.png"
+import Logo_White from "../../public/dido/logo/Logo_White.png";
 
-
-
+// Registering gsap plugin for ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Footer1() {
-  const menuAnim = useRef();
+const Footer1 = (): JSX.Element => {
+  const menuAnim = useRef<HTMLUListElement | null>(null);
+
   useEffect(() => {
     if (menuAnim.current) {
       menuAnimation();
     }
   }, []);
+
   const menuAnimation = () => {
-    let rootParent = menuAnim.current.children;
-    for (let i = 0; i < rootParent.length; i++) {
-      let firstParent = rootParent[i].children;
-      let arr = firstParent[0].textContent.split("")
-      let spanData = ''
-      for (let j = 0; j < arr.length; j++) {
-        if(arr[j] == ' ') {
-          spanData += `<span style='width:6px;'>${arr[j]}</span>`;
-        } else {
-          spanData += `<span>${arr[j]}</span>`;
+    let rootParent = menuAnim.current?.children;
+    if (rootParent) {
+      for (let i = 0; i < rootParent.length; i++) {
+        let firstParent = rootParent[i].children;
+        if (firstParent[0]) {
+          let arr = firstParent[0].textContent?.split("") || [];
+          let spanData = '';
+          for (let j = 0; j < arr.length; j++) {
+            if (arr[j] === ' ') {
+              spanData += `<span style='width:6px;'>${arr[j]}</span>`;
+            } else {
+              spanData += `<span>${arr[j]}</span>`;
+            }
+          }
+          let result = '<div class="menu-text">' + spanData + '</div>';
+          firstParent[0].innerHTML = result;
         }
       }
-      let result = '<div class="menu-text">' + spanData + '</div>';
-      firstParent[0].innerHTML = result
     }
   };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      let tHero = gsap.context(() => {
+      const tHero = gsap.context(() => {
         let endTl = gsap.timeline({
           repeat: -1,
           delay: 0.5,
@@ -46,9 +50,8 @@ export default function Footer1() {
             start: "bottom 100%-=50px",
           },
         });
-        gsap.set(".end", {
-          opacity: 0,
-        });
+
+        gsap.set(".end", { opacity: 0 });
         gsap.to(".end", {
           opacity: 1,
           duration: 1,
@@ -59,6 +62,7 @@ export default function Footer1() {
             once: true,
           },
         });
+
         let mySplitText = new SplitText(".end", { type: "words,chars" });
         let chars = mySplitText.chars;
         let endGradient = chroma.scale([
@@ -67,6 +71,7 @@ export default function Footer1() {
           "#EF2F88",
           "#8843F2",
         ]);
+
         endTl.to(chars, {
           duration: 0.5,
           scaleY: 0.6,
@@ -97,7 +102,7 @@ export default function Footer1() {
         endTl.to(
           chars,
           {
-            color: (i, el, arr) => {
+            color: (i: number, el: HTMLElement, arr: HTMLElement[]) => {
               return endGradient(i / arr.length).hex();
             },
             ease: "power2.out",
@@ -122,20 +127,19 @@ export default function Footer1() {
           stagger: 0.05,
         });
       });
+
       return () => tHero.revert();
     }
   }, []);
+
   return (
-    <>
       <footer className="footer__area-3">
         <div className="footer__btm-3">
           <div className="container-fluid">
             <div className="row">
               <div className="col-xxl-4 col-xl-4 col-lg-4">
                 <div className="footer__copyright-3">
-                  <p>
-                    © 2025 | Alrights reserved by Dido Distrbutions 
-                  </p>
+                  <p>© 2025 | All rights reserved by Dido Distributions</p>
                 </div>
               </div>
               <div className="col-xxl-8 col-xl-8 col-lg-8">
@@ -145,13 +149,13 @@ export default function Footer1() {
                       <Link href="/about">Our Story</Link>
                     </li>
                     <li>
-                      <Link href="/contact">Products</Link>
-                    </li>
-                    <li>
-                      <Link href="/career">contact</Link>
+                      <Link href="/shop">Products</Link>
                     </li>
                     <li>
                       <Link href="/faq">Catalog</Link>
+                    </li>
+                    <li>
+                      <Link href="/contact">Contact</Link>
                     </li>
                     <li>
                       <Link href="/faq">FAQs</Link>
@@ -163,6 +167,7 @@ export default function Footer1() {
           </div>
         </div>
       </footer>
-    </>
   );
-}
+};
+
+export default Footer1;
