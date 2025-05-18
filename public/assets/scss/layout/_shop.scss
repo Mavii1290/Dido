@@ -1,7 +1,7 @@
 //shop-product scss
 
 .shop-grid {
-    padding-top: 15vh;
+    padding-top: 7vh;
 }
 
 .shop-category{
@@ -11,10 +11,18 @@
     color: #183f24; 
 }
 
+.grid-header {
+    color: #183f24; 
+}
+
 .categories{
 
 }
 
 .categoryOpen {
     padding-left:3vh;
+}
+
+.item-container{
+    padding-top: 15vh !important;
 }

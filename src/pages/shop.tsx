@@ -1,25 +1,34 @@
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
 import shop_data from "@/data/shop_data.json";
 import RootLayout from "@/components/common/layout/RootLayout";
-import ShoppingGrid from "@/components/shop/ShoppingGrid";
-import ShopCategory from "@/components/shop/ShopCategory";
-import { Product, Subcategory } from "@/types"; // Adjust if your types file is elsewhere
+import ShoppingGrid from "@/components/shop/grid/ShoppingGrid";
+import ShopCategory from "@/components/shop/category/shopCategory";
+import { Product, Subcategory } from "@/types";
+import {flattenAllProducts, filterProductsBySubcategory, getSubcategoryName,} from "@/lib/utils/productHelpers";
 
-const ShopGrid = () => {
+
+const ShopPage = () => {
   const router = useRouter();
   const { sub } = router.query;
 
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
-  // Sync URL param to local state
+  const allProducts: Product[] = flattenAllProducts(shop_data);
+
+  // Sync URL param to local state and update products
   useEffect(() => {
     if (typeof sub === "string") {
       setSelectedSubcategory(sub);
+      const filtered = filterProductsBySubcategory(allProducts, sub);
+      setFilteredProducts(filtered);
     } else {
       setSelectedSubcategory(null);
+      setFilteredProducts(allProducts);
     }
   }, [sub]);
 
@@ -33,15 +42,6 @@ const ShopGrid = () => {
       { shallow: true }
     );
   };
-
-  // Flatten all products from all categories/subcategories
-  const allProducts: Product[] = shop_data.flatMap((category) =>
-    category.subcategories.flatMap((subcat) => subcat.products || [])
-  );
-
-  const filteredProducts = selectedSubcategory
-    ? allProducts.filter((item) => item.sub === selectedSubcategory)
-    : allProducts;
 
   return (
     <>
@@ -66,4 +66,4 @@ const ShopGrid = () => {
   );
 };
 
-export default ShopGrid;
+export default ShopPage;

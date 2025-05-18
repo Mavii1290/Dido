@@ -127,7 +127,7 @@ const Header1 = ({ navData }: Header1Props): JSX.Element => {
   };
 
   return (
-    <>
+    <div className="head">
       {navData && navData.nav && navData.nav.length > 0 && (
         <>
           <header className="header__area-3" ref={headerArea}>
@@ -178,7 +178,7 @@ const Header1 = ({ navData }: Header1Props): JSX.Element => {
         </>
       )}
       <Canvas ofCanvasArea={ofCanvasArea} />
-    </>
+    </div>
   );
 };
 

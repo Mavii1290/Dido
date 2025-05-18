@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CategoryMenu from "./CategoryMenu";
-import shopData from "../../data/shop_data.json";
-import { Subcategory, Product } from "../../types";
+import shopData from "../../../data/shop_data.json";
+import { Subcategory, Product } from "../../../types";
 
 const ShopCategory: React.FC = () => {
   const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);

@@ -1,3 +1,6 @@
+
+
+
 [
   {
     "category": "Pantry Staples",
@@ -9,7 +12,7 @@
         "products": [
           {
             "id": 1,
-            "img": "public/assets/imgs/dido/products/Partanna_can.png",
+            "img": "/assets/imgs/dido/products/partanna_can.png",
             "badge_color": "primary",
             "badge_text": "-10%",
             "title": "Partanna Extra Virgin Olive Oil",
@@ -22,10 +25,23 @@
           },
           {
             "id": 2,
-            "img": "public/assets/imgs/dido/products/Partanna_glass.png",
+            "img": "/assets/imgs/dido/products/Partanna_glass.png",
             "badge_color": "primary",
             "badge_text": "-10%",
             "title": "Partanna Extra Virgin Olive Oil",
+            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "oil"
+          },
+           {
+            "id": 3,
+            "img": "/assets/imgs/dido/products/sicano_oil.png",
+            "badge_color": "primary",
+            "badge_text": "-10%",
+            "title": "Sicano Olive Oil",
             "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -40,11 +56,11 @@
         "slug": "olives-and-pickled-jars",
         "products": [
           {
-            "id": 2,
-            "img": "public/assets/imgs/dido/product/Partanna_glass.png",
+            "id": 1,
+            "img": "/assets/imgs/dido/products/partanna_olives.png",
             "badge_color": "primary",
             "badge_text": "-10%",
-            "title": "Partanna Extra Virgin Olive Oil",
+            "title": "Partanna Olives",
             "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
             "new_price": 3.36,
             "old_price": 5.99,
