@@ -1,25 +1,25 @@
 import { Category, Product } from "@/types";
 
-export const flattenAllProducts = (data: Category[]): Product[] => {
-  return data.flatMap((category) =>
-    category.subcategories.flatMap((sub) => sub.products)
-  );
-};
-
 export const filterProductsBySubcategory = (
-  products: Product[],
-  subSlug: string
-): Product[] => {
-  return products.filter((product) => product.sub === subSlug);
-};
-
-export const getSubcategoryName = (
   data: Category[],
   subSlug: string
-): string | null => {
-  for (const category of data) {
-    const sub = category.subcategories.find((s) => s.slug === subSlug);
-    if (sub) return sub.name;
-  }
-  return null;
+): Product[] => {
+  const normalizedSlug = subSlug.toLowerCase();
+  const matchedProducts: Product[] = [];
+
+  data.forEach((category) => {
+    category.subcategories.forEach((sub) => {
+      if (sub.slug.toLowerCase() === normalizedSlug) {
+        matchedProducts.push(...sub.products);
+      }
+    });
+  });
+
+  return matchedProducts;
+};
+
+export const flattenAllProducts = (data: Category[]): Product[] => {
+  return data.flatMap((category) =>
+    category.subcategories.flatMap((sub) => sub.products || [])
+  );
 };

@@ -5,10 +5,15 @@ import Image from "next/image";
 
 import Brand5 from "../../../public/assets/imgs/brand/5.png";
 import Brand6 from "../../../public/assets/imgs/brand/6.png";
-import Kinder from "../../../public/assets/imgs/dido/Kinder.png";
-import sanBenedetto from "../../../public/assets/imgs/dido/sanBenedetto.png";
-import Bauli from "../../../public/assets/imgs/dido/Bauli.png";
-import Partanna from "../../../public/assets/imgs/dido/Partanna.png";
+import Kinder from "../../../public/assets/imgs/dido/brands/Kinder.png";
+import sanBenedetto from "../../../public/assets/imgs/dido/brands/sanBenedetto.png";
+import Bauli from "../../../public/assets/imgs/dido/brands/Bauli.png";
+import Partanna from "../../../public/assets/imgs/dido/brands/Partanna.png";
+import Sicilian from "../../../public/assets/imgs/dido/brands/a'siciliana.png";
+import Rustico from "../../../public/assets/imgs/dido/brands/rustico.png"
+import Vallolmo from "../../../public/assets/imgs/dido/brands/Vallolmo.png"
+
+
 
 // Register the plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -69,7 +74,7 @@ const Brand = (): JSX.Element => {
               We worked with global brands
             </h2>
             <div className="brand__list-3">
-              {[Kinder, sanBenedetto, Bauli, Partanna, Brand5, Brand6].map((src, i) => (
+              {[Kinder, sanBenedetto, Bauli, Partanna, Rustico, Vallolmo, Sicilian].map((src, i) => (
                 <div className="brand__item-2 fade_bottom" key={i}>
                   <Image
                     priority

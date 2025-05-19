@@ -7,8 +7,6 @@ export interface Product {
   badge_text?: string;
   title: string;
   description: string;
-  new_price: number;
-  old_price: number;
   btn_color?: string;
   btn_text: string;
   sub: string;
@@ -33,18 +31,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
         style={{ height: "150px", objectFit: "contain" }}
       />
       <div className="card-body">
+        <h6 className="card-title">{product.title}</h6>
         {product.badge_text && (
-          <span className={`badge bg-${product.badge_color || "secondary"} mb-2`}>
+          <span className={`badge-text mb-2`}>
             {product.badge_text}
           </span>
         )}
-        <h6 className="card-title">{product.title}</h6>
-        <p className="card-text text-muted mb-1">
+        
+        {/* <p className="card-text text-muted mb-1">
           <del>${product.old_price}</del> <strong>${product.new_price}</strong>
         </p>
         <button className={`btn btn-${product.btn_color || "primary"} btn-sm`}>
           {product.btn_text}
-        </button>
+        </button> */}
       </div>
     </div>
   );

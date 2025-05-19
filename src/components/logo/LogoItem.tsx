@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Logo from "../../../public/assets/imgs/dido/Logo.png";
+import Logo from "../../../public/assets/imgs/dido/Logo1.png";
 import LogoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
 
 const LogoItem = (): JSX.Element => {

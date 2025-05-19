@@ -1,30 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import shop_data from "../../../data/shop_data.json";
-import ProductCard, { Product } from "../details/ProductCard";
-import ProductDetails from "./details/ProductDetails";
+import ProductCard from "../details/ProductCard";
+import { Product } from "../details/ProductCard";
 
-const flattenProducts = (): Product[] => {
-  const products: Product[] = [];
-  shop_data.forEach((category) => {
-    category.subcategories.forEach((subcat) => {
-      products.push(...subcat.products);
-    });
-  });
-  return products;
-};
+interface Props {
+  products: Product[];
+}
 
-const ShoppingGrid = () => {
+const ShoppingGrid: React.FC<Props> = ({ products }) => {
   const router = useRouter();
-  const allProducts = flattenProducts();
   const [itemsToShow, setItemsToShow] = useState<number>(12);
+
+  // Reset itemsToShow when filtered products change
+  useEffect(() => {
+    setItemsToShow(12);
+  }, []);
 
   const handleItemsChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
-    setItemsToShow(value === "all" ? allProducts.length : parseInt(value));
+    setItemsToShow(value === "12" ? products.length : parseInt(value));
   };
 
-  const displayedProducts = allProducts.slice(0, itemsToShow);
+  const displayedProducts = products.slice(0, itemsToShow);
 
   const handleProductClick = (product: Product) => {
     router.push(`/product/${product.id}`);
@@ -37,7 +34,7 @@ const ShoppingGrid = () => {
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2 className="mb-0 grid-header">Shop Products</h2>
           <select
-            value={itemsToShow > allProducts.length ? "all" : itemsToShow}
+            value={itemsToShow > products.length ? "all" : itemsToShow}
             onChange={handleItemsChange}
             className="form-select w-auto"
           >
@@ -55,45 +52,6 @@ const ShoppingGrid = () => {
               <ProductCard product={product} onClick={() => handleProductClick(product)} />
             </div>
           ))}
-        </div>
-
-        {/* Pagination Placeholder */}
-        <div className="shop-pagination pt-3">
-          <div className="container">
-            <div className="card">
-              <div className="card-body py-3">
-                <nav aria-label="Page navigation example">
-                  <ul className="pagination pagination-two justify-content-center">
-                    <li className="page-item">
-                      <a className="page-link" href="#" aria-label="Previous">
-                        <i className="bi bi-chevron-left"></i>
-                      </a>
-                    </li>
-                    <li className="page-item active">
-                      <a className="page-link" href="#">1</a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">2</a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">3</a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">...</a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">9</a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#" aria-label="Next">
-                        <i className="bi bi-chevron-right"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

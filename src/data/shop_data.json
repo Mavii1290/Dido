@@ -14,7 +14,7 @@
             "id": 1,
             "img": "/assets/imgs/dido/products/partanna_can.png",
             "badge_color": "primary",
-            "badge_text": "-10%",
+            "badge_text": "3L (101oz)",
             "title": "Partanna Extra Virgin Olive Oil",
             "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
             "new_price": 3.36,
@@ -25,9 +25,9 @@
           },
           {
             "id": 2,
-            "img": "/assets/imgs/dido/products/Partanna_glass.png",
+            "img": "/assets/imgs/dido/products/Partanna_1Lcan.png",
             "badge_color": "primary",
-            "badge_text": "-10%",
+            "badge_text": "1L (33.8oz)",
             "title": "Partanna Extra Virgin Olive Oil",
             "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
             "new_price": 3.36,
@@ -38,10 +38,75 @@
           },
            {
             "id": 3,
+            "img": "/assets/imgs/dido/products/Partanna_glass.png",
+            "badge_color": "primary",
+            "badge_text": "500ML (16.9oz)",
+            "title": "Partanna Extra Virgin Olive Oil",
+            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "oil"
+          },
+           {
+            "id": 4,
+            "img": "/assets/imgs/dido/products/partanna_mini.png",
+            "badge_color": "primary",
+            "badge_text": "100ML (3.4oz)",
+            "title": "Partanna Extra Virgin Olive Oil",
+            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "oil"
+          },          
+          {
+            "id": 5,
+            "img": "/assets/imgs/dido/products/partanna_organic_can.png",
+            "badge_color": "primary",
+            "badge_text": "3L (101oz)",
+            "title": "Partanna Organic Unfiltered Extra Virgin Olive Oil",
+            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "oil"
+          },
+                    {
+            "id": 6,
+            "img": "/assets/imgs/dido/products/partanna_organic_glass.png",
+            "badge_color": "primary",
+            "badge_text": "500ML (16.9oz)",
+            "title": "Partanna Organic Unfiltered Extra Virgin Olive Oil",
+            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "oil"
+          },
+          {
+            "id": 7,
             "img": "/assets/imgs/dido/products/sicano_oil.png",
             "badge_color": "primary",
-            "badge_text": "-10%",
-            "title": "Sicano Olive Oil",
+            "badge_text": "1L (33.8oz)",
+            "title": "IL Sicano Organic Extra Virgin Olive Oil ",
+            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "oil"
+          },
+          {
+            "id": 8,
+            "img": "/assets/imgs/dido/products/diamante_oil.png",
+            "badge_color": "primary",
+            "badge_text": "1L (33.8oz)",
+            "title": "IL Sicano Organic Extra Virgin Olive Oil ",
             "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -56,17 +121,17 @@
         "slug": "olives-and-pickled-jars",
         "products": [
           {
-            "id": 1,
+            "id": 9,
             "img": "/assets/imgs/dido/products/partanna_olives.png",
             "badge_color": "primary",
-            "badge_text": "-10%",
+            "badge_text": "12oz",
             "title": "Partanna Olives",
-            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "description": "Castelvetrano Olives, or Nocellara del Belice, hail from southwest Italy and are cherished globally for their meaty texture and nutty, buttery taste. These large, vibrant green olives are hand-harvested before full ripeness to preserve their natural color. For five generations, our family has cultivated 100% sustainably grown Castelvetrano olives. Each olive is hand-picked to maintain its color, flavor, and texture, avoiding bruising and oxidation. Post-harvest, we cure and preserve them using natural sea salt from Trapani, Sicily. Versatile and delicious, Castelvetrano Olives are ideal as a snack, a vibrant addition to charcuterie boards, or a flavorful twist in a Martini.",
             "new_price": 3.36,
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "pickled"
+            "sub": "olives-and-pickled-jars"
           }
         ]
       },
@@ -130,19 +195,11 @@
     "slug": "beverages",
     "subcategories": [
       {
-        "name": "Juices",
-        "slug": "juices",
-        "products": []
-      },
-      {
-        "name": "Soft Drinks",
-        "slug": "soft-drinks",
-        "products": []
-      },
-      {
-        "name": "Tea & Coffee",
-        "slug": "tea-and-coffee",
-        "products": []
+        "name": "Beverages",
+        "sub": "Beverages",
+        "products": [
+
+        ]
       }
     ]
   },

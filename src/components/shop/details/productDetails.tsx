@@ -33,13 +33,13 @@ const ProductDetailPage = () => {
           style={{ maxHeight: "300px", objectFit: "contain" }}
         />
         <h3>{product.title}</h3>
-        <p>
+        {/* <p>
           <del>${product.old_price}</del> <strong>${product.new_price}</strong>
-        </p>
+        </p> */}
         <p>{product.description || "No description available."}</p>
-        <button className={`btn btn-${product.btn_color || "primary"}`}>
+        {/* <button className={`btn btn-${product.btn_color || "primary"}`}>
           {product.btn_text || "Add to Cart"}
-        </button>
+        </button> */}
       </div>
     </div>
   );

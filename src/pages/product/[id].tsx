@@ -50,9 +50,9 @@ const product = products.find((p) => String(p.id) === id);
         className="img-fluid mb-3"
         style={{ maxHeight: "300px", objectFit: "contain" }}
       />
-      <p>
+      {/* <p>
         <del>${product.old_price}</del> <strong>${product.new_price}</strong>
-      </p>
+      </p> */}
       <p>{product.description}</p>
     </div>
     </RootLayout>
