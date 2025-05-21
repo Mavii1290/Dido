@@ -20,7 +20,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
   return (
     <div
-      className="card h-100 text-center"
+      className="card h-100 text-center card-outline"
       onClick={onClick}
       style={{ cursor: "pointer" }}
     >
@@ -31,7 +31,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
         style={{ height: "150px", objectFit: "contain" }}
       />
       <div className="card-body">
-        <h6 className="card-title">{product.title}</h6>
+        <h6 className="card-title product-title">{product.title}</h6>
         {product.badge_text && (
           <span className={`badge-text mb-2`}>
             {product.badge_text}

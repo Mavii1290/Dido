@@ -9,14 +9,15 @@ export const filterProductsBySubcategory = (
 
   data.forEach((category) => {
     category.subcategories.forEach((sub) => {
-      if (sub.slug.toLowerCase() === normalizedSlug) {
-        matchedProducts.push(...sub.products);
+      if (sub.slug && sub.slug.toLowerCase() === normalizedSlug) {
+        matchedProducts.push(...(sub.products || []));
       }
     });
   });
 
   return matchedProducts;
 };
+
 
 export const flattenAllProducts = (data: Category[]): Product[] => {
   return data.flatMap((category) =>

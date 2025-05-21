@@ -6,9 +6,10 @@
 
 .shop-category{
     position: absolute;
-    top: 15vh;
+    top: 7vh;
     left:5vh;
     color: #183f24; 
+    width: 20vh;
 }
 
 .grid-header {
@@ -20,9 +21,17 @@
 }
 
 .categoryOpen {
-    padding-left:3vh;
+    padding-left:1vh;
 }
 
 .item-container{
     padding-top: 15vh !important;
+}
+
+.card-outline{
+    border: 0px !important;
+}
+
+.product-title {
+    font-weight: bold;
 }

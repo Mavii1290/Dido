@@ -10,18 +10,26 @@ interface Props {
 const ShoppingGrid: React.FC<Props> = ({ products }) => {
   const router = useRouter();
   const [itemsToShow, setItemsToShow] = useState<number>(12);
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
-  // Reset itemsToShow when filtered products change
+  // Reset pagination when products change
   useEffect(() => {
     setItemsToShow(12);
-  }, []);
+    setCurrentPage(1);
+  }, [products]);
+
+  const startIndex = (currentPage - 1) * itemsToShow;
+  const endIndex = startIndex + itemsToShow;
+  const displayedProducts = products.slice(startIndex, endIndex);
+
+  const totalPages = Math.ceil(products.length / itemsToShow);
 
   const handleItemsChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
-    setItemsToShow(value === "12" ? products.length : parseInt(value));
+    const count = value === "all" ? products.length : parseInt(value);
+    setItemsToShow(count);
+    setCurrentPage(1);
   };
-
-  const displayedProducts = products.slice(0, itemsToShow);
 
   const handleProductClick = (product: Product) => {
     router.push(`/product/${product.id}`);
@@ -53,6 +61,23 @@ const ShoppingGrid: React.FC<Props> = ({ products }) => {
             </div>
           ))}
         </div>
+
+        {/* Pagination */}
+        {itemsToShow !== products.length && (
+          <div className="shop-pagination pt-3">
+            <nav aria-label="Page navigation">
+              <ul className="pagination justify-content-center">
+                {Array.from({ length: totalPages }, (_, i) => (
+                  <li key={i} className={`page-item ${currentPage === i + 1 ? "active" : ""}`}>
+                    <button className="page-link" onClick={() => setCurrentPage(i + 1)}>
+                      {i + 1}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        )}
       </div>
     </section>
   );

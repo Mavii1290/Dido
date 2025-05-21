@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
@@ -10,9 +10,7 @@ import { Product, Subcategory } from "@/types";
 import {
   flattenAllProducts,
   filterProductsBySubcategory,
-  getSubcategoryName,
 } from "@/lib/utils/productHelpers";
-
 
 const ShopPage = () => {
   const router = useRouter();
@@ -21,24 +19,45 @@ const ShopPage = () => {
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [sortOption, setSortOption] = useState<string>("default");
+  const [visibleCount, setVisibleCount] = useState<number>(12);
 
-  // Sync URL param to local state and update products
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
-    setLoading(true);
     const allProducts: Product[] = flattenAllProducts(shop_data);
 
     if (typeof sub === "string") {
-      setSelectedSubcategory(sub);
       const filtered = filterProductsBySubcategory(shop_data, sub);
+      setSelectedSubcategory(sub);
       setFilteredProducts(filtered);
     } else {
       setSelectedSubcategory(null);
       setFilteredProducts(allProducts);
     }
+
+    setVisibleCount(12);
     setLoading(false);
-    console.log("Filtering for subcategory:", sub);
-    console.log("Filtered Products:", filteredProducts);
   }, [sub]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((prev) => prev + 12);
+        }
+      },
+      {
+        threshold: 1.0,
+      }
+    );
+
+    const ref = loadMoreRef.current;
+    if (ref) observer.observe(ref);
+    return () => {
+      if (ref) observer.unobserve(ref);
+    };
+  }, [filteredProducts]);
 
   const handleSubcategorySelect = (subcategory: Subcategory) => {
     router.push(
@@ -48,16 +67,22 @@ const ShopPage = () => {
       },
       undefined,
       { shallow: true }
-      
     );
   };
 
-  const [gridKey, setGridKey] = useState(0);
+  const handleClearFilter = () => {
+    router.push("/shop", undefined, { shallow: true });
+  };
 
-const handleClearFilter = () => {
-  router.push("/shop", undefined, { shallow: true });
-  setGridKey(prev => prev + 1); // force grid to reset
-};
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
+    if (sortOption === "price-asc") return a.new_price - b.new_price;
+    if (sortOption === "price-desc") return b.new_price - a.new_price;
+    if (sortOption === "title-asc") return a.title.localeCompare(b.title);
+    if (sortOption === "title-desc") return b.title.localeCompare(a.title);
+    return 0;
+  });
+
+  const visibleProducts = sortedProducts.slice(0, visibleCount);
 
   return (
     <>
@@ -72,23 +97,41 @@ const handleClearFilter = () => {
             <div className="w-full md:w-1/4">
               <ShopCategory data={shop_data} onSelect={handleSubcategorySelect} />
               {selectedSubcategory && (
-  <div className="mt-4">
-    <button
-      onClick={handleClearFilter}
-      className="btn btn-outline-secondary btn-sm mt-2"
-    >
-      Clear Filter
-    </button>
-  </div>
-)}
+                <div className="mt-4">
+                  <button
+                    onClick={handleClearFilter}
+                    className="btn btn-outline-secondary btn-sm mt-2"
+                  >
+                    Clear Filter
+                  </button>
+                </div>
+              )}
             </div>
             <div className="w-full md:w-3/4">
+              <div className="mb-4 text-end">
+                <label className="me-2">Sort by:</label>
+                <select
+                  className="form-select w-auto d-inline-block"
+                  value={sortOption}
+                  onChange={(e) => setSortOption(e.target.value)}
+                >
+                  <option value="default">Default</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="title-asc">Title: A-Z</option>
+                  <option value="title-desc">Title: Z-A</option>
+                </select>
+              </div>
               {loading ? (
                 <p className="text-gray-400">Loading products...</p>
-              ) : filteredProducts.length === 0 ? (
+              ) : visibleProducts.length === 0 ? (
                 <p className="text-gray-500">No products found.</p>
               ) : (
-<ShoppingGrid key={gridKey} products={filteredProducts} />              )}
+                <>
+                  <ShoppingGrid products={visibleProducts} />
+                  <div ref={loadMoreRef} className="text-center py-4" />
+                </>
+              )}
             </div>
           </div>
         </RootLayout>

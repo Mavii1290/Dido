@@ -16,14 +16,14 @@ const CategoryMenu: React.FC<Props> = ({ data, onSelect }) => {
   return (
     <section className="shop-category">
       <h2 className="text-lg font-semibold text-green-600 mb-4">Category</h2>
-      <div className="w-full max-w-md mx-auto bg-white rounded-xl shadow-md p-4">
+      <div className="w-full max-w-md mx-auto bg-white rounded-xl shadow-md">
         {data.map((category) => {
           const isOpen = openCategory === category.slug;
           return (
             <div key={category.slug} className="mb-2">
               <div className="">
                 <button
-                  className="flex-grow text-left font-semibold text-lg p-2 bg-gray-100 rounded hover:bg-gray-200"
+                  className="flex-grow text-left font-semibold text-lg bg-gray-100 rounded hover:bg-gray-200"
                   onClick={() => toggleCategory(category.slug)}
                 >
                   {category.category}
