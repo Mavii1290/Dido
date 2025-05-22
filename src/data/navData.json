@@ -17,85 +17,85 @@
       "sub_nav": [
         {
           "name": "PANTRY STAPLES",
-          "link" : "/shop/pantry",
+          "link" : "/shop?category=pantry-staples",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "OIL",
-              "link": "/shop/oil"
+              "link": "/shop?sub=oil"
             },
             {
               "name": "OLIVES & PICKLED JARS",
-              "link": "/shop/olives-and-pickled-jars"
+              "link": "/shop?sub=olives-and-pickled-jars"
             },
             {
               "name": "PASTA",
-              "link": "/shop/pasta"
+              "link": "/shop?sub=pasta"
             },
             {
               "name": "SPICES & SEASONING",
-              "link": "/shop/spices"
+              "link": "/shop?sub=spices"
             }
             ,
             {
               "name": "SYRUP, HONEY & SPREADS",
-              "link": "/shop/syrup"
+              "link": "/shop?sub=syrup"
             }
           ]
         },
         {
           "name": "DAIRY & REFRIDGERATED",
-          "link": "/shop/dairy",
+          "link": "/shop?category=dairy",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "DAIRY",
-              "link": "/shop-grid/dairy"
+              "link": "/shop?sub=dairy"
             }
           ]
         },
         {
           "name": "FROZEN",
-          "link": "/shop/frozen",
+          "link": "/shop?category=frozen",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "FROZEN",
-              "link": "/shop/frozen"
+              "link": "/shop?sub=frozen"
             }
           ]
         },
         {
           "name": "SWEETS",
-          "link": "/shop/sweets",
+          "link": "/shop?category=sweets",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "DESSERTS",
-              "link": "/shop/desserts"
+              "link": "/shop?sub=desserts"
             },
             {
               "name": "CHOCOLATE",
-              "link": "/shop/chocolate"
+              "link": "/shop?sub=chocolate"
             }
           ]
         },
         {
           "name": "BEVERAGES",
-          "link": "/shop/beverages",
+          "link": "/shop?category=beverages",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "JUICES",
-              "link": "/shop/beverages/juices"
+              "link": "/shop?sub=juices"
             },
             {
               "name": "SOFT DRINKS",
-              "link": "/shop/beverages/soft-drinks"
+              "link": "/shop?sub=soft-drinks"
             },
             {
               "name": "TEA & COFFEE",
-              "link": "/shop/beverages/tea-coffee"
+              "link": "/shop?sub=tea-coffee"
             }
           ]
         },

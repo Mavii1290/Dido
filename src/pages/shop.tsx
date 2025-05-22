@@ -96,7 +96,7 @@ const ShopPage = () => {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="w-full md:w-1/4">
               <ShopCategory data={shop_data} onSelect={handleSubcategorySelect} />
-              {selectedSubcategory && (
+              {/* {selectedSubcategory && (
                 <div className="mt-4">
                   <button
                     onClick={handleClearFilter}
@@ -105,7 +105,7 @@ const ShopPage = () => {
                     Clear Filter
                   </button>
                 </div>
-              )}
+              )} */}
             </div>
             <div className="w-full md:w-3/4">
               <div className="mb-4 text-end">
