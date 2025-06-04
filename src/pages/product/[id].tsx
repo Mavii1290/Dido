@@ -1,12 +1,12 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { Product } from "../components/details/ProductCard";
 import RootLayout from "@/components/common/layout/RootLayout";
+import ProductGrid from "@/components/common/ProductGrid";
 import shop_data from "../../data/shop_data.json";
+import { Product } from "../components/details/ProductCard";
 
-
-// same flattening logic from ShoppingGrid
+// Flatten products from categories
 const flattenProducts = (): Product[] => {
   const products: Product[] = [];
   shop_data.forEach((category) => {
@@ -20,43 +20,74 @@ const flattenProducts = (): Product[] => {
 const ProductPage = () => {
   const router = useRouter();
   const { id } = router.query;
-
   const products = flattenProducts();
-const product = products.find((p) => String(p.id) === id);
+  const product = products.find((p) => String(p.id) === id);
 
   if (!product) {
     return (
-      <div className="container py-5">
-        <h2>Product not found.</h2>
-        <p>Sorry, the product you are looking for does not exist.</p>
+      <div className="max-w-6xl mx-auto py-10 px-4">
+        <h2 className="text-2xl font-bold mb-2">Product not found.</h2>
+        <p className="text-gray-600">Sorry, the product you are looking for does not exist.</p>
       </div>
     );
   }
 
   return (
     <>
-    <Head>
-        <title>Item</title>
-        <meta name="description" content="Item" />
+      <Head>
+        <title>{product.title}</title>
+        <meta name="description" content={product.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main>
-        <RootLayout header="header1" footer="footer1">
-    <div className="container py-5 item-container">
-      <h2>{product.title}</h2>
-      <img
-        src={product.img}
-        alt={product.title}
-        className="img-fluid mb-3"
-        style={{ maxHeight: "300px", objectFit: "contain" }}
-      />
-      {/* <p>
-        <del>${product.old_price}</del> <strong>${product.new_price}</strong>
-      </p> */}
-      <p>{product.description}</p>
-    </div>
-    </RootLayout>
-    </main>
+      <RootLayout header="header1" footer="footer1">
+        <main className="max-w-6xl mx-auto py-10 px-4 product-id">
+          {/* Product Details */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Product Image */}
+            <div className="flex justify-center">
+              <img
+                src={product.img}
+                alt={product.title}
+                className="object-contain h-96 w-auto"
+              />
+            </div>
+
+            {/* Product Info */}
+            <div>
+              <h1 className="text-3xl font-semibold mb-4">{product.title}</h1>
+              {/* <p className="text-lg text-red-500 font-medium mb-4">${product.new_price}</p> */}
+              <p className="text-gray-700 mb-6">{product.description}</p>
+
+              {/* <div className="mb-4">
+                <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">
+                  Quantity
+                </label>
+                <input
+                  type="number"
+                  id="quantity"
+                  defaultValue={1}
+                  min={1}
+                  className="w-20 border rounded-md px-2 py-1 text-center"
+                />
+              </div> */}
+
+              <p className="text-sm text-green-600 mb-4 font-medium">In Stock</p>
+
+              {/* <button className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">
+                Add to Cart
+              </button> */}
+            </div>
+          </div>
+
+          {/* Related Products */}
+          <ProductGrid
+            title="Related Products"
+            products={products}
+            excludeId={id}
+            limit={4}
+          />
+        </main>
+      </RootLayout>
     </>
   );
 };

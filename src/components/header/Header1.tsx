@@ -126,60 +126,60 @@ const Header1 = ({ navData }: Header1Props): JSX.Element => {
     }
   };
 
+
   return (
     <div className="head">
-      {navData && navData.nav && navData.nav.length > 0 && (
-        <>
-          <header className="header__area-3" ref={headerArea}>
-            <div className="header__inner-3">
-              <LogoItem />
-              <NavItem nav={navData.nav} navStyle={3} />
-              <div className="header__nav-icon-3">
-                <button
-                  className="search-icon"
-                  onClick={openSearch}
-                  id="search_icon"
-                  ref={searchIcon}
-                >
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <button
-                  className="search-icon"
-                  onClick={closeSearch}
-                  id="search_close"
-                  ref={searchClose}
-                >
-                  <i className="fa-solid fa-xmark"></i>
-                </button>
-                <button onClick={openCanvas}>
-                  <Image
-                    priority
-                    width={21}
-                    height={15}
-                    src={MenuBlack}
-                    alt="Menubar Icon"
-                  />
-                </button>
-              </div>
-            </div>
-          </header>
-          <div className="header__search" ref={headerSearch}>
-            <form onSubmit={searchItem}>
-              <input
-                type="text"
-                name="s"
-                id="s"
-                placeholder="Search.."
-                onChange={(e) => setSearchValue(e.target.value)}
+      <header className="header__area-3 relative z-50" ref={headerArea}>
+        <div className="header__inner-3">
+          <LogoItem />
+          <NavItem nav={navData.nav} navStyle={3} />
+          <div className="header__nav-icon-3">
+            <button
+              className="search-icon"
+              onClick={openSearch}
+              id="search_icon"
+              ref={searchIcon}
+            >
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button
+              className="search-icon"
+              onClick={closeSearch}
+              id="search_close"
+              ref={searchClose}
+            >
+              <i className="fa-solid fa-xmark"></i>
+            </button>
+            <button onClick={openCanvas}>
+              <Image
+                priority
+                width={21}
+                height={15}
+                src={MenuBlack}
+                alt="Menubar Icon"
               />
-              <div id="search-value" ref={searchContent}></div>
-            </form>
+            </button>
           </div>
-        </>
-      )}
+        </div>
+      </header>
+
+      <div className="header__search" ref={headerSearch}>
+        <form onSubmit={searchItem}>
+          <input
+            type="text"
+            name="s"
+            id="s"
+            placeholder="Search.."
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
+          <div id="search-value" ref={searchContent}></div>
+        </form>
+      </div>
+
       <Canvas ofCanvasArea={ofCanvasArea} />
     </div>
   );
 };
+
 
 export default Header1;

@@ -36,11 +36,11 @@ const ShoppingGrid: React.FC<Props> = ({ products }) => {
   };
 
   return (
-    <section className="py-4">
-      <div className="container shop-grid">
+    <section className="py-6">
+      <div className="shop-grid max-w-7xl mx-auto px-4">
         {/* Sort Control */}
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <h2 className="mb-0 grid-header">Shop Products</h2>
+        <div className="d-flex flex-col md:flex-row justify-content-between items-center mb-6 gap-4">
+          <h2 className="mb-0 shop-font-header">Shop Products</h2>
           <select
             value={itemsToShow > products.length ? "all" : itemsToShow}
             onChange={handleItemsChange}
@@ -56,7 +56,7 @@ const ShoppingGrid: React.FC<Props> = ({ products }) => {
         {/* Products Grid */}
         <div className="row g-3">
           {displayedProducts.map((product) => (
-            <div key={product.id} className="col-6 col-md-4 col-lg-3">
+            <div key={product.id} className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
               <ProductCard product={product} onClick={() => handleProductClick(product)} />
             </div>
           ))}

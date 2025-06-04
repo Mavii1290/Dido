@@ -1,37 +1,179 @@
-//shop-product scss
-
+/* === PRODUCT GRID === */
 .shop-grid {
-    padding-top: 7vh;
+  padding-top: 12vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-.shop-category{
-    position: absolute;
-    top: 7vh;
-    left:5vh;
-    color: #183f24; 
-    width: 20vh;
+@media (min-width: 850px) {
+  .shop-grid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* === DESKTOP SIDEBAR === */
+.shop-sidebar {
+  position: static;
+  width: 100%;
+  padding: 1rem;
+  color: #183f24;
+  margin-top:10vh;
+}
+
+/* === MOBILE DRAWER OVERLAY === */
+.shop-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1050;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.mobile-btn{
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #266539;
+  border: 1px solid #183f24;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* === MOBILE DRAWER PANEL === */
+.shop-drawer {
+  width: 80%;
+  max-width: 300px;
+  background: #fff;
+  padding: 1rem;
+  overflow-y: auto;
+  color: #183f24;
+  background: rgba(255, 255, 255, 0.1);
+
+
+    /* Animation */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.shop-drawer.open {
+  transform: translateX(0);
+}
+
+/* === CATEGORY HEADERS & STYLING === */
+.shop-font-header {
+  font-size: 20px;
+  font-weight: 600;
+  color: green;
 }
 
 .grid-header {
-    color: #183f24; 
-}
-
-.categories{
-
+  color: #183f24;
 }
 
 .categoryOpen {
-    padding-left:1vh;
+  padding-left: 1vh;
 }
 
-.item-container{
-    padding-top: 15vh !important;
+.mobile-category {
+  position: absolute;
+  top: 12vh;
+  right: 1rem;
+  z-index: 1100; /* Must be higher than .shop-drawer-overlay (which is 1050) */
 }
 
-.card-outline{
-    border: 0px !important;
+.mobile-filter-bar {
+  position: sticky;
+  top: 10vh; /* Adjust to your header height */
+  z-index: 1100;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: flex-start
+}
+
+@media (min-width: 850px) {
+  .mobile-filter-bar {
+    display: none;
+  }
+}
+
+
+/* === PRODUCT ITEM STYLES === */
+.card-outline {
+  border: 0px !important;
 }
 
 .product-title {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.product-id {
+  padding: 7vh;
+  top: 7vh;
+  left: 5vh;
+}
+
+.no-product {
+  top: 7vh;
+}
+
+/* === CUSTOM BOOTSTRAP GRID ADJUSTMENTS === */
+@media (max-width: 850px) {
+  .custom-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > .col {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+.shop-dropdown-panel {
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  width: 250px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1100;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.mobile-filter-bar {
+  position: relative; /* important for anchoring dropdown */
+  z-index: 1101;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 850px) {
+  .mobile-filter-bar {
+    display: none;
+  }
+}
+
+.drop-down-x{
+    color:#183f24;
 }

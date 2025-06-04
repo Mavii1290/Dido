@@ -4,10 +4,19 @@ import { Subcategory, Category } from "../../types";
 interface Props {
   data: Category[];
   onSelect: (sub: Subcategory) => void;
+  selectedSubcategorySlug?: string;
 }
 
-const CategoryMenu: React.FC<Props> = ({ data, onSelect }) => {
-  const [openCategory, setOpenCategory] = useState<string | null>(null);
+const CategoryMenu: React.FC<Props> = ({ data, onSelect, selectedSubcategorySlug }) => {
+  const [openCategory, setOpenCategory] = useState<string | null>(() => {
+    if (!selectedSubcategorySlug) return null;
+
+    const category = data.find(cat =>
+      cat.subcategories.some(sub => sub.slug === selectedSubcategorySlug)
+    );
+    return category?.slug || null;
+  });
+
 
   const toggleCategory = (slug: string) => {
     setOpenCategory(openCategory === slug ? null : slug);
@@ -15,7 +24,7 @@ const CategoryMenu: React.FC<Props> = ({ data, onSelect }) => {
 
   return (
     <section className="shop-category">
-      <h2 className="text-lg font-semibold text-green-600 mb-4">Category</h2>
+      <h2 className="shop-font-header mb-4">Category</h2>
       <div className="w-full max-w-md mx-auto bg-white rounded-xl shadow-md">
         {data.map((category) => {
           const isOpen = openCategory === category.slug;
@@ -37,11 +46,13 @@ const CategoryMenu: React.FC<Props> = ({ data, onSelect }) => {
                   {category.subcategories.map((sub) => (
                     <li key={sub.slug} className="mb-1 categoryOpen">
                       <button
-                        className="text-blue-600 hover:underline"
-                        onClick={() => onSelect(sub)}
-                      >
-                        {sub.name}
-                      </button>
+  className={`text-blue-600 hover:underline ${
+    sub.slug === selectedSubcategorySlug ? "font-bold underline" : ""
+  }`}
+  onClick={() => onSelect(sub)}
+>
+  {sub.name}
+</button>
                     </li>
                   ))}
                 </ul>

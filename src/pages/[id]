@@ -1,0 +1,216 @@
+import { useRouter } from "next/router";
+import shopData from "@/data/shop_data.json";
+import { Product } from "@/types";
+import RootLayout from "@/components/common/layout/RootLayout";
+
+const findProductById = (id: number): Product | undefined => {
+  for (const category of shopData) {
+    for (const sub of category.subcategories) {
+      const product = sub.products.find((p) => p.id === id);
+      if (product) return product;
+    }
+  }
+  return undefined;
+};
+
+const ProductPage = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  const productId = parseInt(id as string, 10);
+  const product = findProductById(productId);
+
+  if (!product) return <div className="p-4">Loading...</div>;
+
+  return (
+    <RootLayout header="header1" footer="footer1">
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-md-6">
+            <img src={product.img} alt={product.title} className="img-fluid" />
+          </div>
+          <div className="col-md-6">
+            <h2>{product.title}</h2>
+            <p>{product.description || "No description available."}</p>
+            <p>
+              <del>${product.old_price}</del>{" "}
+              <strong>${product.new_price}</strong>
+            </p>
+            <button className={`btn btn-${product.btn_color || "primary"}`}>
+              {product.btn_text || "Add to Cart"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </RootLayout>
+  );
+};
+
+export default ProductPage;
+
+
+
+
+
+import React from "react";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import Link from "next/link";
+import RootLayout from "@/components/common/layout/RootLayout";
+import ProductGrid from "@/components/common/ProductGrid";
+import ShopCategory from "@/components/shop/category/shopCategory";
+import shop_data from "../../data/shop_data.json";
+import { Category, Subcategory } from "../../types";
+import { Product } from "@/components/shop/details/ProductCard"; // Adjust as needed
+
+// Flatten products
+const flattenProducts = (): Product[] => {
+  const products: Product[] = [];
+  shop_data.forEach((category: Category) => {
+    category.subcategories.forEach((subcat: Subcategory) => {
+      products.push(...subcat.products);
+    });
+  });
+  return products;
+};
+
+const ProductPage: React.FC = () => {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const products = flattenProducts();
+
+  // Find product and its category + subcategory
+  let foundProduct: Product | null = null;
+  let foundSubcategory: Subcategory | null = null;
+  let foundCategory: Category | null = null;
+
+  for (const category of shop_data as Category[]) {
+    for (const subcat of category.subcategories) {
+      const match = subcat.products.find((p: Product) => String(p.id) === id);
+      if (match) {
+        foundProduct = match;
+        foundSubcategory = subcat;
+        foundCategory = category;
+        break;
+      }
+    }
+    if (foundProduct) break;
+  }
+
+  if (!foundProduct) {
+    return (
+      <div className="max-w-6xl mx-auto py-10 px-4">
+        <h2 className="text-2xl font-bold mb-2">Product not found.</h2>
+        <p className="text-gray-600">Sorry, the product you are looking for does not exist.</p>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <Head>
+        <title>{foundProduct.title}</title>
+        <meta name="description" content={foundProduct.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      <RootLayout header="header1" footer="footer1">
+        <main className="max-w-6xl mx-auto py-10 px-4 product-id">
+          {/* Breadcrumbs */}
+          <nav className="text-sm text-gray-600 mb-6">
+            <ol className="list-reset flex flex-wrap space-x-2">
+              <li>
+                <Link href="/" className="hover:underline text-blue-600">Home</Link>
+                <span className="mx-1">/</span>
+              </li>
+              {foundCategory && (
+                <>
+                  <li>
+                    <Link href={`/shop/${foundSubcategory?.slug}`} className="hover:underline text-blue-600">
+                      {foundCategory.category}
+                    </Link>
+                    <span className="mx-1">/</span>
+                  </li>
+                  <li>
+                    <Link href={`/shop/${foundSubcategory?.slug}`} className="hover:underline text-blue-600">
+                      {foundSubcategory?.name}
+                    </Link>
+                    <span className="mx-1">/</span>
+                  </li>
+                </>
+              )}
+              <li className="text-gray-800">{foundProduct.title}</li>
+            </ol>
+          </nav>
+
+          {/* Mobile: Back to Category Link */}
+          <div className="md:hidden mb-4">
+            <Link href={`/shop/${foundSubcategory?.slug}`} className="text-blue-600 underline text-sm">
+              ← Back to {foundSubcategory?.name}
+            </Link>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Desktop Sidebar */}
+            <div className="hidden md:block md:w-1/4">
+              <ShopCategory
+                data={shop_data}
+                onSelect={(sub) => router.push(`/shop/${sub.slug}`)}
+                selectedSubcategorySlug={foundSubcategory?.slug}
+              />
+            </div>
+
+            {/* Product Details */}
+            <div className="w-full md:w-3/4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="flex justify-center">
+                  <img
+                    src={foundProduct.img}
+                    alt={foundProduct.title}
+                    className="object-contain h-96 w-auto"
+                  />
+                </div>
+                <div>
+                  <h1 className="text-3xl font-semibold mb-4">{foundProduct.title}</h1>
+                  <p className="text-lg text-red-500 font-medium mb-4">${foundProduct.new_price}</p>
+                  <p className="text-gray-700 mb-6">{foundProduct.description}</p>
+
+                  <div className="mb-4">
+                    <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">
+                      Quantity
+                    </label>
+                    <input
+                      type="number"
+                      id="quantity"
+                      defaultValue={1}
+                      min={1}
+                      className="w-20 border rounded-md px-2 py-1 text-center"
+                    />
+                  </div>
+
+                  <p className="text-sm text-green-600 mb-4 font-medium">In Stock</p>
+
+                  <button className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+
+              {/* Related Products */}
+              <div className="mt-12">
+                <ProductGrid
+                  title="Related Products"
+                  products={products}
+                  excludeId={id as string}
+                  limit={4}
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+      </RootLayout>
+    </>
+  );
+};
+
+export default ProductPage;

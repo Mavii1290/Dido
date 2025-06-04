@@ -11,7 +11,7 @@
         "slug": "oil",
         "products": [
           {
-            "id": 1,
+            "id": "partanna_can",
             "img": "/assets/imgs/dido/products/partanna_can.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
@@ -24,7 +24,7 @@
             "sub": "oil"
           },
           {
-            "id": 2,
+            "id": "Partanna_1Lcan",
             "img": "/assets/imgs/dido/products/Partanna_1Lcan.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -37,7 +37,7 @@
             "sub": "oil"
           },
            {
-            "id": 3,
+            "id": "Partanna_glass",
             "img": "/assets/imgs/dido/products/Partanna_glass.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
@@ -50,7 +50,7 @@
             "sub": "oil"
           },
            {
-            "id": 4,
+            "id": "partanna_mini",
             "img": "/assets/imgs/dido/products/partanna_mini.png",
             "badge_color": "primary",
             "badge_text": "100ML (3.4oz)",
@@ -63,7 +63,7 @@
             "sub": "oil"
           },          
           {
-            "id": 5,
+            "id": "partanna_organic_can",
             "img": "/assets/imgs/dido/products/partanna_organic_can.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
@@ -76,7 +76,7 @@
             "sub": "oil"
           },
                     {
-            "id": 6,
+            "id": "partanna_organic_glass",
             "img": "/assets/imgs/dido/products/partanna_organic_glass.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
@@ -89,7 +89,7 @@
             "sub": "oil"
           },
           {
-            "id": 7,
+            "id": "sicano_oil",
             "img": "/assets/imgs/dido/products/sicano_oil.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -102,7 +102,7 @@
             "sub": "oil"
           },
           {
-            "id": 8,
+            "id": "diamante_oil",
             "img": "/assets/imgs/dido/products/diamante_oil.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -121,7 +121,7 @@
         "slug": "olives-and-pickled-jars",
         "products": [
           {
-            "id": 9,
+            "id": "partanna_green_olives",
             "img": "/assets/imgs/dido/products/partanna_olives.png",
             "badge_color": "primary",
             "badge_text": "12oz",

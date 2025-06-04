@@ -8,7 +8,6 @@ import ScrollTop from "../ScrollTop";
 import Header1 from "@/components/header/Header1";
 import Footer1 from "@/components/footer/Footer1";
 
-// Define prop types
 interface RootLayoutProps {
   children: ReactNode;
   header?: string;
@@ -16,8 +15,6 @@ interface RootLayoutProps {
   defaultMode?: string;
 }
 
-// If you have a known structure for navData, you can type it better later.
-// For now, we'll use `any` to keep it simple.
 interface HeaderContentProps {
   header?: string;
   navData: any;
@@ -44,14 +41,18 @@ export default function RootLayout({
   defaultMode = "",
 }: RootLayoutProps) {
   const [mode, setMode] = useState(defaultMode);
-  const [navData, setNavData] = useState<any>({});
+  const [enableSmoother, setEnableSmoother] = useState(false);
 
   const cursor1 = useRef<HTMLDivElement>(null);
   const cursor2 = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setNavData(allNavData);
+    // Enable ScrollSmoother only on desktop
     if (typeof window !== "undefined") {
+      if (window.innerWidth >= 768) {
+        setEnableSmoother(true);
+      }
+
       const body = document.querySelector("body");
       if (mode === "dark") {
         body?.classList.add("dark");
@@ -65,18 +66,30 @@ export default function RootLayout({
     <>
       <CommonAnimation>
         <div className="has-smooth" id="has_smooth"></div>
-        <ScrollSmootherComponents />
-        <div className="cursor" id="team_cursor">Drag</div>
-        <Preloader />
         <CursorAnimation cursor1={cursor1} cursor2={cursor2} />
+        <Preloader />
         <ScrollTop />
-        <HeaderContent header={header} navData={navData} />
-        <div id="smooth-wrapper">
-          <div id="smooth-content">
+
+        {/* ✅ Header OUTSIDE scroll wrapper */}
+        <HeaderContent header={header} navData={allNavData} />
+
+        {/* ✅ Desktop-only ScrollSmoother */}
+        {enableSmoother ? (
+          <>
+            <ScrollSmootherComponents />
+            <div id="smooth-wrapper">
+              <div id="smooth-content">
+                {children}
+                <FooterContent footer={footer} />
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
             {children}
             <FooterContent footer={footer} />
-          </div>
-        </div>
+          </>
+        )}
       </CommonAnimation>
     </>
   );
