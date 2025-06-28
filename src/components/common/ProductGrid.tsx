@@ -1,5 +1,6 @@
 import React from "react";
-import { Product } from "../details/ProductCard";
+import { Product, Subcategory, Category } from "../../types";
+
 
 type Props = {
   title?: string;
