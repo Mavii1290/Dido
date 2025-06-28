@@ -73,8 +73,8 @@ const CommonAnimation = ({ children }: CommonAnimationProps) => {
 
               gsap.to(target, {
                 duration: 0.5,
-                x: ((relX - $this.width() / 2) / $this.width()) * movement,
-                y: ((relY - $this.height() / 2) / $this.height()) * movement,
+                  x: ((relX - $this?.width()! / 2) / $this?.width()!) * movement,
+                  y: ((relY - $this?.height()! / 2) / $this?.height()!) * movement,
                 ease: Power2.easeOut,
               });
             }
