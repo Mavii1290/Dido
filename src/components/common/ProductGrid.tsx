@@ -1,6 +1,5 @@
 import React from "react";
 import { Product, Subcategory, Category } from "../../types";
-import Image from 'next/image'
 
 
 
@@ -26,7 +25,7 @@ const ProductGrid: React.FC<Props> = ({ title, products, excludeId, limit = 4 })
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {displayProducts.map((product) => (
           <div key={product.id} className="text-center">
-            <image
+            <img
               src={product.img}
               alt={product.title}
               className="h-40 w-auto mx-auto object-contain mb-2"
