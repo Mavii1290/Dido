@@ -2,8 +2,8 @@ import { useEffect, RefObject } from "react";
 import { gsap } from "gsap";
 
 interface CursorAnimationProps {
-  cursor1: RefObject<HTMLDivElement>;
-  cursor2: RefObject<HTMLDivElement>;
+  cursor1: RefObject<HTMLDivElement | null>;
+  cursor2: RefObject<HTMLDivElement | null>;
 }
 
 const CursorAnimation = ({ cursor1, cursor2 }: CursorAnimationProps) => {

@@ -7,6 +7,7 @@ import shop_data from "../../data/shop_data.json";
 import { Product, Subcategory, Category } from "../../types";
 
 
+
 // Flatten products from categories
 const flattenProducts = (): Product[] => {
   const products: Product[] = [];

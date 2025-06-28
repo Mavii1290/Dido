@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import shop_data from "../../data/shop_data";
 import NiceSelect from "../ui/NiceSelect";
 
+
 const ShopListArea = () => {
 	const selectHandler = (e) => {};
 

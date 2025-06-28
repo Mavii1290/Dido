@@ -12,7 +12,7 @@
         "products": [
           {
             "id": "partanna_can",
-            "img": "/assets/imgs/dido/products/partanna_can.png",
+            "image": "/assets/imgs/dido/products/partanna_can.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
             "title": "Partanna Extra Virgin Olive Oil",
