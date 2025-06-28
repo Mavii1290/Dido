@@ -12,7 +12,7 @@ import Brand6 from "../../../public/assets/imgs/brand/6.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Brands = (): JSX.Element => {
+const Brands = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const deviceWidth = window.innerWidth;

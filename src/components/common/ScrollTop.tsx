@@ -2,7 +2,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect } from "react";
 
-const ScrollTop = (): JSX.Element => {
+const ScrollTop = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const scrollTopButton = document.getElementById("scroll_top");

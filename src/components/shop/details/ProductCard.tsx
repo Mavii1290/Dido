@@ -1,16 +1,8 @@
 import React from "react";
+import { Product, Subcategory, Category } from "../../../types";
 
-export interface Product {
-  id: number;
-  img: string;
-  badge_color?: string;
-  badge_text?: string;
-  title: string;
-  description: string;
-  btn_color?: string;
-  btn_text: string;
-  sub: string;
-}
+
+
 
 interface ProductCardProps {
   product: Product;

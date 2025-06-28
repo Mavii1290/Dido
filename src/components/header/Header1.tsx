@@ -15,7 +15,7 @@ interface Header1Props {
   navData: NavData;
 }
 
-const Header1 = ({ navData }: Header1Props): JSX.Element => {
+const Header1 = ({ navData }: Header1Props) => {
   const [topScroll, setTopScroll] = useState(0);
   const [searchData, setSearchData] = useState<any[]>([]); // Adjust as needed, replace any with the correct type.
   const [searchValue, setSearchValue] = useState<string>("");

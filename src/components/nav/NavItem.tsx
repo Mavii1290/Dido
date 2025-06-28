@@ -25,7 +25,7 @@ interface NavItemProps {
   navStyle?: string;
 }
 
-export default function NavItem({ nav, navStyle = "" }: NavItemProps): JSX.Element {
+export default function NavItem({ nav, navStyle = "" }: NavItemProps) {
   const menuAnim = useRef<HTMLUListElement | null>(null);
 
   useEffect(() => {

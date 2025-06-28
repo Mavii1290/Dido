@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const Preloader = (): JSX.Element => {
+const Preloader = () => {
   const preloaderSection = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

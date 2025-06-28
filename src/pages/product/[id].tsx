@@ -4,7 +4,8 @@ import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import ProductGrid from "@/components/common/ProductGrid";
 import shop_data from "../../data/shop_data.json";
-import { Product } from "../components/details/ProductCard";
+import { Product, Subcategory, Category } from "../../types";
+
 
 // Flatten products from categories
 const flattenProducts = (): Product[] => {

@@ -4,7 +4,7 @@ import { SplitText } from "@/plugins";
 import Image from "next/image";
 import homepage_img from "../../../public/assets/imgs/dido/homepage_img.png";
 
-const IndexHero = (): JSX.Element => {
+const IndexHero = () => {
   const titleLeft = useRef<HTMLHeadingElement>(null);
   const titleRight = useRef<HTMLHeadingElement>(null);
   const heroTextAnim = useRef<HTMLParagraphElement>(null);

@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import shop_data from "../../../data/shop_data.json";
-import { Product } from "./ProductCard";
 import React from "react";
-import RootLayout from "@/components/common/layout/RootLayout";
+import { Product, Subcategory, Category } from "../../../types";
+
 
 
 const flattenProducts = (): Product[] => {

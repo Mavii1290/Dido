@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import ProductCard from "../details/ProductCard";
-import { Product } from "../details/ProductCard";
+import { Product, Subcategory, Category } from "../../../types";
+
 
 interface Props {
   products: Product[];

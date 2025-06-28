@@ -6,7 +6,7 @@ import shop_data from "@/data/shop_data.json";
 import RootLayout from "@/components/common/layout/RootLayout";
 import ShoppingGrid from "@/components/shop/grid/ShoppingGrid";
 import ShopCategory from "@/components/shop/category/shopCategory";
-import { Product, Subcategory } from "@/types";
+import { Product, Subcategory, Category } from "@/types";
 import {
   flattenAllProducts,
   filterProductsBySubcategory,

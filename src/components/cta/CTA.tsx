@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const CTA = (): JSX.Element => {
+const CTA = () => {
   return (
     <section className="cta__area">
       <div className="container line pb-110">

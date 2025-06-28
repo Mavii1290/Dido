@@ -5,7 +5,7 @@ import { ScrollSmoother } from "@/plugins";
 // Register GSAP plugin
 gsap.registerPlugin(ScrollSmoother);
 
-const ScrollSmootherComponents = (): JSX.Element => {
+const ScrollSmootherComponents = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const deviceWidth = window.innerWidth;

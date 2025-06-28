@@ -18,7 +18,7 @@ import Vallolmo from "../../../public/assets/imgs/dido/brands/Vallolmo.png"
 // Register the plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const Brand = (): JSX.Element => {
+const Brand = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const deviceWidth = window.innerWidth;

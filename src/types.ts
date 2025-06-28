@@ -1,5 +1,5 @@
 export interface Product {
-  id: number;
+  id: string;
   img: string;
   badge_color?: string;
   badge_text?: string;

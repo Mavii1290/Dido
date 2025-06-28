@@ -8,7 +8,7 @@ import Logo_White from "../../public/dido/logo/Logo_White.png";
 // Registering gsap plugin for ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer1 = (): JSX.Element => {
+const Footer1 = () => {
   const menuAnim = useRef<HTMLUListElement | null>(null);
 
   useEffect(() => {

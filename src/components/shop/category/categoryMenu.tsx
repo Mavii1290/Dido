@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Subcategory, Category } from "../../types";
+import { Subcategory, Category } from "../../../types";
 
 interface Props {
   data: Category[];

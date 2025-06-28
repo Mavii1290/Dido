@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "../../../public/assets/imgs/dido/Logo1.png";
 import LogoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
 
-const LogoItem = (): JSX.Element => {
+const LogoItem = () => {
   return (
     <div className="header__logo-2">
       <Link href="/dido" className="logo-dark">
