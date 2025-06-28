@@ -6,7 +6,7 @@ interface CursorAnimationProps {
   cursor2: RefObject<HTMLDivElement>;
 }
 
-const CursorAnimation = ({ cursor1, cursor2 }: CursorAnimationProps): JSX.Element => {
+const CursorAnimation = ({ cursor1, cursor2 }: CursorAnimationProps) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const tHero = gsap.context(() => {

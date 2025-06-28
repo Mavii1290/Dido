@@ -15,7 +15,7 @@ interface CommonAnimationProps {
   children: ReactNode;
 }
 
-const CommonAnimation = ({ children }: CommonAnimationProps): JSX.Element => {
+const CommonAnimation = ({ children }: CommonAnimationProps) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Hover animations
