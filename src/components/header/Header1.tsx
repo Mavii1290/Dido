@@ -7,13 +7,30 @@ import { useRouter } from "next/router";
 import NavItem from "../nav/NavItem";
 import LogoItem from "../logo/LogoItem";
 
-interface NavData {
-  nav: { name: string; slug: string }[];
+interface SubDropdown {
+  name: string;
+  link: string;
 }
 
-interface Header1Props {
-  navData: NavData;
+interface SubNav {
+  name: string;
+  link: string;
+  type?: string;
+  sub_dropdown_nav?: SubDropdown[];
 }
+
+interface NavItemType {
+  nav_name: string;
+  link: string;
+  type?: string;
+  full_width?: boolean;
+  sub_nav?: SubNav[];
+}
+
+interface NavData {
+  nav: NavItemType[];
+}
+
 
 const Header1 = ({ navData }: Header1Props) => {
   const [topScroll, setTopScroll] = useState(0);
