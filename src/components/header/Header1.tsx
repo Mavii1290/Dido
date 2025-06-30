@@ -31,6 +31,9 @@ interface NavData {
   nav: NavItemType[];
 }
 
+interface Header1Props {
+  navData: NavData;
+}
 
 const Header1 = ({ navData }: Header1Props) => {
   const [topScroll, setTopScroll] = useState(0);
