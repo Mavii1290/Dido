@@ -10,7 +10,6 @@ import sanBenedetto from "../../../public/assets/imgs/dido/brands/sanBenedetto.p
 import Bauli from "../../../public/assets/imgs/dido/brands/Bauli.png";
 import Partanna from "../../../public/assets/imgs/dido/brands/Partanna.png";
 import Sicilian from "../../../public/assets/imgs/dido/brands/a'siciliana.png";
-import Rustico from "../../../public/assets/imgs/dido/brands/rustico.png"
 import Vallolmo from "../../../public/assets/imgs/dido/brands/Vallolmo.png"
 
 
@@ -74,7 +73,7 @@ const Brand = () => {
               We worked with global brands
             </h2>
             <div className="brand__list-3">
-              {[Kinder, sanBenedetto, Bauli, Partanna, Rustico, Vallolmo, Sicilian].map((src, i) => (
+              {[Kinder, sanBenedetto, Bauli, Partanna, Vallolmo, Sicilian].map((src, i) => (
                 <div className="brand__item-2 fade_bottom" key={i}>
                   <Image
                     priority
