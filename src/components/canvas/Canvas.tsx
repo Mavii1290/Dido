@@ -55,10 +55,11 @@ const Canvas: React.FC<CanvasProps> = ({ bladeMode = null, ofCanvasArea }) => {
   };
 
   const closeCanvas = () => {
-    if (ofCanvasArea.current) {
-      ofCanvasArea.current.style.opacity = "0";
-      ofCanvasArea.current.style.visibility = "hidden";
-    }
+   const el = ofCanvasArea.current;
+if (el) {
+  el.style.opacity = "0";
+  el.style.visibility = "hidden";
+}
     if (bladeMode) {
       bladeMode.style.setProperty("mix-blend-mode", "exclusion");
     }
