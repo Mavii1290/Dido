@@ -41,7 +41,7 @@ const Header1 = ({ navData }: Header1Props) => {
   const [searchValue, setSearchValue] = useState<string>("");
   const [searchSlug, setSearchSlug] = useState<string[]>([]);
 
-  const ofCanvasArea = useRef<HTMLDivElement | null>(null);
+  const ofCanvasArea = useRef<HTMLDivElement>(null!);
   const headerArea = useRef<HTMLDivElement | null>(null);
   const headerSearch = useRef<HTMLDivElement | null>(null);
   const searchIcon = useRef<HTMLButtonElement | null>(null);
