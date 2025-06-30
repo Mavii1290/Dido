@@ -21,7 +21,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "oil"
+            "sub": "oil"
           },
           {
             "id": "Partanna_1Lcan",
@@ -34,7 +34,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "oil"
+            "sub": "oil"
           },
            {
             "id": "Partanna_glass",
@@ -47,7 +47,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "oil"
+            "sub": "oil"
           },
            {
             "id": "partanna_mini",
@@ -60,7 +60,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "oil"
+            "sub": "oil"
           },          
           {
             "id": "partanna_organic_can",
@@ -73,7 +73,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "oil"
+            "sub": "oil"
           },
                     {
             "id": "partanna_organic_glass",
@@ -86,7 +86,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "oil"
+            "sub": "oil"
           },
           {
             "id": "sicano_oil",
@@ -99,7 +99,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "oil"
+            "sub": "oil"
           },
           {
             "id": "diamante_oil",
@@ -112,7 +112,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "oil"
+            "sub": "oil"
           }
         ]
       },
@@ -131,7 +131,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "slug": "olives-and-pickled-jars"
+            "sub": "olives-and-pickled-jars"
           }
         ]
       },
@@ -195,11 +195,21 @@
     "slug": "beverages",
     "subcategories": [
       {
-        "name": "Beverages",
-        "slug": "Beverages",
+        "name": "Water",
+        "sub": "water",
         "products": [
 
         ]
+      },
+      {
+        "name":"Cardonated Drinks",
+        "sub":"carbonated",
+        "products":[]
+      },
+       {
+        "name":"Juice",
+        "sub":"juice",
+        "products":[]
       }
     ]
   },
