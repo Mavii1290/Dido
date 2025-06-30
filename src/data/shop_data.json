@@ -196,19 +196,19 @@
     "subcategories": [
       {
         "name": "Water",
-        "sub": "water",
+        "slug": "water",
         "products": [
 
         ]
       },
       {
         "name":"Cardonated Drinks",
-        "sub":"carbonated",
+        "slug":"carbonated",
         "products":[]
       },
        {
         "name":"Juice",
-        "sub":"juice",
+        "slug":"juice",
         "products":[]
       }
     ]
