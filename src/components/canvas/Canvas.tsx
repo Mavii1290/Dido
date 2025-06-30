@@ -9,8 +9,9 @@ import Olive_White from "../../../public/assets/imgs/dido/Olive_White.png";
 
 interface CanvasProps {
   bladeMode?: HTMLElement | null;
-  ofCanvasArea: React.RefObject<HTMLDivElement> | null;
+  ofCanvasArea: React.RefObject<HTMLDivElement>; 
 }
+
 
 const Canvas: React.FC<CanvasProps> = ({ bladeMode = null, ofCanvasArea }) => {
   const [accordion, setAccordion] = useState<number>(0);
