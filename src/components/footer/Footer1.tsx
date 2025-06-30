@@ -63,14 +63,8 @@ const Footer1 = () => {
           },
         });
 
-        let mySplitText = new SplitText(".end", { type: "words,chars" });
-        let chars = mySplitText.chars;
-        let endGradient = chroma.scale([
-          "#F9D371",
-          "#F47340",
-          "#EF2F88",
-          "#8843F2",
-        ]);
+let mySplitText = new SplitText(".end", { type: "words,chars" });
+let chars = mySplitText.chars;
 
         endTl.to(chars, {
           duration: 0.5,
@@ -99,18 +93,17 @@ const Footer1 = () => {
           },
           0.5
         );
-        endTl.to(
-          chars,
-          {
-            color: (i: number, el: HTMLElement, arr: HTMLElement[]) => {
-              return endGradient(i / arr.length).hex();
-            },
-            ease: "power2.out",
-            stagger: 0.03,
-            duration: 0.3,
-          },
-          0.5
-        );
+endTl.to(
+  chars,
+  {
+    color: "#F9D371", // or any single color
+    ease: "power2.out",
+    stagger: 0.03,
+    duration: 0.3,
+  },
+  0.5
+);
+
         endTl.to(
           chars,
           {
