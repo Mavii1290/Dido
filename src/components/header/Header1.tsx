@@ -152,7 +152,7 @@ const Header1 = ({ navData }: Header1Props) => {
       <header className="header__area-3 relative z-50" ref={headerArea}>
         <div className="header__inner-3">
           <LogoItem />
-          <NavItem nav={navData.nav} navStyle={3} />
+          <NavItem nav={navData.nav} navStyle="3" />
           <div className="header__nav-icon-3">
             <button
               className="search-icon"
