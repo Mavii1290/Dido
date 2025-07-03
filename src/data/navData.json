@@ -6,11 +6,6 @@
       "type": ""
     },
     {
-      "nav_name": "OUR STORY",
-      "link": "/about",
-      "type": ""
-    },
-    {
       "nav_name": "PRODUCTS",
       "link": "/shop",
       "type": "dropdown",

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import shop_data from "../../data/shop_data";
 import NiceSelect from "../ui/NiceSelect";
-
+import Image from "next/image";
 
 const ShopListArea = () => {
 	const selectHandler = (e) => {};
@@ -52,7 +52,13 @@ const ShopListArea = () => {
 														className="product-thumbnail d-block"
 														to="/shop-details"
 													>
-														<img src={item.img} alt={item.title} />
+														<Image 
+														src={item.img} 
+														alt={item.title} 
+														style={{ height: "150px", objectFit: "contain" }}
+														width={200}
+														height={200}
+														/>
 														{/* Badge */}
 														<span className={`badge bg-${item.badge_colro}`}>
 															{item.badge_text}

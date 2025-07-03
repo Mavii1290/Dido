@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import shop_data from "../../../data/shop_data.json";
 import React from "react";
 import { Product, Subcategory, Category } from "../../../types";
+import Image from "next/image"; 
 
 
 
@@ -28,12 +29,15 @@ const ProductDetailPage = () => {
   return (
     <div className="container py-4">
       <div className="card p-4">
-        <img
+        <Image
           src={product.img}
           alt={product.title}
           className="img-fluid mb-3"
           style={{ maxHeight: "300px", objectFit: "contain" }}
+          width={150}
+          height={150}
         />
+        <h3>{product.brand}</h3>
         <h3>{product.title}</h3>
         {/* <p>
           <del>${product.old_price}</del> <strong>${product.new_price}</strong>

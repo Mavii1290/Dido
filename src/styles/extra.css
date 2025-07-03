@@ -520,3 +520,12 @@
 .display-none {
   display: none;
 }
+
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.horizontal-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

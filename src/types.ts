@@ -3,6 +3,7 @@ export interface Product {
   img: string;
   badge_color?: string;
   badge_text?: string;
+  brand: string;
   title: string;
   description: string;
   new_price: number;

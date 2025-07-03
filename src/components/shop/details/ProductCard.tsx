@@ -1,5 +1,6 @@
 import React from "react";
 import { Product, Subcategory, Category } from "../../../types";
+import Image from "next/image"; 
 
 
 
@@ -16,13 +17,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
       onClick={onClick}
       style={{ cursor: "pointer" }}
     >
-      <img
+      <Image
         src={product.img}
         alt={product.title}
         className="card-img-top"
+        width={200}
+        height={150}
         style={{ height: "150px", objectFit: "contain" }}
       />
       <div className="card-body">
+        <h6 className="card-title product-title">{product.brand}</h6>
         <h6 className="card-title product-title">{product.title}</h6>
         {product.badge_text && (
           <span className={`badge-text mb-2`}>

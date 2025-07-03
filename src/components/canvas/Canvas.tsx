@@ -80,7 +80,7 @@ if (el) {
               />
             </Link>
           </div>
-          <div className="offcanvas__social">
+          {/* <div className="offcanvas__social">
             <h3 className="social-title">Follow Us</h3>
             <ul>
               <li><a href="#">Instagram</a></li>
@@ -88,10 +88,10 @@ if (el) {
               <li><a href="#">Twitter</a></li>
               <li><a href="#">YouTube</a></li>
             </ul>
-          </div>
+          </div> */}
           <div className="offcanvas__links">
             <ul>
-              <li><Link href="/about">Our Story</Link></li>
+              {/* <li><Link href="/about">Our Story</Link></li> */}
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -106,11 +106,11 @@ if (el) {
                     <Link href={"/dido"}>HOME</Link>
                   </div>
                 </li>
-                <li>
+                {/* <li>
                   <div className="header_title">
                     <Link href={"/about"}>OUR STORY</Link>
                   </div>
-                </li>
+                </li> */}
                 <li>
                   <div className="header_title d-flex">
                     <Link href={"/shop"}>Products</Link>
@@ -182,9 +182,9 @@ if (el) {
           <div className="offcanvas__contact">
             <h3>Get in touch</h3>
             <ul>
-              <li><a href="tel:02094980547">+(02) - 094 980 547</a></li>
-              <li><a href="mailto:info@extradesign.com">info@extradesign.com</a></li>
-              <li>230 Norman Street New York, QC (USA) H8R 1A1</li>
+              <li><a href="tel:02094980547">516-727-0114</a></li>
+              <li><a href="mailto:info@extradesign.com">didodistributions@gmail.com</a></li>
+              <li>Valley Stream, NY</li>
             </ul>
           </div>
         </div>
