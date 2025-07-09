@@ -10,7 +10,7 @@ const CTA = () => {
             <div className="cta__content">
               <p className="cta__sub-title">Work with us</p>
               <h2 className="cta__title title-anim">
-                We would love to hear more about your project
+                We would love to hear more about your business
               </h2>
               <div className="btn_wrapper">
                 <Link
