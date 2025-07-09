@@ -1,5 +1,4 @@
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ArrowUp } from "lucide-react";
 import { useEffect } from "react";
 
 const ScrollTop = () => {
@@ -36,7 +35,7 @@ const ScrollTop = () => {
 
   return (
     <button id="scroll_top" className="scroll-top" style={{ display: "none" }}>
-      <FontAwesomeIcon icon={faArrowUp} />
+      <ArrowUp size={16} />
     </button>
   );
 };

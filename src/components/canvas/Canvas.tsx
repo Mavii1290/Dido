@@ -1,5 +1,4 @@
-import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Search, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -9,9 +8,8 @@ import Olive_White from "../../../public/assets/imgs/dido/Olive_White.png";
 
 interface CanvasProps {
   bladeMode?: HTMLElement | null;
-  ofCanvasArea: React.RefObject<HTMLDivElement>; 
+  ofCanvasArea: React.RefObject<HTMLDivElement>;
 }
-
 
 const Canvas: React.FC<CanvasProps> = ({ bladeMode = null, ofCanvasArea }) => {
   const [accordion, setAccordion] = useState<number>(0);
@@ -56,11 +54,11 @@ const Canvas: React.FC<CanvasProps> = ({ bladeMode = null, ofCanvasArea }) => {
   };
 
   const closeCanvas = () => {
-   const el = ofCanvasArea.current;
-if (el) {
-  el.style.opacity = "0";
-  el.style.visibility = "hidden";
-}
+    const el = ofCanvasArea.current;
+    if (el) {
+      el.style.opacity = "0";
+      el.style.visibility = "hidden";
+    }
     if (bladeMode) {
       bladeMode.style.setProperty("mix-blend-mode", "exclusion");
     }
@@ -80,18 +78,8 @@ if (el) {
               />
             </Link>
           </div>
-          {/* <div className="offcanvas__social">
-            <h3 className="social-title">Follow Us</h3>
-            <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">YouTube</a></li>
-            </ul>
-          </div> */}
           <div className="offcanvas__links">
             <ul>
-              {/* <li><Link href="/about">Our Story</Link></li> */}
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -106,11 +94,6 @@ if (el) {
                     <Link href={"/dido"}>HOME</Link>
                   </div>
                 </li>
-                {/* <li>
-                  <div className="header_title">
-                    <Link href={"/about"}>OUR STORY</Link>
-                  </div>
-                </li> */}
                 <li>
                   <div className="header_title d-flex">
                     <Link href={"/shop"}>Products</Link>
@@ -122,13 +105,10 @@ if (el) {
                       {accordion === 4 ? "-" : "+"}
                     </button>
                   </div>
-
-                  {/* Submenu */}
                   <ul
                     className="sub_title"
                     style={{ display: accordion === 4 ? "" : "none" }}
                   >
-                    {/** Pantry Staples */}
                     <li className="sub_header_title">
                       <div className="d-flex justify-content-between">
                         <Link href={"/shop"}>Pantry Staples</Link>
@@ -150,9 +130,6 @@ if (el) {
                         <li><Link href={"/shop/syrup"}>Syrup, Honey & Spreads</Link></li>
                       </ul>
                     </li>
-
-                    {/** Other subcategories (beverages, dairy, frozen, sweets, etc.) */}
-                    {/* You can copy and paste the same pattern above for others */}
                   </ul>
                 </li>
                 <li>
@@ -175,7 +152,7 @@ if (el) {
             <form action="#">
               <input type="text" name="search" placeholder="Search keyword" />
               <button type="submit">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                <Search size={16} />
               </button>
             </form>
           </div>
@@ -191,7 +168,7 @@ if (el) {
 
         <div className="offcanvas__close">
           <button type="button" onClick={closeCanvas}>
-            <FontAwesomeIcon icon={faXmark} />
+            <X size={16} />
           </button>
         </div>
       </div>
