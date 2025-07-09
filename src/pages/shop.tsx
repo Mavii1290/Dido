@@ -68,7 +68,7 @@ const ShopPage = () => {
       if (ref) observer.unobserve(ref);
       document.removeEventListener("keydown", handleEsc);
     };
-  }, [loadMoreRef.current]);
+  }, []);
 
   // Handle category selection
   const handleSubcategorySelect = (subcategory: Subcategory) => {
