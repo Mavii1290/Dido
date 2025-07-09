@@ -25,9 +25,7 @@ const Contact1 = () => {
           </div>
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
             <div className="contact__text">
-              <p>
-                Great! We're excited to hear from you and let's start something special together. Call us for any inquiry.
-              </p>
+              <p>Great! We&rsquo;re excited to hear from you and let&rsquo;s start something special together. Call us for any inquiry.</p>
             </div>
           </div>
         </div>
