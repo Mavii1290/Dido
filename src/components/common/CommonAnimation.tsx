@@ -1,5 +1,4 @@
 import { useEffect, ReactNode } from "react";
-import $ from "jquery";
 import { Power2, gsap } from "gsap";
 import {
   ScrollTrigger,
@@ -19,22 +18,28 @@ const CommonAnimation = ({ children }: CommonAnimationProps) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Hover animations
-      $(".btn-hover").on("mouseenter", function (e) {
-        const offset = $(this).offset();
-        if (!offset) return;
-        const x = e.pageX - offset.left;
-        const y = e.pageY - offset.top;
+      document.querySelectorAll<HTMLElement>(".btn-hover").forEach((el) => {
+        el.addEventListener("mouseenter", (e) => {
+          const rect = el.getBoundingClientRect();
+          const x = e.pageX - rect.left - window.scrollX;
+          const y = e.pageY - rect.top - window.scrollY;
+          const span = el.querySelector("span") as HTMLElement;
+          if (span) {
+            span.style.top = `${y}px`;
+            span.style.left = `${x}px`;
+          }
+        });
 
-        $(this).find("span").css({ top: y, left: x });
-      });
-
-      $(".btn-hover").on("mouseout", function (e) {
-        const offset = $(this).offset();
-        if (!offset) return;
-        const x = e.pageX - offset.left;
-        const y = e.pageY - offset.top;
-
-        $(this).find("span").css({ top: y, left: x });
+        el.addEventListener("mouseout", (e) => {
+          const rect = el.getBoundingClientRect();
+          const x = e.pageX - rect.left - window.scrollX;
+          const y = e.pageY - rect.top - window.scrollY;
+          const span = el.querySelector("span") as HTMLElement;
+          if (span) {
+            span.style.top = `${y}px`;
+            span.style.left = `${x}px`;
+          }
+        });
       });
 
       // Common Animation
@@ -43,38 +48,38 @@ const CommonAnimation = ({ children }: CommonAnimationProps) => {
           const all_btns = gsap.utils.toArray<HTMLElement>(".btn_wrapper");
           const fallback_btns = gsap.utils.toArray<HTMLElement>("#btn_wrapper");
           const all_btn = all_btns.length > 0 ? all_btns : fallback_btns;
-
           const all_btn_circle = gsap.utils.toArray<HTMLElement>(".btn-item");
 
           all_btn.forEach((btn, i) => {
-            $(btn).on("mousemove", (e) => callParallax(e));
-            $(btn).on("mouseleave", () => {
-              gsap.to(all_btn_circle[i], 0.5, {
+            btn.addEventListener("mousemove", (e) => callParallax(e));
+            btn.addEventListener("mouseleave", () => {
+              gsap.to(all_btn_circle[i], {
+                duration: 0.5,
                 x: 0,
                 y: 0,
                 ease: Power2.easeOut,
               });
             });
 
-            function callParallax(e: JQuery.MouseMoveEvent) {
+            function callParallax(e: MouseEvent) {
               parallaxIt(e, all_btn_circle[i], 80);
             }
 
             function parallaxIt(
-              e: JQuery.MouseMoveEvent,
+              e: MouseEvent,
               target: HTMLElement,
               movement: number
             ) {
-              const $this = $(btn);
-              const offset = $this.offset();
-              if (!offset) return;
-              const relX = e.pageX - offset.left;
-              const relY = e.pageY - offset.top;
+              const rect = btn.getBoundingClientRect();
+              const relX = e.pageX - rect.left - window.scrollX;
+              const relY = e.pageY - rect.top - window.scrollY;
+              const width = btn.offsetWidth;
+              const height = btn.offsetHeight;
 
               gsap.to(target, {
                 duration: 0.5,
-                  x: ((relX - $this?.width()! / 2) / $this?.width()!) * movement,
-                  y: ((relY - $this?.height()! / 2) / $this?.height()!) * movement,
+                x: ((relX - width / 2) / width) * movement,
+                y: ((relY - height / 2) / height) * movement,
                 ease: Power2.easeOut,
               });
             }

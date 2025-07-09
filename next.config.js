@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+	enabled: process.env.ANALYZE === "true",
+});
 
-module.exports = {
-  output: 'standalone',
-  webpack(config) {
-    // Optionally analyze size later
-    return config;
-  },
+const nextConfig = {
+	reactStrictMode: true,
+	output: "standalone",
+	webpack(config) {
+		// Optionally analyze size later
+		return config;
+	},
 };
+
+module.exports = withBundleAnalyzer(nextConfig);
