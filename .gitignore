@@ -10,7 +10,12 @@
 
 # next.js
 /.next/
+!.next/static/
+/.next/cache/
+/.next/**/*.pack
+.next/traces/
 /out/
+
 
 # production
 /build
