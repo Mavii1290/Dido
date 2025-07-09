@@ -5,4 +5,8 @@ const nextConfig = {
 
 module.exports = {
   output: 'standalone',
+  webpack(config) {
+    // Optionally analyze size later
+    return config;
+  },
 };
