@@ -5,9 +5,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const nextConfig = {
   reactStrictMode: true,
-  output: "export", // for static export
+  output: "export",
   images: {
-    unoptimized: true, // <--- disables server-side image optimization
+    unoptimized: true, 
   },
   webpack(config) {
     return config;
