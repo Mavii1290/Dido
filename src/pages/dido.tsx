@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import IndexHero from "@/components/hero/IndexHero";

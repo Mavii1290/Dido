@@ -138,9 +138,9 @@ endTl.to(
               <div className="col-xxl-8 col-xl-8 col-lg-8">
                 <div className="footer__nav-2">
                   <ul className="footer-menu-2 menu-anim" ref={menuAnim}>
-                    <li>
+                    {/* <li>
                       <Link href="/about">Our Story</Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/shop">Products</Link>
                     </li>
