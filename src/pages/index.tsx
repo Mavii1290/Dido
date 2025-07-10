@@ -17,7 +17,7 @@ const Index: React.FC = () => {
   </div>);
 };
 
-// export default Index;
+export default Index;
 
 
 // import Dido from "./dido";
