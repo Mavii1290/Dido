@@ -23,30 +23,42 @@ const Contact1 = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    try {
-      const response = await fetch("https://send-email.mmavii1290.workers.dev", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+  const form = e.currentTarget;
+  const formData = new FormData(form);
 
-      if (response.ok) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        const err = await response.json();
-        alert("Error: " + (err.message || "Something went wrong."));
-      }
-    } catch (error) {
-      alert("Failed to send. Please try again later.");
-      console.error(error);
-    }
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    message: formData.get("message"),
   };
+
+  try {
+    const response = await fetch("https://send-email.mmavi1290.workers.dev/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset(); // Optional: clear the form
+    } else {
+      const errorData = await response.text();
+      console.error("Email send failed:", errorData);
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error("Request failed:", error);
+    alert("An error occurred. Please try again.");
+  }
+};
+
 
   return (
     <section className="contact__area-6">
