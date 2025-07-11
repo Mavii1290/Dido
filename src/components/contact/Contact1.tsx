@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import animationCharCome from "@/lib/utils/animationCharCome";
 import animationWordCome from "@/lib/utils/animationWordCome";
 
@@ -11,54 +11,41 @@ const Contact1 = () => {
     if (wordAnim.current) animationWordCome(wordAnim.current);
   }, []);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
- const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
+    };
 
-  const form = e.currentTarget;
-  const formData = new FormData(form);
+    try {
+      const response = await fetch("https://send-email.mmavi1290.workers.dev/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-  const data = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    message: formData.get("message"),
-  };
-
-  try {
-    const response = await fetch("https://send-email.mmavi1290.workers.dev/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      alert("Message sent successfully!");
-      form.reset(); // Optional: clear the form
-    } else {
-      const errorData = await response.text();
-      console.error("Email send failed:", errorData);
-      alert("Something went wrong. Please try again.");
+      if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset();
+      } else {
+        const error = await response.text();
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error("Request failed:", err);
+      alert("An error occurred. Please try again.");
     }
-  } catch (error) {
-    console.error("Request failed:", error);
-    alert("An error occurred. Please try again.");
-  }
-};
-
+  };
 
   return (
     <section className="contact__area-6">
@@ -74,10 +61,7 @@ const Contact1 = () => {
           </div>
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
             <div className="contact__text">
-              <p>
-                Great! We&rsquo;re excited to hear from you and let&rsquo;s start something special
-                together. Call us for any inquiry.
-              </p>
+              <p>Great! We&rsquo;re excited to hear from you and let&rsquo;s start something special together. Call us for any inquiry.</p>
             </div>
           </div>
         </div>
@@ -103,48 +87,25 @@ const Contact1 = () => {
               <form onSubmit={handleSubmit}>
                 <div className="row g-3">
                   <div className="col-xxl-6 col-xl-6 col-12">
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Name *"
-                      required
-                    />
+                    <input type="text" name="name" placeholder="Name *" required />
                   </div>
                   <div className="col-xxl-6 col-xl-6 col-12">
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email *"
-                      required
-                    />
+                    <input type="email" name="email" placeholder="Email *" required />
+                  </div>
+                </div>
+
+                <div className="row g-3">
+                  <div className="col-xxl-6 col-xl-6 col-12">
+                    <input type="tel" name="phone" placeholder="Phone" />
+                  </div>
+                  <div className="col-xxl-6 col-xl-6 col-12">
+                    <input type="text" name="subject" placeholder="Subject *" required />
                   </div>
                 </div>
 
                 <div className="row g-3">
                   <div className="col-12">
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Phone"
-                    />
-                  </div>
-                </div>
-
-                <div className="row g-3">
-                  <div className="col-12">
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Messages *"
-                      required
-                    ></textarea>
+                    <textarea name="message" placeholder="Messages *" required></textarea>
                   </div>
                 </div>
 
