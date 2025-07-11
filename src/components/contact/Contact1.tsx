@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import animationCharCome from "@/lib/utils/animationCharCome";
 import animationWordCome from "@/lib/utils/animationWordCome";
 
@@ -10,6 +10,43 @@ const Contact1 = () => {
     if (charAnim.current) animationCharCome(charAnim.current);
     if (wordAnim.current) animationWordCome(wordAnim.current);
   }, []);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("https://send-email.mmavii1290.workers.dev", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        const err = await response.json();
+        alert("Error: " + (err.message || "Something went wrong."));
+      }
+    } catch (error) {
+      alert("Failed to send. Please try again later.");
+      console.error(error);
+    }
+  };
 
   return (
     <section className="contact__area-6">
@@ -25,7 +62,10 @@ const Contact1 = () => {
           </div>
           <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
             <div className="contact__text">
-              <p>Great! We&rsquo;re excited to hear from you and let&rsquo;s start something special together. Call us for any inquiry.</p>
+              <p>
+                Great! We&rsquo;re excited to hear from you and let&rsquo;s start something special
+                together. Call us for any inquiry.
+              </p>
             </div>
           </div>
         </div>
@@ -48,28 +88,51 @@ const Contact1 = () => {
 
           <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
             <div className="contact__form">
-              <form action="assets/mail.php" method="POST">
+              <form onSubmit={handleSubmit}>
                 <div className="row g-3">
                   <div className="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="name" placeholder="Name *" required />
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Name *"
+                      required
+                    />
                   </div>
                   <div className="col-xxl-6 col-xl-6 col-12">
-                    <input type="email" name="email" placeholder="Email *" required />
-                  </div>
-                </div>
-
-                <div className="row g-3">
-                  <div className="col-xxl-6 col-xl-6 col-12">
-                    <input type="tel" name="phone" placeholder="Phone" />
-                  </div>
-                  <div className="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="subject" placeholder="Subject *" required />
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Email *"
+                      required
+                    />
                   </div>
                 </div>
 
                 <div className="row g-3">
                   <div className="col-12">
-                    <textarea name="message" placeholder="Messages *" required></textarea>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Phone"
+                    />
+                  </div>
+                </div>
+
+                <div className="row g-3">
+                  <div className="col-12">
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Messages *"
+                      required
+                    ></textarea>
                   </div>
                 </div>
 

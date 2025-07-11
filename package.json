@@ -2,14 +2,15 @@
   "name": "axtra-client",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "export": "next export",
-  "lint": "next lint",
-  "predeploy": "npm run build"
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "lint": "next lint",
+    "predeploy": "npm run build"
+  },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@types/swiper": "^6.0.0",
     "bootstrap": "^5.2.3",
     "eslint": "8.37.0",
