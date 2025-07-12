@@ -18,11 +18,11 @@ const Contact1 = () => {
     const formData = new FormData(form);
 
     const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      subject: formData.get("subject") as string,
+      message: formData.get("message") as string,
     };
 
     try {
@@ -73,9 +73,8 @@ const Contact1 = () => {
           <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
             <div className="contact__info">
               <h3 className="sub-title-anim-top animation__word_come" ref={wordAnim}>
-                {"Don't be afraid man! "}
                 <br />
-                Get in touch
+                Contact Info
               </h3>
               <ul>
                 <li><a href="tel:+1-516-727-0114">516-727-0114</a></li>
@@ -102,7 +101,7 @@ const Contact1 = () => {
                     <input type="tel" name="phone" placeholder="Phone" />
                   </div>
                   <div className="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="subject" placeholder="Subject" />
+                    <input type="text" name="subject" placeholder="Subject *" required />
                   </div>
                 </div>
 
