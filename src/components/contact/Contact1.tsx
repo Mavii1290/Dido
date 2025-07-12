@@ -21,30 +21,33 @@ const Contact1 = () => {
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
+      subject: formData.get("subject"),
       message: formData.get("message"),
     };
 
     try {
-      const response = await fetch("https://send-email.mmavi1290.workers.dev/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      console.log("Sending form data:", data);
+  const response = await fetch("https://send-email.mmavi1290.workers.dev/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
 
-      if (response.ok) {
-        alert("Message sent successfully!");
-        form.reset();
-      } else {
-        const error = await response.text();
-        console.error("Error:", error);
-        alert("Something went wrong. Please try again.");
-      }
-    } catch (err) {
-      console.error("Request failed:", err);
-      alert("An error occurred. Please try again.");
-    }
+  const text = await response.text();
+  console.log("Server response:", response.status, text);
+
+  if (!response.ok) {
+    alert("Something went wrong. Please try again.");
+  } else {
+    alert("Message sent!");
+  }
+} catch (error) {
+  console.error("Request failed:", error);
+  alert("Something went wrong. Please try again.");
+}
+
   };
 
   return (
@@ -99,7 +102,7 @@ const Contact1 = () => {
                     <input type="tel" name="phone" placeholder="Phone" />
                   </div>
                   <div className="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="subject" placeholder="Subject *" required />
+                    <input type="text" name="subject" placeholder="Subject" />
                   </div>
                 </div>
 

@@ -60,9 +60,9 @@ const AboutHero = () => {
                   <div className="btn_wrapper">
                     <Link
                       className="wc-btn-light btn-hover btn-item"
-                      href="/about"
+                      href="/shop"
                     >
-                      <span></span> Explore Us{" "}
+                      <span></span> Explore Us{""}
                       <i className="fa-solid fa-arrow-right"></i>
                     </Link>
                   </div>
