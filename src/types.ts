@@ -6,6 +6,7 @@ export interface Product {
   brand: string;
   title: string;
   description: string;
+  quantity_per_case: string;
   new_price: number;
   old_price: number;
   btn_color?: string;
