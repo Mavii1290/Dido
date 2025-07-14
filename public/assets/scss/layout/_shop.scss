@@ -198,6 +198,15 @@
 .id-image{
   align-items: center;
 }
+.id-description{
+ display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 0 15%;
+  width: 100%;
+}
 
 .drop-down-x{
     color:#183f24;

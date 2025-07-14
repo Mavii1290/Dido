@@ -57,7 +57,7 @@ const ProductPage = () => {
             <div className="text-center md:text-left">
               <h1 className="text-3xl font-bold">{product.brand}</h1>
               <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
-              <p className="text-gray-700 mb-6">{product.description}</p>
+              <p className="text-gray-700 mb-6 id-description text-center">{product.description}</p>
               <p className="mb-6">{product.badge_text}</p>
               <p className="mb-6">{product.quantity_per_case} Per Case</p>
               <p className="text-sm text-green-600 mb-4 font-medium">In Stock</p>

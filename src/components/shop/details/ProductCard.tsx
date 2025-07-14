@@ -27,7 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
       />
       <div className="card-body">
         <h6 className="card-title product-title">{product.brand}</h6>
-        <h6 className="card-title product-title">{product.title}</h6>
+        <h6 className="card-title">{product.title}</h6>
         {product.badge_text && (
           <span className={`badge-text mb-2`}>
             {product.badge_text}
