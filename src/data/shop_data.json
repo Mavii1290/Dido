@@ -40,7 +40,7 @@
             "btn_text": "Add to Cart",
             "sub": "oil"
           },
-           {
+          {
             "id": "Partanna_.5LCan",
             "img": "/assets/imgs/dido/products/partanna_.5Lcan.png",
             "badge_color": "primary",
@@ -55,7 +55,7 @@
             "btn_text": "Add to Cart",
             "sub": "oil"
           },
-           {
+          {
             "id": "partanna_mini",
             "img": "/assets/imgs/dido/products/partanna_mini.png",
             "badge_color": "primary",
@@ -231,7 +231,7 @@
         "name": "Pasta",
         "slug": "pasta",
         "products": [
-           {
+          {
             "id": "partanna_busiate",
             "img": "/assets/imgs/dido/products/pasta/partanna_busiate.png",
             "badge_color": "primary",
@@ -245,7 +245,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "pasta"
-          }, {
+          },{
             "id": "frankies-organice-pasta",
             "img": "/assets/imgs/dido/products/pasta/frankies_rigatoni.png",
             "badge_color": "primary",
@@ -259,7 +259,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "pasta"
-          }, {
+          },{
             "id": "frankies-organice-pasta",
             "img": "/assets/imgs/dido/products/pasta/frankies_cavatelli.png",
             "badge_color": "primary",
@@ -273,7 +273,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "pasta"
-          }, {
+          },{
             "id": "frankies-organice-pasta",
             "img": "/assets/imgs/dido/products/pasta/frankies_pappardelle.png",
             "badge_color": "primary",
@@ -376,8 +376,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "water"
-          },
-          {
+          },{
             "id": "saratoga",
             "img": "/assets/imgs/dido/products/beverages/saratoga-sparkling-24pk.png",
             "badge_color": "primary",
@@ -426,8 +425,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "carbonated"
-          },
-        {
+          },{
             "id": "A'Sicilian",
             "img": "/assets/imgs/dido/products/beverages/Limonata_4pk.png",
             "badge_color": "primary",
@@ -441,8 +439,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "carbonated"
-          },
-        {
+          },{
             "id": "A'Sicilian",
             "img": "/assets/imgs/dido/products/beverages/Mandarino_4pk.png",
             "badge_color": "primary",
@@ -456,8 +453,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "carbonated"
-          },
-        {
+          },{
             "id": "A'Sicilian",
             "img": "/assets/imgs/dido/products/beverages/Melograno_4pk.png",
             "badge_color": "primary",
@@ -471,8 +467,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "carbonated"
-          },
-        {
+          },{
             "id": "A'Sicilian",
             "img": "/assets/imgs/dido/products/beverages/limonata_1L.png",
             "badge_color": "primary",
@@ -486,8 +481,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "carbonated"
-          },
-        {
+          },{
             "id": "A'Sicilian",
             "img": "/assets/imgs/dido/products/beverages/aranciata_1L.png",
             "badge_color": "primary",
