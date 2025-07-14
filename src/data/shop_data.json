@@ -12,7 +12,7 @@
         "products": [
           {
             "id": "partanna_3Lcan",
-            "img": "/assets/imgs/dido/products/partanna_3Lcan.png",
+            "img": "/assets/imgs/dido/products/oil/partanna_3Lcan.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
             "brand": "Partanna",
@@ -27,7 +27,7 @@
           },
           {
             "id": "Partanna_1Lglass",
-            "img": "/assets/imgs/dido/products/patanna_1L_glass.png",
+            "img": "/assets/imgs/dido/products/oil/patanna_1L_glass.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
             "brand": "Partanna",
@@ -42,7 +42,7 @@
           },
           {
             "id": "Partanna_.5LCan",
-            "img": "/assets/imgs/dido/products/partanna_.5Lcan.png",
+            "img": "/assets/imgs/dido/products/oil/partanna_.5Lcan.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
             "brand": "Partanna",
@@ -57,7 +57,7 @@
           },
           {
             "id": "partanna_mini",
-            "img": "/assets/imgs/dido/products/partanna_mini.png",
+            "img": "/assets/imgs/dido/products/oil/partanna_mini.png",
             "badge_color": "primary",
             "badge_text": "100ML (3.4oz)",
             "brand": "Partanna",
@@ -72,7 +72,7 @@
           },          
           {
             "id": "partanna_.5Lorganic_can",
-            "img": "/assets/imgs/dido/products/partana_.5L_Organic.png",
+            "img": "/assets/imgs/dido/products/oil/partana_.5L_Organic.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
             "brand": "Partanna",
@@ -87,7 +87,7 @@
           },
           {
             "id": "sicano_oil",
-            "img": "/assets/imgs/dido/products/sicano_oil.png",
+            "img": "/assets/imgs/dido/products/oil/sicano_oil.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
             "brand": "IL Sicano",
@@ -102,7 +102,7 @@
           },
           {
             "id": "diamante_oil",
-            "img": "/assets/imgs/dido/products/diamante_oil.png",
+            "img": "/assets/imgs/dido/products/oil/diamante_oil.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
             "brand": "Rustico",
@@ -117,7 +117,7 @@
           },
           {
             "id": "Frankies-oil-.5L",
-            "img": "/assets/imgs/dido/products/frankies_.5L.png",
+            "img": "/assets/imgs/dido/products/oil/frankies_.5L.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
             "brand": "Frankies 457 Spuntino",
@@ -132,7 +132,7 @@
           },
           {
             "id": "Frankies-oil-1L",
-            "img": "/assets/imgs/dido/products/frankies_1L.png",
+            "img": "/assets/imgs/dido/products/oil/frankies_1L.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
             "brand": "Frankies 457 Spuntino",
@@ -355,7 +355,7 @@
             "badge_text": "12oz",
             "brand": "Saratoga",
             "title": "Still Water Glass Bottles",
-            "description": "Saratoga Natural Still Spring Water sets the bar for domestic spring water. Packaged in our iconic cobalt blue glass bottles. Saratoga is the product of choice for America's most sophisticated consumers. The crisp, clean taste and low mineral content makes it a light and refreshin beverage for any occasion.",
+            "description": "Saratoga Natural Still Spring Water sets the bar for domestic spring water. Packaged in our iconic cobalt blue glass bottles. Saratoga is the product of choice for America's most sophisticated consumers. The crisp, clean taste and low mineral content makes it a light and refreshing beverage for any occasion.",
             "quantity_per_case": "24/12oz",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -369,7 +369,7 @@
             "badge_text": "28oz",
             "brand": "Saratoga",
             "title": "Still Water Glass Bottles",
-            "description": "Saratoga Natural Still Spring Water sets the bar for domestic spring water. Packaged in our iconic cobalt blue glass bottles. Saratoga is the product of choice for America's most sophisticated consumers. The crisp, clean taste and low mineral content makes it a light and refreshin beverage for any occasion.",
+            "description": "Saratoga Natural Still Spring Water sets the bar for domestic spring water. Packaged in our iconic cobalt blue glass bottles. Saratoga is the product of choice for America's most sophisticated consumers. The crisp, clean taste and low mineral content makes it a light and refreshing beverage for any occasion.",
             "quantity_per_case": "12/24oz",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -383,7 +383,7 @@
             "badge_text": "12oz",
             "brand": "Saratoga",
             "title": "Sparkling Water Glass Bottles",
-            "description": "Saratoga Sparkling Spring Water is the perfect balance of light taste with just the right amount of carbonation. The champagne-like bubbles help slense the palate and complement the flavors of fine food and wine.",
+            "description": "Saratoga Sparkling Spring Water is the perfect balance of light taste with just the right amount of carbonation. The champagne-like bubbles help cleanse the palate and complement the flavors of fine food and wine.",
             "quantity_per_case": "24/12oz",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -397,7 +397,7 @@
             "badge_text": "28oz",
             "brand": "Saratoga",
             "title": "Sparkling Water Glass Bottles",
-            "description": "Saratoga Sparkling Spring Water is the perfect balance of light taste with just the right amount of carbonation. The champagne-like bubbles help slense the palate and complement the flavors of fine food and wine.",
+            "description": "Saratoga Sparkling Spring Water is the perfect balance of light taste with just the right amount of carbonation. The champagne-like bubbles help cleanse the palate and complement the flavors of fine food and wine.",
             "quantity_per_case": "12/24oz",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -408,7 +408,7 @@
         ]
       },
       {
-        "name":"Cardonated Drinks",
+        "name":"Carbonated Drinks",
         "slug":"carbonated",
         "products":[
           {
@@ -459,7 +459,7 @@
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
             "brand": "A'Sicilian",
-            "title": "Melograno Sparkling Pomegrantate Beverage",
+            "title": "Melograno Sparkling Pomegranate Beverage",
             "description": "Saratoga Sparkling Spring Water is the perfect balance of light taste with just the right amount of carbonation. The champagne-like bubbles help slense the palate and complement the flavors of fine food and wine.",
             "quantity_per_case": "4/6pk",
             "new_price": 3.36,

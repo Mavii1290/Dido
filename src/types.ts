@@ -11,7 +11,7 @@ export interface Product {
   old_price: number;
   btn_color?: string;
   btn_text: string;
-  sub: string;
+  sub: string | string[];
 }
 
 export interface Subcategory {
