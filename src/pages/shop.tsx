@@ -31,7 +31,7 @@ const ShopPage = () => {
   useEffect(() => {
     const allProducts: Product[] = flattenAllProducts(shop_data);
 
-    if (typeof sub === "string") {
+    if (typeof sub === "string" && sub.length ) {
       const filtered = filterProductsBySubcategory(shop_data, sub);
       setSelectedSubcategory(sub);
       setFilteredProducts(filtered);
@@ -40,7 +40,7 @@ const ShopPage = () => {
       setFilteredProducts(allProducts);
     }
 
-    setVisibleCount(12);
+    setVisibleCount();
     setLoading(false);
   }, [sub]);
 

@@ -37,13 +37,13 @@ const ShopCategory: React.FC<Props> = ({ data, onSelect, selectedSubcategorySlug
       </div> */}
 
       {/* Static Sidebar (Desktop) */}
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <CategoryMenu
           data={data}
           onSelect={onSelect}
           selectedSubcategorySlug={subcategorySlug}
         />
-      </div>
+      </div> */}
 
       {/* Slide-out Mobile Drawer */}
       <div
@@ -76,7 +76,7 @@ const ShopCategory: React.FC<Props> = ({ data, onSelect, selectedSubcategorySlug
             </button>
           </div> */}
 
-          <div className="p-4 overflow-y-auto h-full">
+          <div className="overflow-y-auto h-full">
             <CategoryMenu
               data={data}
               onSelect={(sub) => {

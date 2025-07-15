@@ -10,14 +10,15 @@ interface Props {
 
 const ShoppingGrid: React.FC<Props> = ({ products }) => {
   const router = useRouter();
-  const [itemsToShow, setItemsToShow] = useState<number>(12);
+  const [itemsToShow, setItemsToShow] = useState<number>(products.length);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   // Reset pagination when products change
-  useEffect(() => {
-    setItemsToShow(12);
-    setCurrentPage(1);
-  }, [products]);
+useEffect(() => {
+  setItemsToShow(products.length);
+  setCurrentPage(1);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, [products]);
 
   const startIndex = (currentPage - 1) * itemsToShow;
   const endIndex = startIndex + itemsToShow;
@@ -43,7 +44,7 @@ const ShoppingGrid: React.FC<Props> = ({ products }) => {
         <div className="d-flex flex-col md:flex-row justify-content-between items-center mb-6 gap-4">
           <h2 className="mb-0 shop-font-header">Shop Products</h2>
           <select
-            value={itemsToShow > products.length ? "all" : itemsToShow}
+            value={itemsToShow === products.length ? "all" : itemsToShow}
             onChange={handleItemsChange}
             className="form-select w-auto"
           >

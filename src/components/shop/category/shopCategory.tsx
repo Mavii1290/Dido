@@ -26,26 +26,7 @@ const ShopCategory: React.FC<Props> = ({ data, onSelect, selectedSubcategorySlug
 
   return (
     <div className="shop-category relative">
-      {/* Toggle Button (Mobile) */}
-      {/* <div className="md:hidden mb-4">
-        <button
-          onClick={() => setIsOpen(true)}
-          className="text-green-600 font-semibold underline"
-        >
-          Browse Categories
-        </button>
-      </div> */}
 
-      {/* Static Sidebar (Desktop) */}
-      {/* <div className="hidden md:block">
-        <CategoryMenu
-          data={data}
-          onSelect={onSelect}
-          selectedSubcategorySlug={subcategorySlug}
-        />
-      </div> */}
-
-      {/* Slide-out Mobile Drawer */}
       <div
         className={`fixed inset-0 z-50 transition duration-300 ease-in-out ${
           isOpen ? "pointer-events-auto" : "pointer-events-none"
@@ -59,22 +40,6 @@ const ShopCategory: React.FC<Props> = ({ data, onSelect, selectedSubcategorySlug
           onClick={() => setIsOpen(false)}
         />
 
-        {/* Drawer Panel */}
-        {/* <div
-          className={`absolute top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-        > */}
-          {/* <div className="flex justify-between items-center px-4 py-3 border-b">
-            <h2 className="text-lg font-semibold text-green-600">Categories</h2>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-gray-600 hover:text-black"
-              aria-label="Close menu"
-            >
-              ✕
-            </button>
-          </div> */}
 
           <div className="overflow-y-auto h-full">
             <CategoryMenu
@@ -88,7 +53,7 @@ const ShopCategory: React.FC<Props> = ({ data, onSelect, selectedSubcategorySlug
           </div>
         </div>
       </div>
-    // </div>
+
   );
 };
 

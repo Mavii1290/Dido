@@ -5,13 +5,25 @@ export const filterProductsBySubcategory = (
   subSlug: string
 ): Product[] => {
   const normalizedSlug = subSlug.toLowerCase();
+
   const matchedProducts: Product[] = [];
 
   data.forEach((category) => {
     category.subcategories.forEach((sub) => {
-      if (sub.slug && sub.slug.toLowerCase() === normalizedSlug) {
-        matchedProducts.push(...(sub.products || []));
-      }
+      (sub.products || []).forEach((product) => {
+        const productSub = product.sub;
+
+        if (Array.isArray(productSub)) {
+          if (productSub.map(s => s.toLowerCase()).includes(normalizedSlug)) {
+            matchedProducts.push(product);
+          }
+        } else if (
+          typeof productSub === "string" &&
+          productSub.toLowerCase() === normalizedSlug
+        ) {
+          matchedProducts.push(product);
+        }
+      });
     });
   });
 
