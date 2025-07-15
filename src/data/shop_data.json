@@ -12,6 +12,7 @@
         "products": [
           {
             "id": "partanna_3Lcan",
+            "product_num": "po3L",
             "img": "/assets/imgs/dido/products/oil/partanna_3Lcan.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
@@ -27,6 +28,7 @@
           },
           {
             "id": "Partanna_1Lglass",
+            "product_num": "po1Lg",
             "img": "/assets/imgs/dido/products/oil/patanna_1L_glass.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -42,6 +44,7 @@
           },
           {
             "id": "Partanna_.5LCan",
+            "product_num": "po5L",
             "img": "/assets/imgs/dido/products/oil/partanna_.5Lcan.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
@@ -57,6 +60,7 @@
           },
           {
             "id": "partanna_mini",
+            "product_num": "po100ml",
             "img": "/assets/imgs/dido/products/oil/partanna_mini.png",
             "badge_color": "primary",
             "badge_text": "100ML (3.4oz)",
@@ -72,6 +76,7 @@
           },          
           {
             "id": "partanna_.5Lorganic_can",
+            "product_num": "po5Lo",
             "img": "/assets/imgs/dido/products/oil/partana_.5L_Organic.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
@@ -87,6 +92,7 @@
           },
           {
             "id": "sicano_oil",
+            "product_num": "so1L",
             "img": "/assets/imgs/dido/products/oil/sicano_oil.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -102,6 +108,7 @@
           },
           {
             "id": "diamante_oil",
+            "product_num": "do1L",
             "img": "/assets/imgs/dido/products/oil/diamante_oil.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -117,6 +124,7 @@
           },
           {
             "id": "Frankies-oil-.5L",
+            "product_num": "fo5Lo",
             "img": "/assets/imgs/dido/products/oil/frankies_.5L.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
@@ -132,6 +140,7 @@
           },
           {
             "id": "Frankies-oil-1L",
+            "product_num": "fo1Lo",
             "img": "/assets/imgs/dido/products/oil/frankies_1L.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -153,9 +162,10 @@
         "products": [
           {
             "id": "partanna_whole_olives-jar",
+            "product_num": "pol75lb",
             "img": "/assets/imgs/dido/products/olives-pickled/partanna_olives.png",
             "badge_color": "primary",
-            "badge_text": "340g",
+            "badge_text": "340g (.75lb)",
             "brand": "Partanna",
             "title": "Whole Castelvetrano Olives",
             "description": "Castelvetrano Olives, or Nocellara del Belice, hail from southwest Italy and are cherished globally for their meaty texture and nutty, buttery taste. These large, vibrant green olives are hand-harvested before full ripeness to preserve their natural color. For five generations, our family has cultivated 100% sustainably grown Castelvetrano olives. Each olive is hand-picked to maintain its color, flavor, and texture, avoiding bruising and oxidation. Post-harvest, we cure and preserve them using natural sea salt from Trapani, Sicily. Versatile and delicious, Castelvetrano Olives are ideal as a snack, a vibrant addition to charcuterie boards, or a flavorful twist in a Martini.",
@@ -167,9 +177,10 @@
             "sub": "olives-and-pickled-jars"
           },{
             "id": "partanna_mediteranean_olives-jar",
+            "product_num": "pol26lb",
             "img": "/assets/imgs/dido/products/olives-pickled/partanna-mediteranean-olives.png",
             "badge_color": "primary",
-            "badge_text": "260g",
+            "badge_text": "260g (.26lb)",
             "brand": "Partanna",
             "title": "Mediterranean Pitted Olive Mix",
             "description": "Our family has been growing olives in the Belice Valley, Sicily since 1916. Our olives are hand-picked, pitted and placed in a brine within hours of being picked. The Partanna Mediterranean Pitted Olive mix is a selection of the best Sicilian olives that are seasoned in a brine made with hot peppers and garlic. The olives are different in size, naturally and have a mild-bittery flavor. They are great for snacking and pair well with cheese and antipasto.",
@@ -182,6 +193,7 @@
           },
           {
             "id": "partanna_green_olives-2kgcan",
+            "product_num": "pol2kgw",
             "img": "/assets/imgs/dido/products/olives-pickled/partanna-green-olives.png",
             "badge_color": "primary",
             "badge_text": "2.25kg (5.5lb)",
@@ -197,6 +209,7 @@
           },
           {
             "id": "partanna_pitted_olives-2kgcan",
+            "product_num": "pol2kgp",
             "img": "/assets/imgs/dido/products/olives-pickled/partanna-pitted-olives.png",
             "badge_color": "primary",
             "badge_text": "2.3kg (5.07lb)",
@@ -211,6 +224,7 @@
             "sub": "olives-and-pickled-jars"
           },{
             "id": "frankies_black_olives-12oz-jar",
+            "product_num": "fol12oz",
             "img": "/assets/imgs/dido/products/olives-pickled/Frankies-black-olives.png",
             "badge_color": "primary",
             "badge_text": "340g (12oz)",
@@ -233,6 +247,7 @@
         "products": [
           {
             "id": "partanna-pasta-busiate1lb",
+            "product_num": "ppb1lb",
             "img": "/assets/imgs/dido/products/pasta/partanna_busiate.png",
             "badge_color": "primary",
             "badge_text": "454g (1lb)",
@@ -247,6 +262,7 @@
             "sub": "pasta"
           },{
             "id": "frankies-pasta-rigatonilb",
+            "product_num": "fpr1lb",
             "img": "/assets/imgs/dido/products/pasta/frankies_rigatoni.png",
             "badge_color": "primary",
             "badge_text": "454g (1lb)",
@@ -261,6 +277,7 @@
             "sub": "pasta"
           },{
             "id": "frankies-pasta-cavatelli-1lb",
+            "product_num": "fpc1lb",
             "img": "/assets/imgs/dido/products/pasta/frankies_cavatelli.png",
             "badge_color": "primary",
             "badge_text": "454g (1lb)",
@@ -275,6 +292,7 @@
             "sub": "pasta"
           },{
             "id": "frankies-pasta-pappardelle-1lb",
+            "product_num": "fpp1lb",
             "img": "/assets/imgs/dido/products/pasta/frankies_pappardelle.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
@@ -334,6 +352,7 @@
         "products": [
           {
             "id": "dais-croissant-pistachio",
+            "product_num": "dspc",
             "img": "/assets/imgs/dido/products/sweets/pistachio-croissants.png",
             "badge_color": "primary",
             "badge_text": "5 X 50g=250G",
@@ -349,6 +368,7 @@
           },
           {
             "id": "dolce-sicilian-croissant-cherry",
+            "product_num": "dscc",
             "img": "/assets/imgs/dido/products/sweets/cherry-croissants.png",
             "badge_color": "primary",
             "badge_text": "6 X 50g=270G",
@@ -363,6 +383,7 @@
             "sub": "dessert"
           },{
             "id": "dolce-sicilian-croissant-choc-hazelnut",
+            "product_num": "dschc",
             "img": "/assets/imgs/dido/products/sweets/choc-hazelnut-croissants.png",
             "badge_color": "primary",
             "badge_text": "6 X 50g=270G",
@@ -375,8 +396,16 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "dessert"
-          },{
+          }
+        ]
+      },
+      {
+        "name": "Chocolate",
+        "slug": "chocolate",
+        "products": [
+          {
             "id": "hanuta",
+            "product_num": "hsw18",
             "img": "/assets/imgs/dido/products/sweets/hanuta.png",
             "badge_color": "primary",
             "badge_text": "18 x 44g",
@@ -388,17 +417,9 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "dessert"
+            "sub": "chocolate"
           }
-
-
-
         ]
-      },
-      {
-        "name": "Chocolate",
-        "slug": "chocolate",
-        "products": []
       }
     ]
   },
@@ -412,6 +433,7 @@
         "products": [
           {
             "id": "saratoga-still-12oz",
+            "product_num": "snw12",
             "img": "/assets/imgs/dido/products/beverages/saratoga-still-24pk.png",
             "badge_color": "primary",
             "badge_text": "12oz",
@@ -426,6 +448,7 @@
             "sub": "water"
           },{
             "id": "saratoga-still-24oz",
+            "product_num": "snw24",
             "img": "/assets/imgs/dido/products/beverages/saratoga-still-12pk.png",
             "badge_color": "primary",
             "badge_text": "28oz",
@@ -440,6 +463,7 @@
             "sub": "water"
           },{
             "id": "saratoga-sparkling-12oz",
+            "product_num": "ssw12",
             "img": "/assets/imgs/dido/products/beverages/saratoga-sparkling-24pk.png",
             "badge_color": "primary",
             "badge_text": "12oz",
@@ -454,6 +478,7 @@
             "sub": ["water", "carbonated"]
           },{
             "id": "saratoga-sparkling-24oz",
+            "product_num": "ssw24",
             "img": "/assets/imgs/dido/products/beverages/saratoga-sparkling-12pk.png",
             "badge_color": "primary",
             "badge_text": "28oz",
@@ -475,6 +500,7 @@
         "products":[
           {
             "id": "A'Sicilian-blood-orange",
+            "product_num": "ascbo",
             "img": "/assets/imgs/dido/products/beverages/Blood-orange_4pk.png",
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
@@ -489,6 +515,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-limonata",
+            "product_num": "ascl",
             "img": "/assets/imgs/dido/products/beverages/Limonata_4pk.png",
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
@@ -503,6 +530,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-mandarino",
+            "product_num": "ascm",
             "img": "/assets/imgs/dido/products/beverages/Mandarino_4pk.png",
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
@@ -517,6 +545,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-pomegranate",
+            "product_num": "ascp",
             "img": "/assets/imgs/dido/products/beverages/Melograno_4pk.png",
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
@@ -531,6 +560,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-limonata-1l",
+            "product_num": "ascl1l",
             "img": "/assets/imgs/dido/products/beverages/limonata_1L.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -545,6 +575,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-aranciata-1l",
+            "product_num": "ascbo1l",
             "img": "/assets/imgs/dido/products/beverages/aranciata_1L.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",

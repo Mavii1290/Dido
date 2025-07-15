@@ -109,7 +109,7 @@
     },
     {
       "nav_name": "CATALOG",
-      "link": "/service",
+      "link": "/catalog",
       "type": "dropdown",
       "sub_nav": [
         {
