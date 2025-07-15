@@ -28,21 +28,23 @@ const ShopPage = () => {
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
   // Load products on initial render or when subcategory changes
-  useEffect(() => {
-    const allProducts: Product[] = flattenAllProducts(shop_data);
+useEffect(() => {
+  const allProducts: Product[] = flattenAllProducts(shop_data);
 
-    if (typeof sub === "string" && sub.length ) {
-      const filtered = filterProductsBySubcategory(shop_data, sub);
-      setSelectedSubcategory(sub);
-      setFilteredProducts(filtered);
-    } else {
-      setSelectedSubcategory(null);
-      setFilteredProducts(allProducts);
-    }
+  let filtered: Product[];
 
-    setVisibleCount();
-    setLoading(false);
-  }, [sub]);
+  if (typeof sub === "string" && sub.length) {
+    filtered = filterProductsBySubcategory(shop_data, sub);
+    setSelectedSubcategory(sub);
+  } else {
+    filtered = allProducts;
+    setSelectedSubcategory(null);
+  }
+
+  setFilteredProducts(filtered);
+  setVisibleCount(filtered.length); // ✅ Pass a number here
+  setLoading(false);
+}, [sub]);
 
   // Infinite scroll + ESC key listener
   useEffect(() => {
