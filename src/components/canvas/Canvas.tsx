@@ -134,7 +134,7 @@ const Canvas: React.FC<CanvasProps> = ({ bladeMode = null, ofCanvasArea }) => {
                 </li>
                 <li>
                   <div className="header_title">
-                    <Link href={"/blog"}>Catalog</Link>
+                    <Link href={"/catalog"}>Catalog</Link>
                   </div>
                 </li>
                 <li>
