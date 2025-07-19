@@ -79,11 +79,11 @@
             "product_num": "po5Lo",
             "img": "/assets/imgs/dido/products/oil/partana_.5L_Organic.png",
             "badge_color": "primary",
-            "badge_text": "3L (101oz)",
+            "badge_text": "500ML (16.9oz)",
             "brand": "Partanna",
             "title": "Organic Unfiltered Extra Virgin Olive Oil",
             "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
-            "quantity_per_case": "12/500L",
+            "quantity_per_case": "12/500ml",
             "new_price": 3.36,
             "old_price": 5.99,
             "btn_color": "primary",
@@ -348,7 +348,7 @@
     "subcategories": [
       {
         "name": "Desserts & Snacks",
-        "slug": "desserts",
+        "slug": "snacks",
         "products": [
           {
             "id": "dais-croissant-pistachio",
@@ -364,7 +364,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "dessert"
+            "sub": "snacks"
           },
           {
             "id": "dolce-sicilian-croissant-cherry",
@@ -380,7 +380,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "dessert"
+            "sub": "snacks"
           },{
             "id": "dolce-sicilian-croissant-choc-hazelnut",
             "product_num": "dschc",
@@ -388,14 +388,14 @@
             "badge_color": "primary",
             "badge_text": "6 X 50g=270G",
             "brand": "Dolce Siciliana Croissants",
-            "title": "Cocoa & Hazelnut Filled Croissant",
+            "title": "Cocoa Hazelnut Filled Croissant",
             "description": "The soft cocoa and hazelnut cream filling inspires you to wake up and enjoy breakfast. The delicious recipe for Dais Chocolate and Hazelnut Croissants makes them ideal for the whole family and a delicious break. Imported directly from Sicily, these Cornetti Cocoa and hazelnut cream Dolce Sicilia are the perfect sweet treat. Each package contains 6 individually wrapped croissants. As you unwrap each one, you'll be greeted by the delightful aroma of freshly baked croissant filled with luscious cocoa and hazelnut cream.",
             "quantity_per_case": "6/6 X 50g=270G",
             "new_price": 3.36,
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "dessert"
+            "sub": "snacks"
           }
         ]
       },
@@ -417,7 +417,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "chocolate"
+            "sub": ["chocolate", "snacks"]
           }
         ]
       }

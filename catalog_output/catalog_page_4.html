@@ -1,0 +1,154 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Catalog - Page 4</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 0; padding: 20px; box-sizing: border-box; }
+            .header { text-align: center; margin-bottom: 30px; }
+            .logo { max-width: 150px; height: auto; }
+            .catalog-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+            .product-item {
+                border: 1px solid #eee;
+                padding: 15px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .product-image {
+                max-width: 100%;
+                height: 150px; /* Fixed height for consistency */
+                object-fit: contain; /* Ensures the whole image is visible */
+                margin-bottom: 10px;
+            }
+            .product-info {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .product-badge {
+                display: inline-block;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 0.8em;
+                margin-bottom: 5px;
+            }
+            .badge-primary { background-color: #007bff; color: white; }
+            .product-brand { font-size: 0.9em; color: #555; margin-bottom: 5px; }
+            .product-title { font-size: 1.1em; font-weight: bold; margin-bottom: 10px; }
+            .product-description { font-size: 0.85em; color: #666; margin-bottom: 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+            .product-details { margin-top: 10px; }
+            .product-price { font-size: 1em; font-weight: bold; margin-right: 10px; }
+            .new-price { color: #28a745; }
+            .old-price { text-decoration: line-through; color: #dc3545; }
+            .btn {
+                background-color: #007bff;
+                color: white;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+            .footer {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 0.9em;
+                color: #777;
+            }
+            .category-heading, .subcategory-heading {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+            h2 { margin-top: 40px; }
+            h3 { margin-top: 20px; }
+            .pagination { text-align: center; margin-top: 20px; }
+            .pagination a {
+                margin: 0 5px;
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                text-decoration: none;
+                color: #007bff;
+                border-radius: 4px;
+            }
+            .pagination a.active {
+                background-color: #007bff;
+                color: white;
+                border-color: #007bff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <img src="/assets/imgs/dido/dido_logo.png" alt="Company Logo" class="logo">
+        </div>
+        <h2 class="category-heading">Sweets</h2>
+        <h3 class="subcategory-heading">Desserts & Snacks</h3>
+        <div class="catalog-grid">
+            
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/sweets/pistachio-croissants.png" alt="Pistachio Cream Croissant" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">5 X 50g=250G</span>
+            <p class="product-brand">Dais Cornetti</p>
+            <h4 class="product-title">Pistachio Cream Croissant</h4>
+            <p class="product-description">Indulge in the rich and authentic flavors of Sicily with this Pistacchio Cream Filled Croissant Individual Snack Cakes.  Imported directly from Sicily, these Cornetti Pistacchio Dolce Sicilia are the perfect sweet treat. Each package contains 5 individually wrapped croissants. As you unwrap each one, you'll be greeted by the delightful aroma of freshly baked croissant filled with luscious pistacchio cream.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/5 X 50g=250G</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/sweets/cherry-croissants.png" alt="Cherry Filled Croissant" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">6 X 50g=270G</span>
+            <p class="product-brand">Dolce Siciliana Croissants</p>
+            <h4 class="product-title">Cherry Filled Croissant</h4>
+            <p class="product-description">Croissants filled with cherry jam are the sweetest way to start the day. The sweet flavor of ripe cherries makes them perfect for even the littlest ones, for breakfast or as a snack. Imported directly from Sicily, these Cornetti Cherry Dolce Sicilia are the perfect sweet treat. Each package contains 6 individually wrapped croissants. As you unwrap each one, you'll be greeted by the delightful aroma of freshly baked croissant filled with luscious cherry jam.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/6 X 50g=270G</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/sweets/choc-hazelnut-croissants.png" alt="Cocoa Hazelnut Filled Croissant" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">6 X 50g=270G</span>
+            <p class="product-brand">Dolce Siciliana Croissants</p>
+            <h4 class="product-title">Cocoa Hazelnut Filled Croissant</h4>
+            <p class="product-description">The soft cocoa and hazelnut cream filling inspires you to wake up and enjoy breakfast. The delicious recipe for Dais Chocolate and Hazelnut Croissants makes them ideal for the whole family and a delicious break. Imported directly from Sicily, these Cornetti Cocoa and hazelnut cream Dolce Sicilia are the perfect sweet treat. Each package contains 6 individually wrapped croissants. As you unwrap each one, you'll be greeted by the delightful aroma of freshly baked croissant filled with luscious cocoa and hazelnut cream.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/6 X 50g=270G</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+        </div>
+        <div class="footer">
+            Page 4 of 4
+        </div>
+    </body>
+    </html>
+    

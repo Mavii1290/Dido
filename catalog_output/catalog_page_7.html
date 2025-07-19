@@ -1,0 +1,202 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Catalog - Page 7</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 0; padding: 20px; box-sizing: border-box; }
+            .header { text-align: center; margin-bottom: 30px; }
+            .logo { max-width: 150px; height: auto; }
+            .catalog-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+            .product-item {
+                border: 1px solid #eee;
+                padding: 15px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .product-image {
+                max-width: 100%;
+                height: 150px; /* Fixed height for consistency */
+                object-fit: contain; /* Ensures the whole image is visible */
+                margin-bottom: 10px;
+            }
+            .product-info {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .product-badge {
+                display: inline-block;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 0.8em;
+                margin-bottom: 5px;
+            }
+            .badge-primary { background-color: #007bff; color: white; }
+            .product-brand { font-size: 0.9em; color: #555; margin-bottom: 5px; }
+            .product-title { font-size: 1.1em; font-weight: bold; margin-bottom: 10px; }
+            .product-description { font-size: 0.85em; color: #666; margin-bottom: 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+            .product-details { margin-top: 10px; }
+            .product-price { font-size: 1em; font-weight: bold; margin-right: 10px; }
+            .new-price { color: #28a745; }
+            .old-price { text-decoration: line-through; color: #dc3545; }
+            .btn {
+                background-color: #007bff;
+                color: white;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+            .footer {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 0.9em;
+                color: #777;
+            }
+            .category-heading, .subcategory-heading {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+            h2 { margin-top: 40px; }
+            h3 { margin-top: 20px; }
+            .pagination { text-align: center; margin-top: 20px; }
+            .pagination a {
+                margin: 0 5px;
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                text-decoration: none;
+                color: #007bff;
+                border-radius: 4px;
+            }
+            .pagination a.active {
+                background-color: #007bff;
+                color: white;
+                border-color: #007bff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <img src="/assets/imgs/dido/dido_logo.png" alt="Company Logo" class="logo">
+        </div>
+        <h2 class="category-heading">Beverages</h2>
+        <h3 class="subcategory-heading">Carbonated Drinks</h3>
+        <div class="catalog-grid">
+            
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/beverages/Blood-orange_4pk.png" alt="Aranciata Sparkling Blood Orange Beverage" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">330ml 4Pk</span>
+            <p class="product-brand">A'Sicilian</p>
+            <h4 class="product-title">Aranciata Sparkling Blood Orange Beverage</h4>
+            <p class="product-description">The Blood Orange is a variety of orange with crimson, almost-blood-colored flesh. The fruit is roughly the same size as an average orange, but sometimes can be smaller or larger; its skin is usually pitted, but can be smooth. The distinctive dark flesh color is due to the presence of anthocyanin, a family of antioxidant pigments common to many flowers and fruit, but uncommon in citrus fruits. Blood oranges have a unique flavor profile compared to other oranges, being distinctly raspberry-like in addition to the usual citrus notes. The arancia rossa di Sicilia (red orange of Sicily) has protected geographical status.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 4/6pk</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/beverages/Limonata_4pk.png" alt="Limonata Sparkling Lemon Beverage" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">330ml 4Pk</span>
+            <p class="product-brand">A'Sicilian</p>
+            <h4 class="product-title">Limonata Sparkling Lemon Beverage</h4>
+            <p class="product-description">A' Siciliana Sicilian Limonata Lemon Soda is made from fresh lemons from the coasts of Sicily. Lemon drinks are extremely popular in Italy, and this Italian lemon soda is a great representation of why that is. Zingy and refreshing, A' Siciliana Sicilian Limonata Lemon Soda is an ideal drink to grab on a hot day.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 4/6pk</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/beverages/Mandarino_4pk.png" alt="Mandarino Sparkling Mandarin Beverage" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">330ml 4Pk</span>
+            <p class="product-brand">A'Sicilian</p>
+            <h4 class="product-title">Mandarino Sparkling Mandarin Beverage</h4>
+            <p class="product-description">Transport your taste buds straight to the sun-soaked groves of Sicily with A’ Siciliana Mandarino di Sicilia. This refreshing Italian soda is made with real Sicilian mandarins, delivering a bright, citrusy burst of flavor in every sip. Lightly sparkling and irresistibly aromatic, it’s the perfect balance of sweet and zesty.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 4/6pk</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/beverages/Melograno_4pk.png" alt="Melograno Sparkling Pomegranate Beverage" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">330ml 4Pk</span>
+            <p class="product-brand">A'Sicilian</p>
+            <h4 class="product-title">Melograno Sparkling Pomegranate Beverage</h4>
+            <p class="product-description">Saratoga Sparkling Spring Water is the perfect balance of light taste with just the right amount of carbonation. The champagne-like bubbles help slense the palate and complement the flavors of fine food and wine.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 4/6pk</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/beverages/limonata_1L.png" alt="Limonata Sparkling Lemon Beverage" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">1L (33.8oz)</span>
+            <p class="product-brand">A'Sicilian</p>
+            <h4 class="product-title">Limonata Sparkling Lemon Beverage</h4>
+            <p class="product-description">A' Siciliana Sicilian Limonata Lemon Soda is made from fresh lemons from the coasts of Sicily. Lemon drinks are extremely popular in Italy, and this Italian lemon soda is a great representation of why that is. Zingy and refreshing, A' Siciliana Sicilian Limonata Lemon Soda is an ideal drink to grab on a hot day.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/1L</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/beverages/aranciata_1L.png" alt="Aranciata Sparkling Blood Orange Beverage" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">1L (33.8oz)</span>
+            <p class="product-brand">A'Sicilian</p>
+            <h4 class="product-title">Aranciata Sparkling Blood Orange Beverage</h4>
+            <p class="product-description">The Blood Orange is a variety of orange with crimson, almost-blood-colored flesh. The fruit is roughly the same size as an average orange, but sometimes can be smaller or larger; its skin is usually pitted, but can be smooth. The distinctive dark flesh color is due to the presence of anthocyanin, a family of antioxidant pigments common to many flowers and fruit, but uncommon in citrus fruits. Blood oranges have a unique flavor profile compared to other oranges, being distinctly raspberry-like in addition to the usual citrus notes. The arancia rossa di Sicilia (red orange of Sicily) has protected geographical status.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/1L</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+        </div>
+        <div class="footer">
+            Page 7 of 4
+        </div>
+    </body>
+    </html>
+    

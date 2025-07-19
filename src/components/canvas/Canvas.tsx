@@ -134,7 +134,7 @@ const Canvas: React.FC<CanvasProps> = ({ bladeMode = null, ofCanvasArea }) => {
                 </li>
                 <li>
                   <div className="header_title">
-                    <Link href={"/catalog"}>Catalog</Link>
+                    <a href="/catalog/Dido_Product_Catalog.pdf" target="_blank" rel="noopener noreferrer">CATALOG</a>
                   </div>
                 </li>
                 <li>

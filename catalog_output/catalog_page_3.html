@@ -1,0 +1,170 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Catalog - Page 3</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 0; padding: 20px; box-sizing: border-box; }
+            .header { text-align: center; margin-bottom: 30px; }
+            .logo { max-width: 150px; height: auto; }
+            .catalog-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+            .product-item {
+                border: 1px solid #eee;
+                padding: 15px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .product-image {
+                max-width: 100%;
+                height: 150px; /* Fixed height for consistency */
+                object-fit: contain; /* Ensures the whole image is visible */
+                margin-bottom: 10px;
+            }
+            .product-info {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .product-badge {
+                display: inline-block;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 0.8em;
+                margin-bottom: 5px;
+            }
+            .badge-primary { background-color: #007bff; color: white; }
+            .product-brand { font-size: 0.9em; color: #555; margin-bottom: 5px; }
+            .product-title { font-size: 1.1em; font-weight: bold; margin-bottom: 10px; }
+            .product-description { font-size: 0.85em; color: #666; margin-bottom: 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+            .product-details { margin-top: 10px; }
+            .product-price { font-size: 1em; font-weight: bold; margin-right: 10px; }
+            .new-price { color: #28a745; }
+            .old-price { text-decoration: line-through; color: #dc3545; }
+            .btn {
+                background-color: #007bff;
+                color: white;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+            .footer {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 0.9em;
+                color: #777;
+            }
+            .category-heading, .subcategory-heading {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+            h2 { margin-top: 40px; }
+            h3 { margin-top: 20px; }
+            .pagination { text-align: center; margin-top: 20px; }
+            .pagination a {
+                margin: 0 5px;
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                text-decoration: none;
+                color: #007bff;
+                border-radius: 4px;
+            }
+            .pagination a.active {
+                background-color: #007bff;
+                color: white;
+                border-color: #007bff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <img src="/assets/imgs/dido/dido_logo.png" alt="Company Logo" class="logo">
+        </div>
+        <h2 class="category-heading">Pantry Staples</h2>
+        <h3 class="subcategory-heading">Pasta</h3>
+        <div class="catalog-grid">
+            
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/pasta/partanna_busiate.png" alt="Busiate Pasta" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">454g (1lb)</span>
+            <p class="product-brand">Partanna</p>
+            <h4 class="product-title">Busiate Pasta</h4>
+            <p class="product-description">Partanna Busiate Sicilian Pasta has only the best Italian ingredients together with ancient semolina flour are used to make our Pasta. Our pasta is produced using the best Sicilian durum wheat, a key factor to offer a pasta with high nutritional value and rich in proteins. Each production phase follows the steps that have been handed down according to the most ancient tradition: bronze drawing and slow drying, which are fundamental to obtain a pleasant rough dough and an excellent cooking strength.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/454g Bag</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/pasta/frankies_rigatoni.png" alt="Organic Rigatoni Pasta" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">454g (1lb)</span>
+            <p class="product-brand">Frankies 457</p>
+            <h4 class="product-title">Organic Rigatoni Pasta</h4>
+            <p class="product-description">Frankies Artisanal Rigatoni Pasta is Essential to Rome and the world, rigatoni are a fixture of the Italian-American Sunday table. And, much like the Italian-American Sunday table, they’re large, fun, and messy—but hold everything together beautifully. Rigatoni pair incredibly well with everything from a bright pesto to an indulgent vodka or meat sauce.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/454g Bag</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/pasta/frankies_cavatelli.png" alt="Organic Cavatelli Pasta" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">454g (1lb)</span>
+            <p class="product-brand">Frankies 457</p>
+            <h4 class="product-title">Organic Cavatelli Pasta</h4>
+            <p class="product-description">Frankies Artisanal Cavatelli pasta is prized throughout Southern Italy for their soft, snappy bite, cavatelli are the ideal vehicle for meatballs and marinara and the magical combination of sautéed broccoli and garlic. <br> We use them in our most famous dish at Frankies 457 Spuntino: cavatelli with spicy sausage, crispy sage, and brown butter.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/454g Bag</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="product-item">
+        <img src="/assets/imgs/dido/products/pasta/frankies_pappardelle.png" alt="Organic Pappardelle Pasta" class="product-image">
+        <div class="product-info">
+            <span class="product-badge badge-primary">3L (101oz)</span>
+            <p class="product-brand">Frankies 457</p>
+            <h4 class="product-title">Organic Pappardelle Pasta</h4>
+            <p class="product-description">Frankies Artisanal Pasta is typical of Emilia-Romagna, pappardelle are luxurious, silky, and smooth. While most versions are made with eggs, ours are a bit less heavy while still delivering all that glorious texture. Pappardelle will become fast friends with any buttery or meaty sauce, such as a Bolognese. We like to pair them with vegetable ragù.</p>
+            <div class="product-details">
+                <span class="quantity-per-case">Case: 6/454g Bag</span>
+                <span class="product-price new-price">$3.36</span>
+                <span class="product-price old-price">$5.99</span>
+            </div>
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    
+        </div>
+        <div class="footer">
+            Page 3 of 4
+        </div>
+    </body>
+    </html>
+    

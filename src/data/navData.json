@@ -110,19 +110,7 @@
     {
       "nav_name": "CATALOG",
       "link": "/catalog",
-      "type": "dropdown",
-      "sub_nav": [
-        {
-          "name": "VIEW",
-          "link": "/service",
-          "sub_dropdown_nav": [
-            {
-              "name": "DOWNLOAD",
-              "link": ""
-            }
-          ]
-        }
-      ]
+      "type": ""
     },
     {
       "nav_name": "CONTACT",
