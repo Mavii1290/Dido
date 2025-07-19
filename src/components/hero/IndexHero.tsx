@@ -64,8 +64,10 @@ const IndexHero = () => {
               </div>
               <div className="hero__text-3">
                 <p className="hero__text-animation" ref={heroTextAnim}>
-                  Olive Oil | Fine Foods<br />
-                  Imported Goods | Wholesale Distributor
+                  Olive Oil | Fine Foods  <br />
+                </p>
+                <p className="hero__text-animation" ref={heroTextAnim}>
+                    Imported Goods | Wholesale Distributor
                 </p>
               </div>
             </div>

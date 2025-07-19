@@ -3,8 +3,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
 import Image from "next/image";
 
-import Brand5 from "../../../public/assets/imgs/brand/5.png";
-import Brand6 from "../../../public/assets/imgs/brand/6.png";
 import Kinder from "../../../public/assets/imgs/dido/brands/Kinder.png";
 import sanBenedetto from "../../../public/assets/imgs/dido/brands/sanBenedetto.png";
 import Bauli from "../../../public/assets/imgs/dido/brands/Bauli.png";
