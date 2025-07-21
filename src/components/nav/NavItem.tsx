@@ -109,7 +109,6 @@
 //   );
 // }
 
-
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
@@ -183,7 +182,7 @@ export default function NavItem({ nav, navStyle = "" }: NavItemProps) {
             return (
               <li className="has-megamenu" key={i}>
                 <Link href={el.link}>
-                  <a>{el.nav_name}</a> {/* Added <a> for explicit Link child */}
+                  {el.nav_name} {/* REMOVED the <a> tag */}
                 </Link>
                 <ul className={el.full_width ? "mega-menu" : "mega-menu-2"}></ul>
               </li>
@@ -192,20 +191,20 @@ export default function NavItem({ nav, navStyle = "" }: NavItemProps) {
             return (
               <li key={i}>
                 <Link href={el.link}>
-                  <a>{el.nav_name}</a> {/* Added <a> for explicit Link child */}
+                  {el.nav_name} {/* REMOVED the <a> tag */}
                 </Link>
                 <ul className="main-dropdown">
                   {el.sub_nav.map((subEl, index) => (
                     <li key={index}>
                       <Link href={subEl.link}>
-                        <a>{subEl.name}</a> {/* Added <a> for explicit Link child */}
+                        {subEl.name} {/* REMOVED the <a> tag */}
                       </Link>
                       {subEl.sub_dropdown_nav && subEl.sub_dropdown_nav.length > 0 && (
                         <ul className="sub-dropdown">
                           {subEl.sub_dropdown_nav.map((subDrop, subIndex) => (
                             <li key={subIndex}>
                               <Link href={subDrop.link}>
-                                <a>{subDrop.name}</a> {/* Added <a> for explicit Link child */}
+                                {subDrop.name} {/* REMOVED the <a> tag */}
                               </Link>
                             </li>
                           ))}
@@ -221,9 +220,9 @@ export default function NavItem({ nav, navStyle = "" }: NavItemProps) {
               return (
                 <li key={i}>
                   <a
-                    href="/catalog/Dido_Product_Catalog.pdf" 
-                    target="_blank"                        
-                    rel="noopener noreferrer"              
+                    href="/catalog/Dido_Product_Catalog.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {el.nav_name}
                   </a>
@@ -234,7 +233,7 @@ export default function NavItem({ nav, navStyle = "" }: NavItemProps) {
               return (
                 <li key={i}>
                   <Link href={el.link}>
-                    <a>{el.nav_name}</a> {/* Added <a> for explicit Link child */}
+                    {el.nav_name} {/* REMOVED the <a> tag */}
                   </Link>
                 </li>
               );

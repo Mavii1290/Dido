@@ -3,16 +3,28 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
 import Image from "next/image";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation'; // If you want navigation arrows
+import 'swiper/css/pagination'; // If you want pagination dots
+
+// Import required modules
+// *** FIX STARTS HERE ***
+import { Autoplay, Navigation, Pagination } from 'swiper'; // Import modules directly from 'swiper'
+// *** FIX ENDS HERE ***
+
+// Your brand images
 import Kinder from "../../../public/assets/imgs/dido/brands/Kinder.png";
 import sanBenedetto from "../../../public/assets/imgs/dido/brands/sanBenedetto.png";
 import Bauli from "../../../public/assets/imgs/dido/brands/Bauli.png";
 import Partanna from "../../../public/assets/imgs/dido/brands/Partanna.png";
 import Sicilian from "../../../public/assets/imgs/dido/brands/a'siciliana.png";
-import Vallolmo from "../../../public/assets/imgs/dido/brands/Vallolmo.png"
+import Vallolmo from "../../../public/assets/imgs/dido/brands/Vallolmo.png";
 
-
-
-// Register the plugin
+// Register the plugin (keep for existing GSAP animations if still needed elsewhere)
 gsap.registerPlugin(ScrollTrigger);
 
 const Brand = () => {
@@ -62,26 +74,61 @@ const Brand = () => {
     }
   }, []);
 
+  const brandImages = [Kinder, sanBenedetto, Bauli, Partanna, Vallolmo, Sicilian];
+
   return (
     <section className="brand__area">
       <div className="container pt-140 pb-140">
         <div className="row">
           <div className="col-xxl-12">
-            <h2 className="brand__title-3 title-anim">
+            <h2 className="brand__title-3 title-anim fade_bottom">
               We worked with global brands
             </h2>
-            <div className="brand__list-3">
-              {[Kinder, sanBenedetto, Bauli, Partanna, Vallolmo, Sicilian].map((src, i) => (
-                <div className="brand__item-2 fade_bottom" key={i}>
-                  <Image
-                    priority
-                    width={120}
-                    height={70}
-                    src={src}
-                    alt="Brand Logo"
-                  />
-                </div>
-              ))}
+            <div className="brand__carousel_container fade_bottom">
+              <Swiper
+                modules={[Autoplay, Navigation, Pagination]}
+                spaceBetween={30}
+                slidesPerView={2}
+                loop={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                pagination={{ clickable: true }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                  768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                  },
+                  1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                {brandImages.map((src, i) => (
+                  <SwiperSlide key={i}>
+                    <div className="brand__item-2">
+                      <Image
+                        priority
+                        width={120}
+                        height={70}
+                        src={src}
+                        alt="Brand Logo"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>

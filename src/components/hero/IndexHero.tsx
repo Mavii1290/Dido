@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { SplitText } from "@/plugins";
 import Image from "next/image";
 import homepage_img from "../../../public/assets/imgs/dido/homepage_img.png";
+import CTAButton from "../cta/CTAButton";
+import Link from "next/link";
 
 const IndexHero = () => {
   const titleLeft = useRef<HTMLHeadingElement>(null);
@@ -48,13 +50,27 @@ const IndexHero = () => {
   }, []);
 
   return (
-    <section className="hero__area-3" ref={heroArea}>
+
+
+    <section on className="hero__area-3" ref={heroArea}>
+          <div className="hero3-img-ani">
+        <Image
+          priority
+          width={1195}
+          style={{ height: "auto" }}
+          src={homepage_img}
+          alt="Hero Image"
+          className="hero3-img"
+        />
+      </div> 
       <div className="container">
         <div className="row">
+
+
+
           <div className="col-xxl-12">
             <div className="hero__inner-3">
               <div className="sec-title-wrapper">
-                <h2 className="sec-sub-title"></h2>
                 <h3 className="sec-title title-left" ref={titleLeft}>
                   Dido
                 </h3>
@@ -69,22 +85,17 @@ const IndexHero = () => {
                 <p className="hero__text-animation" ref={heroTextAnim}>
                     Imported Goods | Wholesale Distributor
                 </p>
+                <br/>
+                 <Link href="/contact" className=" btn-hover btn-item">
+              <h2 className="cta__content_button">Work with us</h2>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="hero3-img-ani">
-        <Image
-          priority
-          width={1195}
-          style={{ height: "auto" }}
-          src={homepage_img}
-          alt="Hero Image"
-          className="hero3-img"
-        />
-      </div>
+     
     </section>
   );
 };
