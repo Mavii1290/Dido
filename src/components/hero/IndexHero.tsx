@@ -52,22 +52,9 @@ const IndexHero = () => {
   return (
 
 
-    <section on className="hero__area-3" ref={heroArea}>
-          <div className="hero3-img-ani">
-        <Image
-          priority
-          width={1195}
-          style={{ height: "auto" }}
-          src={homepage_img}
-          alt="Hero Image"
-          className="hero3-img"
-        />
-      </div> 
-      <div className="container">
+    <section className="hero__area-3" ref={heroArea}>
+        <div className="container">
         <div className="row">
-
-
-
           <div className="col-xxl-12">
             <div className="hero__inner-3">
               <div className="sec-title-wrapper">
@@ -78,6 +65,7 @@ const IndexHero = () => {
                   Distributions
                 </h3>
               </div>
+              <br/><br/>
               <div className="hero__text-3">
                 <p className="hero__text-animation" ref={heroTextAnim}>
                   Olive Oil | Fine Foods  <br />
@@ -95,6 +83,17 @@ const IndexHero = () => {
         </div>
       </div>
 
+
+ <div className="hero3-img-ani">
+        <Image
+          priority
+          width={1195}
+          style={{ height: "auto" }}
+          src={homepage_img}
+          alt="Hero Image"
+          className="hero3-img"
+        />
+      </div> 
      
     </section>
   );
