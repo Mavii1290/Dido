@@ -12,7 +12,7 @@
         "products": [
           {
             "id": "partanna_3Lcan",
-            "product_num": "po3L",
+            "product_num": "O01",
             "img": "/assets/imgs/dido/products/oil/partanna_3Lcan.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
@@ -28,7 +28,7 @@
           },
           {
             "id": "Partanna_1Lglass",
-            "product_num": "po1Lg",
+            "product_num": "O02",
             "img": "/assets/imgs/dido/products/oil/patanna_1L_glass.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -44,7 +44,7 @@
           },
           {
             "id": "Partanna_.5LCan",
-            "product_num": "po5L",
+            "product_num": "O03",
             "img": "/assets/imgs/dido/products/oil/partanna_.5Lcan.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
@@ -60,7 +60,7 @@
           },
           {
             "id": "partanna_mini",
-            "product_num": "po100ml",
+            "product_num": "O04",
             "img": "/assets/imgs/dido/products/oil/partanna_mini.png",
             "badge_color": "primary",
             "badge_text": "100ML (3.4oz)",
@@ -76,7 +76,7 @@
           },          
           {
             "id": "partanna_.5Lorganic_can",
-            "product_num": "po5Lo",
+            "product_num": "O05",
             "img": "/assets/imgs/dido/products/oil/partana_.5L_Organic.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
@@ -91,14 +91,14 @@
             "sub": "oil"
           },          {
             "id": "pugliese",
-            "product_num": "po3L",
+            "product_num": "O06",
             "img": "/assets/imgs/dido/products/oil/pugliese.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
             "brand": "Pugliese",
             "title": "Extra Virgin Olive Oil",
             "description": "Pugliese Extra Virgin Olive Oil is a premium, all-natural product crafted using traditional extraction methods. Celebrated since the days of ancient Greek and Roman civilizations, this oil has long been valued for its rich nutritional and dietary benefits. Staying true to that timeless heritage, Pugliese Olive Oil continues to honor the art of authentic olive oil production. Perfect for enhancing the flavor of salads, meats, fish, and poultry, it’s also the secret ingredient behind many gourmet sauces and soups.",
-            "quantity_per_case": "12/500ml",
+            "quantity_per_case": "/3L",
             "new_price": 3.36,
             "old_price": 5.99,
             "btn_color": "primary",
@@ -107,13 +107,13 @@
           },
           {
             "id": "sicano_oil",
-            "product_num": "so1L",
+            "product_num": "O07",
             "img": "/assets/imgs/dido/products/oil/sicano_oil.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
             "brand": "IL Sicano",
             "title": "Organic Extra Virgin Olive Oil ",
-            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "description": "Dedicated to the Sicans, Sicily's earliest inhabitants, this olive oil is crafted from highly regarded Nocellara del Belice olives grown in Partanna and Selinunte. Cold-extracted, it's a vibrant green oil with golden tints, rich in polyphenols and an intense fruity aroma. Balanced with harmonious spiciness and soft bitterness, it's perfect for a wide range of dishes, from fresh cheeses to meats and soups.",
             "quantity_per_case": "6/1L",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -123,13 +123,13 @@
           },
           {
             "id": "diamante_oil",
-            "product_num": "do1L",
+            "product_num": "O08",
             "img": "/assets/imgs/dido/products/oil/diamante_oil.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
             "brand": "Rustico",
             "title": "Diamante Verde Extra Virgin Olive Oil ",
-            "description": "Partanna Sicilian Robust Extra Virgin Olive Oil is our family's favorite, go-to, everyday olive oil. It's ideal for sautéing vegetables to bring out their natural flavors, roasting meats to perfection, and baking delectable treats.",
+            "description": "Rustico, Diamante Verde Extra Virgin Olive Oil is our family's favorite, everyday olive oil, ideal for sautéing vegetables, roasting meats, and baking delectable treats. Crafted from highly regarded Nocellara del Belice olives grown in Partanna and Selinunte, this vibrant green oil is rich in polyphenols with an intense fruity aroma. ",
             "quantity_per_case": "",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -139,7 +139,7 @@
           },
           {
             "id": "Frankies-oil-.5L",
-            "product_num": "fo5Lo",
+            "product_num": "O09",
             "img": "/assets/imgs/dido/products/oil/frankies_.5L.png",
             "badge_color": "primary",
             "badge_text": "500ML (16.9oz)",
@@ -155,7 +155,7 @@
           },
           {
             "id": "Frankies-oil-1L",
-            "product_num": "fo1Lo",
+            "product_num": "O10",
             "img": "/assets/imgs/dido/products/oil/frankies_1L.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -192,7 +192,7 @@
             "sub": "olives-and-pickled-jars"
           },{
             "id": "partanna_mediteranean_olives-jar",
-            "product_num": "pol26lb",
+            "product_num": "OL02",
             "img": "/assets/imgs/dido/products/olives-pickled/partanna-mediteranean-olives.png",
             "badge_color": "primary",
             "badge_text": "260g (.26lb)",
@@ -208,7 +208,7 @@
           },
           {
             "id": "partanna_green_olives-2kgcan",
-            "product_num": "pol2kgw",
+            "product_num": "OL03",
             "img": "/assets/imgs/dido/products/olives-pickled/partanna-green-olives.png",
             "badge_color": "primary",
             "badge_text": "2.25kg (5.5lb)",
@@ -224,7 +224,7 @@
           },
           {
             "id": "partanna_pitted_olives-2kgcan",
-            "product_num": "pol2kgp",
+            "product_num": "OL04",
             "img": "/assets/imgs/dido/products/olives-pickled/partanna-pitted-olives.png",
             "badge_color": "primary",
             "badge_text": "2.3kg (5.07lb)",
@@ -239,13 +239,28 @@
             "sub": "olives-and-pickled-jars"
           },{
             "id": "frankies_black_olives-12oz-jar",
-            "product_num": "fol12oz",
+            "product_num": "OL05",
             "img": "/assets/imgs/dido/products/olives-pickled/Frankies-black-olives.png",
             "badge_color": "primary",
             "badge_text": "340g (12oz)",
             "brand": "Frankies 457",
             "title": "Sicilian Black Olives",
             "description": "The closest thing to eating an olive straight from the tree, these Cerasuola and Nocellara varieties are a favorite of Sicilian farmers who crave their bold, fruity, full flavor. You should cook with them, too: black olives balance out the sweetness in salads and the richness of meats, fish, and grilled vegetables. ",
+            "quantity_per_case": "6/340g Jars",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "olives-and-pickled-jars"
+          },{
+            "id": "frankies_green_olives-12oz-jar",
+            "product_num": "OL06",
+            "img": "/assets/imgs/dido/products/olives-pickled/frankies-green-olives.png",
+            "badge_color": "primary",
+            "badge_text": "340g (12oz)",
+            "brand": "Frankies 457",
+            "title": "Whole Castelvetrano Olives",
+            "description": "Prized for their buttery, smooth flavor, these whole Castelvetrano olives are a perfect match for any celebration. Add them to your next charcuterie board or Aperitivo hour to experience the fullest, brightest expression of this earthy varietal. They're an exquisite complement to good company and a glass of champagne.",
             "quantity_per_case": "6/340g Jars",
             "new_price": 3.36,
             "old_price": 5.99,
@@ -262,7 +277,7 @@
         "products": [
           {
             "id": "partanna-pasta-busiate1lb",
-            "product_num": "ppb1lb",
+            "product_num": "P01",
             "img": "/assets/imgs/dido/products/pasta/partanna_busiate.png",
             "badge_color": "primary",
             "badge_text": "454g (1lb)",
@@ -277,7 +292,7 @@
             "sub": "pasta"
           },{
             "id": "frankies-pasta-rigatonilb",
-            "product_num": "fpr1lb",
+            "product_num": "P02",
             "img": "/assets/imgs/dido/products/pasta/frankies_rigatoni.png",
             "badge_color": "primary",
             "badge_text": "454g (1lb)",
@@ -292,7 +307,7 @@
             "sub": "pasta"
           },{
             "id": "frankies-pasta-cavatelli-1lb",
-            "product_num": "fpc1lb",
+            "product_num": "P03",
             "img": "/assets/imgs/dido/products/pasta/frankies_cavatelli.png",
             "badge_color": "primary",
             "badge_text": "454g (1lb)",
@@ -307,7 +322,7 @@
             "sub": "pasta"
           },{
             "id": "frankies-pasta-pappardelle-1lb",
-            "product_num": "fpp1lb",
+            "product_num": "P04",
             "img": "/assets/imgs/dido/products/pasta/frankies_pappardelle.png",
             "badge_color": "primary",
             "badge_text": "3L (101oz)",
@@ -324,9 +339,62 @@
         ]
       },
       {
+        "name": "Sauce",
+        "slug": "sauce",
+        "products": [
+          {
+            "id": "sauce-mutti",
+            "product_num": "S01",
+            "img": "/assets/imgs/dido/products/sauce/mutti.png",
+            "badge_color": "primary",
+            "badge_text": "700g",
+            "brand": "Mutti",
+            "title": "Passata di Pomodoro, Tomato Puree",
+            "description": "Experience the difference with Mutti Tomato Puree. We use only the reddest, peak-season tomatoes, harvested and carefully processed right away to create a smooth, creamy puree. It's free of skins and seeds, offering a naturally sweet and inviting flavor.",
+            "quantity_per_case": "12/700g",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "sauce"
+          },{
+            "id": "Sauce-suzybel",
+            "product_num": "S02",
+            "img": "/assets/imgs/dido/products/sauce/suzybel.png",
+            "badge_color": "primary",
+            "badge_text": "6lb 11oz",
+            "brand": "Suzy Bel",
+            "title": "Tomato Puree Cans",
+            "description": "Enjoy the true taste of garden-fresh tomatoes with Suzy Bel® Tomato Puree. You'll get that bright red color and creamy, smooth texture, all without seeds or skins. We promise maximum fresh flavor because it's always 'Packed From Fresh Tomatoes, Not From Concentrate.'",
+            "quantity_per_case": "6/6lb 11oz",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "sauce"
+          }
+        ]},
+      {
         "name": "Spices & Seasoning",
         "slug": "spices-and-seasoning",
-        "products": []
+        "products": [
+          {
+            "id": "morton-salt",
+            "product_num": "SS01",
+            "img": "/assets/imgs/dido/products/seasoning/morton-salt.png",
+            "badge_color": "primary",
+            "badge_text": "50lb bag",
+            "brand": "Morton",
+            "title": "All Purpose Salt",
+            "description": "This iodine-free Morton table salt is an essential seasoning for any establishment. Its versatile nature makes it suitable for diverse food processing applications, such as cooking meats, blending seasonings, and preparing marinades. Keep your front and back-of-house operations stocked by utilizing this generous supply for refilling shakers and more.",
+            "quantity_per_case": "50lb bag",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "spices-and-seasoning"
+          }
+        ]
       },
       {
         "name": "Syrup, Honey & Spreads",
@@ -347,40 +415,7 @@
        {
         "name": "Cheese",
         "slug": "cheese",
-        "products": [
-          {
-            "id": "cheese-philly-30",
-            "product_num": "D-P30che",
-            "img": "/assets/imgs/dido/products/dairy/philly-30lb.png",
-            "badge_color": "primary",
-            "badge_text": "30lb",
-            "brand": "Philadelphia",
-            "title": "Cream Cheese 30lb Bar",
-            "description": "Philadelphia Cream Cheese bar, 30lb",
-            "quantity_per_case": "30lb",
-            "new_price": 3.36,
-            "old_price": 5.99,
-            "btn_color": "primary",
-            "btn_text": "Add to Cart",
-            "sub": "cheese"
-          },
-                    {
-            "id": "cheese-philly-light-30",
-            "product_num": "D-P30Sche",
-            "img": "/assets/imgs/dido/products/dairy/phill-30lb-light.png",
-            "badge_color": "primary",
-            "badge_text": "30lb",
-            "brand": "Philadelphia",
-            "title": "Light Cream Cheese 30lb Bar",
-            "description": "Philadelphia Light Cream Cheese bar, 30lb",
-            "quantity_per_case": "30lb",
-            "new_price": 3.36,
-            "old_price": 5.99,
-            "btn_color": "primary",
-            "btn_text": "Add to Cart",
-            "sub": "cheese"
-          }
-        ]}
+        "products": []}
     ]
   },
   {
@@ -390,7 +425,54 @@
       {
         "name": "Frozen",
         "slug": "frozen",
-        "products": []
+        "products": [
+          {
+            "id": "Ricotta Cream",
+            "product_num": "F01",
+            "img": "/assets/imgs/dido/products/frozen/ricotta-cannoli.png",
+            "badge_color": "primary",
+            "badge_text": "1.5lb",
+            "brand": "D'Agostino ",
+            "title": "Ricotta Cream Chocolate Chip Sac",
+            "description": "Just when you thought our traditional cannoli cream couldn't get any better, we added mini chocolate chips! Like our classic ricotta cream, this chocolate chip filling is super smooth, sweet, and infused with notes of vanilla. Our delicious filling comes frozen in easy-to-use disposable pastry bags. Simply defrost, and you're ready to fill cannoli and more! Each case contains four 1.5 lb bags of cannoli cream.",
+            "quantity_per_case": "4/1.5lbs",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["frozen", "dairy"]
+          },{
+            "id": "dais-croissant-pistachio",
+            "product_num": "SD01",
+            "img": "/assets/imgs/dido/products/Sweets/pistachio-croissants.png",
+            "badge_color": "primary",
+            "badge_text": "5 X 50g=250G",
+            "brand": "Dais Cornetti",
+            "title": "Pistachio Cream Croissant",
+            "description": "Indulge in the rich and authentic flavors of Sicily with this Pistacchio Cream Filled Croissant Individual Snack Cakes.  Imported directly from Sicily, these Cornetti Pistacchio Dolce Sicilia are the perfect sweet treat. Each package contains 5 individually wrapped croissants. As you unwrap each one, you'll be greeted by the delightful aroma of freshly baked croissant filled with luscious pistacchio cream.",
+            "quantity_per_case": "6/5 X 50g=250G",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "snacks"
+          },{
+            "id": "dais-croissant-pistachio",
+            "product_num": "SD01",
+            "img": "/assets/imgs/dido/products/Sweets/pistachio-croissants.png",
+            "badge_color": "primary",
+            "badge_text": "5 X 50g=250G",
+            "brand": "Dais Cornetti",
+            "title": "Pistachio Cream Croissant",
+            "description": "Indulge in the rich and authentic flavors of Sicily with this Pistacchio Cream Filled Croissant Individual Snack Cakes.  Imported directly from Sicily, these Cornetti Pistacchio Dolce Sicilia are the perfect sweet treat. Each package contains 5 individually wrapped croissants. As you unwrap each one, you'll be greeted by the delightful aroma of freshly baked croissant filled with luscious pistacchio cream.",
+            "quantity_per_case": "6/5 X 50g=250G",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "snacks"
+          }
+        ]
       }
     ]
   },
@@ -404,8 +486,8 @@
         "products": [
           {
             "id": "dais-croissant-pistachio",
-            "product_num": "dspc",
-            "img": "/assets/imgs/dido/products/sweets/pistachio-croissants.png",
+            "product_num": "SD01",
+            "img": "/assets/imgs/dido/products/Sweets/pistachio-croissants.png",
             "badge_color": "primary",
             "badge_text": "5 X 50g=250G",
             "brand": "Dais Cornetti",
@@ -420,8 +502,8 @@
           },
           {
             "id": "dolce-sicilian-croissant-cherry",
-            "product_num": "dscc",
-            "img": "/assets/imgs/dido/products/sweets/cherry-croissants.png",
+            "product_num": "SD02",
+            "img": "/assets/imgs/dido/products/Sweets/cherry-croissants.png",
             "badge_color": "primary",
             "badge_text": "6 X 50g=270G",
             "brand": "Dolce Siciliana Croissants",
@@ -435,8 +517,8 @@
             "sub": "snacks"
           },{
             "id": "dolce-sicilian-croissant-choc-hazelnut",
-            "product_num": "dschc",
-            "img": "/assets/imgs/dido/products/sweets/choc-hazelnut-croissants.png",
+            "product_num": "SD03",
+            "img": "/assets/imgs/dido/products/Sweets/choc-hazelnut-croissants.png",
             "badge_color": "primary",
             "badge_text": "6 X 50g=270G",
             "brand": "Dolce Siciliana Croissants",
@@ -448,6 +530,22 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "snacks"
+          },
+          {
+            "id": "Nutella-450g",
+            "product_num": "SD04",
+            "img": "/assets/imgs/dido/products/Sweets/nutella-450g.png",
+            "badge_color": "primary",
+            "badge_text": "450g",
+            "brand": "Nutella",
+            "title": "Chocolate Hazelnut Spread",
+            "description": "Experience authentic Italian indulgence with Nutella in a glass jar. Made from high-quality, natural ingredients, this rich, creamy hazelnut and chocolate spread is ideal for breakfast, desserts, or any time you crave a sweet treat.",
+            "quantity_per_case": "15/450g",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["chocolate", "snacks"]
           }
         ]
       },
@@ -457,8 +555,8 @@
         "products": [
           {
             "id": "hanuta",
-            "product_num": "hsw18",
-            "img": "/assets/imgs/dido/products/sweets/hanuta.png",
+            "product_num": "SDS05",
+            "img": "/assets/imgs/dido/products/Sweets/hanuta.png",
             "badge_color": "primary",
             "badge_text": "18 x 44g",
             "brand": "Hanuta",
@@ -470,6 +568,75 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": ["chocolate", "snacks"]
+          }
+        ]
+      },
+            {
+        "name": "cookies",
+        "slug": "cookies",
+        "products": [          {
+            "id": "Mulino-biscotti",
+            "product_num": "SDS06",
+            "img": "/assets/imgs/dido/products/Sweets/mulino-abbracci.png",
+            "badge_color": "primary",
+            "badge_text": "350g (12.3oz)",
+            "brand": "Mulino Bianco",
+            "title": "Abbracci Cookies",
+            "description": "Established in 1975, Mulino Bianco is more than just a brand; it's woven into the heart of Italian culture and family nutrition. They offer simple, authentic baked goods across all categories, perfect for enjoying at home or on the go.",
+            "quantity_per_case": "12/350g",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["cookies", "snacks"]
+          },
+                  {
+            "id": "pan-stealla",
+            "product_num": "SDS07",
+            "img": "/assets/imgs/dido/products/Sweets/pan-stella.png",
+            "badge_color": "primary",
+            "badge_text": "350g (12.3oz)",
+            "brand": "Mulino Bianco",
+            "title": "Pan di Stella Cookies",
+            "description": "Unwrap a little magic with Pan di Stelle Mulino Bianco. Each chocolate pastry biscuit is a blend of rich cocoa and hazelnuts, adorned with signature sugar stars. Enjoy them dipped in milk or coffee, or as a standalone treat—they're truly perfect for any moment.",
+            "quantity_per_case": "12/350g",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["cookies", "snacks"]
+          },
+                  {
+            "id": "nutella-biscuits",
+            "product_num": "SDS08",
+            "img": "/assets/imgs/dido/products/Sweets/nutella-biscuits.png",
+            "badge_color": "primary",
+            "badge_text": "41.4g",
+            "brand": "Hanuta",
+            "title": "Wafers filled with Hazelnut Cream",
+            "description": "Hearty, crispy, nutty, mini. Hanuta minis are the small edition of the well-known hazelnut slices with the cream of freshly roasted hazelnuts and tart-aromatic cocoa between two crispy wheat waffles. These ingredients give hanuta the unique nutty-sweet and at the same time slightly tart taste. Whether for the little snack moment, for coffee, tea or simply to share or offer: The minis are always a hit.",
+            "quantity_per_case": "28/41.4g",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["cookies", "snacks"]
+          },
+                  {
+            "id": "lago-savoiardi",
+            "product_num": "SDS09",
+            "img": "/assets/imgs/dido/products/Sweets/lago-sav.png",
+            "badge_color": "primary",
+            "badge_text": "400g",
+            "brand": "Lago Savoiardi",
+            "title": "Lady Fingers",
+            "description": "Discover the gentle magic of Gastone Lago Savoiardi Lady Fingers. These Italian-made biscuits, baked with fresh eggs, offer a delicate softness that holds its shape—even when soaked! They're the quintessential ingredient for an exquisite tiramisu, and an indispensable addition to your baking pantry.",
+            "quantity_per_case": "10/400g",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["cookies", "snacks"]
           }
         ]
       }
@@ -485,7 +652,7 @@
         "products": [
           {
             "id": "saratoga-still-12oz",
-            "product_num": "snw12",
+            "product_num": "B01",
             "img": "/assets/imgs/dido/products/beverages/saratoga-still-24pk.png",
             "badge_color": "primary",
             "badge_text": "12oz",
@@ -500,7 +667,7 @@
             "sub": "water"
           },{
             "id": "saratoga-still-24oz",
-            "product_num": "snw24",
+            "product_num": "B02",
             "img": "/assets/imgs/dido/products/beverages/saratoga-still-12pk.png",
             "badge_color": "primary",
             "badge_text": "28oz",
@@ -515,7 +682,7 @@
             "sub": "water"
           },{
             "id": "saratoga-sparkling-12oz",
-            "product_num": "ssw12",
+            "product_num": "B03",
             "img": "/assets/imgs/dido/products/beverages/saratoga-sparkling-24pk.png",
             "badge_color": "primary",
             "badge_text": "12oz",
@@ -530,7 +697,7 @@
             "sub": ["water", "carbonated"]
           },{
             "id": "saratoga-sparkling-24oz",
-            "product_num": "ssw24",
+            "product_num": "B04",
             "img": "/assets/imgs/dido/products/beverages/saratoga-sparkling-12pk.png",
             "badge_color": "primary",
             "badge_text": "28oz",
@@ -543,6 +710,21 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": ["water", "carbonated"]
+          },{
+            "id": "san-benedetto-water",
+            "product_num": "B05",
+            "img": "/assets/imgs/dido/products/beverages/sb-water.png",
+            "badge_color": "primary",
+            "badge_text": "2L",
+            "brand": "San Benedetto",
+            "title": "Acqua Minerale Naturale",
+            "description": "From the heart of the Veneto Alps, Benedicta Mineral Water embarks on a remarkable journey. It's naturally enriched with minerals and trace elements before resting in a pure, protected underground basin.",
+            "quantity_per_case": "6/2L",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "water"
           }
         ]
       },
@@ -552,7 +734,7 @@
         "products":[
           {
             "id": "A'Sicilian-blood-orange",
-            "product_num": "ascbo",
+            "product_num": "B08",
             "img": "/assets/imgs/dido/products/beverages/Blood-orange_4pk.png",
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
@@ -567,7 +749,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-limonata",
-            "product_num": "ascl",
+            "product_num": "B09",
             "img": "/assets/imgs/dido/products/beverages/Limonata_4pk.png",
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
@@ -582,7 +764,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-mandarino",
-            "product_num": "ascm",
+            "product_num": "B10",
             "img": "/assets/imgs/dido/products/beverages/Mandarino_4pk.png",
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
@@ -597,7 +779,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-pomegranate",
-            "product_num": "ascp",
+            "product_num": "B11",
             "img": "/assets/imgs/dido/products/beverages/Melograno_4pk.png",
             "badge_color": "primary",
             "badge_text": "330ml 4Pk",
@@ -612,7 +794,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-limonata-1l",
-            "product_num": "ascl1l",
+            "product_num": "B12",
             "img": "/assets/imgs/dido/products/beverages/limonata_1L.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -627,7 +809,7 @@
             "sub": "carbonated"
           },{
             "id": "A'Sicilian-aranciata-1l",
-            "product_num": "ascbo1l",
+            "product_num": "B13",
             "img": "/assets/imgs/dido/products/beverages/aranciata_1L.png",
             "badge_color": "primary",
             "badge_text": "1L (33.8oz)",
@@ -640,13 +822,135 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": "carbonated"
+          },{
+            "id": "manhattan-special-original",
+            "product_num": "B14",
+            "img": "/assets/imgs/dido/products/beverages/ms-og.png",
+            "badge_color": "primary",
+            "badge_text": "12oz",
+            "brand": "Manhattan Specials",
+            "title": "Pure Espresso Coffee Soda",
+            "description": "Taste the original! Manhattan Special sodas, crafted in Brooklyn since 1895, represent the pinnacle of classic American sodas. Their iconic Coffee Soda stands alone – a rich, full-flavored fusion of espresso coffee and seltzer. It's a true New York legend.",
+            "quantity_per_case": "12/12oz",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "carbonated"
+          },{
+            "id": "manhattan-special-diet",
+            "product_num": "B15",
+            "img": "/assets/imgs/dido/products/beverages/ms-diet.png",
+            "badge_color": "primary",
+            "badge_text": "12oz",
+            "brand": "Manhattan Specials",
+            "title": "Diet Pure Espresso Coffee Soda",
+            "description": "Taste the original! Manhattan Special sodas, crafted in Brooklyn since 1895, represent the pinnacle of classic American sodas. Their iconic Coffee Soda stands alone – a rich, full-flavored fusion of espresso coffee and seltzer. It's a true New York legend.",
+            "quantity_per_case": "12/12oz",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "carbonated"
+          },{
+            "id": "manhattan-specials-vanilla",
+            "product_num": "B16",
+            "img": "/assets/imgs/dido/products/beverages/ms-vanilla.png",
+            "badge_color": "primary",
+            "badge_text": "12oz",
+            "brand": "Manhattan Specials",
+            "title": "Vaniila Cream Soda",
+            "description": "Indulge in the smooth, nostalgic taste of Manhattan Special Vanilla Cream Soda. This 12-ounce can delivers a luxurious blend of rich vanilla and sparkling soda, perfect for a refreshing treat. Enjoy its sweet, velvety profile on its own or as a delightful complement to your favorite desserts.",
+            "quantity_per_case": "12/12oz",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "carbonated"
+          },{
+            "id": "manhattan-specials-orange",
+            "product_num": "B17",
+            "img": "/assets/imgs/dido/products/beverages/ms-orange.png",
+            "badge_color": "primary",
+            "badge_text": "12oz",
+            "brand": "Manhattan Specials",
+            "title": "Orange Soda",
+            "description": "Brighten your day with the vibrant, citrusy zest of Manhattan Special Orange Soda. This 12-ounce can delivers an invigorating balance of sweet and tangy fresh orange flavor with every crisp, effervescent sip. It's the perfect bubbly refreshment to quench your thirst or complement any meal.",
+            "quantity_per_case": "12/12oz",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": "carbonated"
           }
         ]
       },
        {
         "name":"Juice",
         "slug":"juice",
-        "products":[]
+        "products":[
+          {
+            "id": "san-benedetto-peach-can",
+            "product_num": "B18",
+            "img": "/assets/imgs/dido/products/beverages/sb-peach-can.png",
+            "badge_color": "primary",
+            "badge_text": "330ml",
+            "brand": "San Benedetto",
+            "title": "Peach Tea Can",
+            "description": "Enjoy the crisp, refreshing taste of our Peach Tea soft drink in a convenient 330ml can. Made in Italy with infused black tea and 80% mineral water, this preservative-free beverage offers a balanced flavor and antioxidant benefits for any occasion.",
+            "quantity_per_case": "24/330ml",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["juice", "tea"]
+          }, {
+            "id": "san-benedetto-peach-bottle",
+            "product_num": "B19",
+            "img": "/assets/imgs/dido/products/beverages/sb-peach500.png",
+            "badge_color": "primary",
+            "badge_text": "500ML (16.9oz)",
+            "brand": "San Benedetto",
+            "title": "Peach Tea 500ml Bottle",
+            "description": "Enjoy the crisp, refreshing taste of our Peach Tea soft drink in a convenient 330ml can. Made in Italy with infused black tea and 80% mineral water, this preservative-free beverage offers a balanced flavor and antioxidant benefits for any occasion.",
+            "quantity_per_case": "12/500ml",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["juice", "tea"]
+          },{
+            "id": "san-benedetto-lemon-can",
+            "product_num": "B20",
+            "img": "/assets/imgs/dido/products/beverages/sb-lemon-can.png",
+            "badge_color": "primary",
+            "badge_text": "330ml",
+            "brand": "San Benedetto",
+            "title": "Peach Tea Can",
+            "description": "Savor the refreshing taste of San Benedetto Thé Limone, a delightful iced tea crafted in Italy. This premium beverage perfectly balances rich black tea with the zesty brightness of natural lemon, offering a burst of Mediterranean freshness in every sip. Enjoy its quality and heritage as it brightens any moment.",
+            "quantity_per_case": "24/330ml",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["juice", "tea"]
+          },{
+            "id": "san-benedetto-lemon500",
+            "product_num": "B20",
+            "img": "/assets/imgs/dido/products/beverages/sb-lemon500.png",
+            "badge_color": "primary",
+            "badge_text": "500ML (16.9oz)",
+            "brand": "San Benedetto",
+            "title": "Lemon Tea 500ml Bottle",
+            "description": "Savor the refreshing taste of San Benedetto Thé Limone, a delightful iced tea crafted in Italy. This premium beverage perfectly balances rich black tea with the zesty brightness of natural lemon, offering a burst of Mediterranean freshness in every sip. Enjoy its quality and heritage as it brightens any moment.",
+            "quantity_per_case": "12/500ml",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["juice", "tea"]
+          }
+        ]
       }
     ]
   },
