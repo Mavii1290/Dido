@@ -136,22 +136,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": ["pantry-staples","oil"]
-          }, {
-            "id": "diamante_oil",
-            "product_num": "O09",
-            "img": "/assets/imgs/dido/products/oil/diamante-3l.png",
-            "badge_color": "primary",
-            "badge_text": "3L (101oz)",
-            "brand": "Rustico",
-            "title": "Diamante Verde Extra Virgin Olive Oil ",
-            "description": "Rustico, Diamante Verde Extra Virgin Olive Oil is our family's favorite, everyday olive oil, ideal for sautéing vegetables, roasting meats, and baking delectable treats. Crafted from highly regarded Nocellara del Belice olives grown in Partanna and Selinunte, this vibrant green oil is rich in polyphenols with an intense fruity aroma. ",
-            "quantity_per_case": "",
-            "new_price": 3.36,
-            "old_price": 5.99,
-            "btn_color": "primary",
-            "btn_text": "Add to Cart",
-            "sub": ["pantry-staples","oil"]
-          },
+          }, 
           {
             "id": "Frankies-oil-.5L",
             "product_num": "O10",
@@ -282,23 +267,7 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": ["pantry-staples","olives-and-pickled-jars"]
-          },{
-            "id": "rocche-green-olives",
-            "product_num": "OL07",
-            "img": "/assets/imgs/dido/products/olives-pickled/rocche-green-olives.png",
-            "badge_color": "primary",
-            "badge_text": "340g (12oz)",
-            "brand": "Rocche Della Sala",
-            "title": "Whole Castelvetrano Olives",
-            "description": "Unleash the smooth, buttery flavor of our whole Castelvetrano olives. These beautiful, plump olives are an ideal choice for any celebration, bringing a vibrant burst to your charcuterie board or pre-dinner Aperitivo. Experience the pure, bright essence of this earthy varietal. Served in brine, they are an elegant pairing for cherished moments.",
-            "quantity_per_case": "",
-            "new_price": 3.36,
-            "old_price": 5.99,
-            "btn_color": "primary",
-            "btn_text": "Add to Cart",
-            "sub": ["pantry-staples","olives-and-pickled-jars"]
           }
-
         ]
       },
       {
@@ -733,8 +702,8 @@
             "img": "/assets/imgs/dido/products/Sweets/nutella-biscuits.png",
             "badge_color": "primary",
             "badge_text": "41.4g",
-            "brand": "Hanuta",
-            "title": "Wafers filled with Hazelnut Cream",
+            "brand": "Nutella",
+            "title": "Chocolate Hazelnut Biscuits",
             "description": "Hearty, crispy, nutty, mini. Hanuta minis are the small edition of the well-known hazelnut slices with the cream of freshly roasted hazelnuts and tart-aromatic cocoa between two crispy wheat waffles. These ingredients give hanuta the unique nutty-sweet and at the same time slightly tart taste. Whether for the little snack moment, for coffee, tea or simply to share or offer: The minis are always a hit.",
             "quantity_per_case": "28/41.4g",
             "new_price": 3.36,
