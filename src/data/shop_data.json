@@ -282,6 +282,21 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": ["pantry-staples","olives-and-pickled-jars"]
+          },{
+            "id": "rocche-green-olives",
+            "product_num": "OL07",
+            "img": "/assets/imgs/dido/products/olives-pickled/rocche-green-olives.png",
+            "badge_color": "primary",
+            "badge_text": "340g (12oz)",
+            "brand": "Rocche Della Sala",
+            "title": "Whole Castelvetrano Olives",
+            "description": "Unleash the smooth, buttery flavor of our whole Castelvetrano olives. These beautiful, plump olives are an ideal choice for any celebration, bringing a vibrant burst to your charcuterie board or pre-dinner Aperitivo. Experience the pure, bright essence of this earthy varietal. Served in brine, they are an elegant pairing for cherished moments.",
+            "quantity_per_case": "",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["pantry-staples","olives-and-pickled-jars"]
           }
 
         ]
