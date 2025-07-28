@@ -24,7 +24,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },
           {
             "id": "Partanna_1Lglass",
@@ -40,7 +40,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },
           {
             "id": "Partanna_.5LCan",
@@ -56,7 +56,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },
           {
             "id": "partanna_mini",
@@ -72,7 +72,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },          
           {
             "id": "partanna_.5Lorganic_can",
@@ -88,7 +88,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },          {
             "id": "pugliese",
             "product_num": "O06",
@@ -103,7 +103,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },
           {
             "id": "sicano_oil",
@@ -119,7 +119,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },
           {
             "id": "diamante_oil",
@@ -135,7 +135,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },
           {
             "id": "Frankies-oil-.5L",
@@ -151,7 +151,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           },
           {
             "id": "Frankies-oil-1L",
@@ -167,7 +167,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "oil"
+            "sub": ["pantry-staples","oil"]
           }
         ]
       },
@@ -189,7 +189,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "olives-and-pickled-jars"
+            "sub": ["pantry-staples","olives-and-pickled-jars"]
           },{
             "id": "partanna_mediteranean_olives-jar",
             "product_num": "OL02",
@@ -204,7 +204,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "olives-and-pickled-jars"
+            "sub": ["pantry-staples","olives-and-pickled-jars"]
           },
           {
             "id": "partanna_green_olives-2kgcan",
@@ -220,7 +220,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "olives-and-pickled-jars"
+            "sub": ["pantry-staples","olives-and-pickled-jars"]
           },
           {
             "id": "partanna_pitted_olives-2kgcan",
@@ -236,7 +236,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "olives-and-pickled-jars"
+            "sub": ["pantry-staples","olives-and-pickled-jars"]
           },{
             "id": "frankies_black_olives-12oz-jar",
             "product_num": "OL05",
@@ -251,7 +251,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "olives-and-pickled-jars"
+            "sub": ["pantry-staples","olives-and-pickled-jars"]
           },{
             "id": "frankies_green_olives-12oz-jar",
             "product_num": "OL06",
@@ -266,7 +266,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "olives-and-pickled-jars"
+            "sub": ["pantry-staples","olives-and-pickled-jars"]
           }
 
         ]
@@ -289,7 +289,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "pasta"
+            "sub": ["pantry-staples","pasta"]
           },{
             "id": "frankies-pasta-rigatonilb",
             "product_num": "P02",
@@ -304,7 +304,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "pasta"
+            "sub": ["pantry-staples","pasta"]
           },{
             "id": "frankies-pasta-cavatelli-1lb",
             "product_num": "P03",
@@ -319,7 +319,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "pasta"
+            "sub": ["pantry-staples","pasta"]
           },{
             "id": "frankies-pasta-pappardelle-1lb",
             "product_num": "P04",
@@ -334,7 +334,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "pasta"
+            "sub": ["pantry-staples","pasta"]
           }
         ]
       },
@@ -356,7 +356,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "sauce"
+            "sub": ["pantry-staples","sauce"]
           },{
             "id": "Sauce-suzybel",
             "product_num": "S02",
@@ -371,7 +371,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "sauce"
+            "sub": ["pantry-staples","sauce"]
           }
         ]},
       {
@@ -392,7 +392,7 @@
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "spices-and-seasoning"
+            "sub": ["pantry-staples","spices-and-seasoning"]
           }
         ]
       },
@@ -432,8 +432,8 @@
             "img": "/assets/imgs/dido/products/frozen/ricotta-cannoli.png",
             "badge_color": "primary",
             "badge_text": "1.5lb",
-            "brand": "D'Agostino ",
-            "title": "Ricotta Cream Chocolate Chip Sac",
+            "brand": "Imported",
+            "title": "Ricotta & Chocolate Chip Cannoli Cream",
             "description": "Just when you thought our traditional cannoli cream couldn't get any better, we added mini chocolate chips! Like our classic ricotta cream, this chocolate chip filling is super smooth, sweet, and infused with notes of vanilla. Our delicious filling comes frozen in easy-to-use disposable pastry bags. Simply defrost, and you're ready to fill cannoli and more! Each case contains four 1.5 lb bags of cannoli cream.",
             "quantity_per_case": "4/1.5lbs",
             "new_price": 3.36,
@@ -442,35 +442,35 @@
             "btn_text": "Add to Cart",
             "sub": ["frozen", "dairy"]
           },{
-            "id": "dais-croissant-pistachio",
-            "product_num": "SD01",
-            "img": "/assets/imgs/dido/products/Sweets/pistachio-croissants.png",
+            "id": "dolfin-sorbetto",
+            "product_num": "F02",
+            "img": "/assets/imgs/dido/products/frozen/sorbetto.png",
             "badge_color": "primary",
-            "badge_text": "5 X 50g=250G",
-            "brand": "Dais Cornetti",
-            "title": "Pistachio Cream Croissant",
-            "description": "Indulge in the rich and authentic flavors of Sicily with this Pistacchio Cream Filled Croissant Individual Snack Cakes.  Imported directly from Sicily, these Cornetti Pistacchio Dolce Sicilia are the perfect sweet treat. Each package contains 5 individually wrapped croissants. As you unwrap each one, you'll be greeted by the delightful aroma of freshly baked croissant filled with luscious pistacchio cream.",
-            "quantity_per_case": "6/5 X 50g=250G",
+            "badge_text": "2 x 100ml",
+            "brand": "Dolfin",
+            "title": "SensoFreddo Sorbetto Limone",
+            "description": "Enjoy the authentic taste of sicilian lemon with Dolfin Lemon Sorbet Ready To Freeze. This Senso Freddo Sorbet/Granita is a new line of soft, refreshing real fruit sorbets, bringing ancient tradition to your table. Each 2-portion pack (2 x 100ml) is just 97 Kcal, offering a light, flavorful pause for your day!",
+            "quantity_per_case": "24/2 x 100ml",
             "new_price": 3.36,
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "snacks"
+            "sub": ["snacks", "frozen"]
           },{
-            "id": "dais-croissant-pistachio",
-            "product_num": "SD01",
-            "img": "/assets/imgs/dido/products/Sweets/pistachio-croissants.png",
+            "id": "dolfin-granita",
+            "product_num": "F03",
+            "img": "/assets/imgs/dido/products/frozen/granita.png",
             "badge_color": "primary",
-            "badge_text": "5 X 50g=250G",
-            "brand": "Dais Cornetti",
-            "title": "Pistachio Cream Croissant",
-            "description": "Indulge in the rich and authentic flavors of Sicily with this Pistacchio Cream Filled Croissant Individual Snack Cakes.  Imported directly from Sicily, these Cornetti Pistacchio Dolce Sicilia are the perfect sweet treat. Each package contains 5 individually wrapped croissants. As you unwrap each one, you'll be greeted by the delightful aroma of freshly baked croissant filled with luscious pistacchio cream.",
-            "quantity_per_case": "6/5 X 50g=250G",
+            "badge_text": "2 x 100ml",
+            "brand": "Dolfin",
+            "title": "Sensofreddo Granita Arancia",
+            "description": "Transport yourself to Sicily with Senso Freddo Sorbet / Granita. Our Blood Orange (Arancia Rossa) ready-to-freeze sorbet brings an ancient tradition directly to your table. Made with real fruit, it's wonderfully soft, refreshing, and the perfect light, flavorful break. Enjoy two 100ml portions in each 200ml pack, at just 89 Kcal.",
+            "quantity_per_case": "24/2 x 100ml",
             "new_price": 3.36,
             "old_price": 5.99,
             "btn_color": "primary",
             "btn_text": "Add to Cart",
-            "sub": "snacks"
+            "sub": ["snacks", "frozen"]
           }
         ]
       }
@@ -546,6 +546,22 @@
             "btn_color": "primary",
             "btn_text": "Add to Cart",
             "sub": ["chocolate", "snacks"]
+          },
+          {
+            "id": "pistachio-5kg",
+            "product_num": "SD04",
+            "img": "/assets/imgs/dido/products/Sweets/pistachio-cream-5kg.png",
+            "badge_color": "primary",
+            "badge_text": "5kg (11lb)",
+            "brand": "Napoletano Dessert",
+            "title": "Pistachio Cream",
+            "description": "Elevate your desserts with Napoletano Dessert Pistachio Cream Spread. This rich, velvety spread, made from the finest pistachios, offers a perfect balance of nutty flavor and sweetness. It's ideal for toast, pastries, or as a decadent cake filling. Smooth and vibrant green, it effortlessly transforms any moment into an extraordinary indulgence.",
+            "quantity_per_case": "5kg",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["snacks"]
           }
         ]
       },
@@ -962,6 +978,26 @@
         "name": "Paper Goods",
         "slug": "paper-goods",
         "products": []
+      },
+      {
+        "name": "Cleaning",
+        "slug": "cleaning",
+        "products": [{
+            "id": "chanteclair-Lavender",
+            "product_num": "CP01",
+            "img": "/assets/imgs/dido/products/paper-cleaning/sgras-lavendar.png",
+            "badge_color": "primary",
+            "badge_text": "600ml",
+            "brand": "Chanteclair Sgrassatore",
+            "title": "Superpotente Lavender",
+            "description": "The Chanteclair Universal Degreaser Lavander is a highly effective detergent, powerfully cleaning all types of dirt. Ideal for both domestic and professional use, it degreases, removes stains, and thoroughly cleans surfaces such as ovens, stoves, slicers, hoods, worktops, and mechanical parts. It's also great as a laundry pre-treatment.",
+            "quantity_per_case": "12/600ml",
+            "new_price": 3.36,
+            "old_price": 5.99,
+            "btn_color": "primary",
+            "btn_text": "Add to Cart",
+            "sub": ["cleaning", "paper-goods"]
+          }]
       }
     ]
   }

@@ -26,3 +26,9 @@ export interface Category {
   slug: string;
   subcategories: Subcategory[];
 }
+
+export interface NavItem {
+  nav_name: string;
+  name: string;
+  link: string;
+}
