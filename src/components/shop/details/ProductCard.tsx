@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
     >
       <Image
         src={product.img}
-        alt={product.title}
+        alt={product.product}
         className="card-img-top"
         width={200}
         height={150}
@@ -27,15 +27,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
       />
       <div className="card-body">
         <h6 className="card-title product-title">{product.brand}</h6>
-        <h6 className="card-title">{product.title}</h6>
-        {product.badge_text && (
+        <h6 className="card-title">{product.product}</h6>
+        {product.size && (
           <span className={`badge-text mb-2`}>
-            {product.badge_text}
+            {product.size}
           </span>
         )}
         
         {/* <p className="card-text text-muted mb-1">
-          <del>${product.old_price}</del> <strong>${product.new_price}</strong>
+          <del>${product.old_price}</del> <strong>${product.price}</strong>
         </p>
         <button className={`btn btn-${product.btn_color || "primary"} btn-sm`}>
           {product.btn_text}
