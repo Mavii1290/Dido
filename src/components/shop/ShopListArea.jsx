@@ -54,14 +54,14 @@ const ShopListArea = () => {
 													>
 														<Image 
 														src={item.img} 
-														alt={item.title} 
+														alt={item.product} 
 														style={{ height: "150px", objectFit: "contain" }}
 														width={200}
 														height={200}
 														/>
 														{/* Badge */}
-														<span className={`badge bg-${item.badge_colro}`}>
-															{item.badge_text}
+														<span className={`badge bg-${item.badge_color}`}>
+															{item.size}
 														</span>
 													</Link>
 												</div>
@@ -72,12 +72,12 @@ const ShopListArea = () => {
 														className="product-title d-block text-truncate mt-0"
 														to="/shop-details"
 													>
-														{item.title}
+														{item.product}
 													</Link>
 													{/* Product Price */}
 													<p className="sale-price">
-														${item.new_price}
-														<span>${item.old_price}</span>
+														${item.price}
+														
 													</p>
 													{/* Add To Cart Button */}
 													<a
@@ -86,7 +86,7 @@ const ShopListArea = () => {
 														}`}
 														href="#"
 													>
-														{item.btn_text}
+														{item.preorder}
 													</a>
 												</div>
 											</div>

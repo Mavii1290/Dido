@@ -91,10 +91,10 @@ useEffect(() => {
 
   // Sort products
   const sortedProducts = [...filteredProducts].sort((a, b) => {
-    if (sortOption === "price-asc") return a.new_price - b.new_price;
-    if (sortOption === "price-desc") return b.new_price - a.new_price;
-    if (sortOption === "title-asc") return a.title.localeCompare(b.title);
-    if (sortOption === "title-desc") return b.title.localeCompare(a.title);
+    if (sortOption === "price-asc") return a.price - b.price;
+    if (sortOption === "price-desc") return b.price - a.price;
+    if (sortOption === "title-asc") return a.product.localeCompare(b.product);
+    if (sortOption === "title-desc") return b.product.localeCompare(a.product);
     return 0;
   });
 
