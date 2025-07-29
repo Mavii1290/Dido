@@ -1,17 +1,17 @@
 export interface Product {
   id: string;
-  product_num: string;
+  item_num: string;
   img: string;
   badge_color?: string;
-  badge_text?: string;
+  size?: string;
   brand: string;
-  title: string;
+  product: string;
   description: string;
-  quantity_per_case: string;
-  new_price: number;
-  old_price: number;
+  per_case: string;
+  price: number;
+  cost: number;
   btn_color?: string;
-  btn_text: string;
+  preorder: string;
   sub: string | string[];
 }
 
