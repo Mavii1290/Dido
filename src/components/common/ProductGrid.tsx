@@ -28,14 +28,14 @@ const ProductGrid: React.FC<Props> = ({ brand, title, products, excludeId, limit
           <div key={product.id}>
             <Image
               src={product.img}
-              alt={product.title}
+              alt={product.product}
               className="mx-auto mb-2"
               width={200}
               height={150}
               style={{ height: "250px", objectFit: "contain" }}
             />
              <h3 className="text-sm font-medium">{product.brand}</h3>
-            <h3 className="text-sm font-medium">{product.title}</h3>
+            <h3 className="text-sm font-medium">{product.product}</h3>
           </div>
         ))}
       </div>
