@@ -123,12 +123,12 @@ shopData.forEach((category, categoryIndex) => {
             const titleY = brandY + 15; // Below brand
             const badgeTextY = titleY + 30; // Below title (adjust for potential multi-line title)
             const quantityY = badgeTextY + 15; // Below badge text
-            const productNumY = quantityY + 15; // Product number now comes after quantity_per_case
+            const productNumY = quantityY + 15; // Product number now comes after per_case
 
             // Ensure enough space for the content by checking remaining cell height
             const requiredHeight = productNumY - rowY + 15; // Estimate needed height for all content + some padding
             if (requiredHeight > CELL_HEIGHT) {
-                console.warn(`Content for product ${product.product_num} might overflow cell height.`);
+                console.warn(`Content for product ${product.item_num} might overflow cell height.`);
             }
 
             // Draw image if exists
@@ -159,25 +159,25 @@ shopData.forEach((category, categoryIndex) => {
             };
             const titleX = x + (CELL_WIDTH - CELL_WIDTH * 0.9) / 2;
 
-            doc.fontSize(10).text(product.title || "", titleX, titleY, titleOptions);
+            doc.fontSize(10).text(product.product || "", titleX, titleY, titleOptions);
 
             // Draw badge text
             doc
                 .fontSize(9)
                 .fillColor("gray")
-                .text(product.badge_text || "", x, badgeTextY, {
+                .text(product.size || "", x, badgeTextY, {
                     align: "center",
                     width: CELL_WIDTH,
                 });
 
             // Draw quantity per case (now before product number)
-            doc.text(product.quantity_per_case || "", x, quantityY, {
+            doc.text(product.per_case || "", x, quantityY, {
                 align: "center",
                 width: CELL_WIDTH,
             });
 
-            // Draw product number (now after quantity_per_case)
-            doc.fontSize(10).fillColor("black").text(product.product_num || "", x, productNumY, {
+            // Draw product number (now after per_case)
+            doc.fontSize(10).fillColor("black").text(product.item_num || "", x, productNumY, {
                 width: CELL_WIDTH,
                 align: "center",
             });
