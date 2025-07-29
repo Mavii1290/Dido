@@ -31,14 +31,14 @@ const ProductDetailPage = () => {
       <div className="card p-4">
         <Image
           src={product.img}
-          alt={product.title}
+          alt={product.product}
           className="img-fluid mb-3"
           style={{ maxHeight: "300px", objectFit: "contain" }}
           width={150}
           height={150}
         />
         <h3>{product.brand}</h3>
-        <h3>{product.title}</h3>
+        <h3>{product.product}</h3>
         {/* <p>
           <del>${product.old_price}</del> <strong>${product.new_price}</strong>
         </p> */}
