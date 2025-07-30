@@ -71,7 +71,7 @@ const checkAndAddNewPageForProduct = (rowY) => {
 // First page setup: Header, Catalog Title
 drawHeader();
 doc
-	.fontSize(18)
+	.fontSize(12)
 	.text(
 		"Thanks for your patience! We're temporarily out of stock on a few items while we await our next shipment from overseas. We appreciate your understanding and are working to restock as quickly as possible.",
 		{ align: "center" },
