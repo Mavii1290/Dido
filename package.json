@@ -15,6 +15,7 @@
     "bootstrap": "^5.2.3",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "exceljs": "^4.4.0",
     "gsap": "^3.11.5",
     "lucide-react": "^0.525.0",
     "next": "^15.3.0",
