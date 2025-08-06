@@ -11,9 +11,10 @@ const CategoryMenu: React.FC<Props> = ({ data, onSelect, selectedSubcategorySlug
   const [openCategory, setOpenCategory] = useState<string | null>(() => {
     if (!selectedSubcategorySlug) return null;
 
-    const category = data.find(cat =>
-      cat.subcategories.some(sub => sub.slug === selectedSubcategorySlug)
-    );
+const category = data.find(cat =>
+  'subcategories' in cat && Array.isArray(cat.subcategories) &&
+  cat.subcategories.some(sub => sub.slug === selectedSubcategorySlug)
+);
     return category?.slug || null;
   });
 
