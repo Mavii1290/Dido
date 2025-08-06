@@ -25,6 +25,7 @@ export type Category =
   | {
       name: string;
       slug: string;
+      subcategories: Subcategory[];
       products: Product[];
     };
 export interface Subcategory {
