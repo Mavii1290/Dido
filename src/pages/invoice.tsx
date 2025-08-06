@@ -365,7 +365,7 @@ const InvoiceApp = () => {
             </button>
           </form>
           <p className="mt-4 text-center text-sm text-gray-500">
-            Hint: The password is "your_secure_password" (change this in code!)
+            Hint: The password is your_secure_password (change this in code!)
           </p>
         </div>
       </div>
