@@ -16,13 +16,7 @@ export interface Product {
 }
 
 export type Category =
-  | {
-      category: string;
-      slug: string;
-      subcategories?: Subcategory[];
-      products?: Product[];
-    }
-  | {
+ {
       name: string;
       slug: string;
       subcategories: Subcategory[];

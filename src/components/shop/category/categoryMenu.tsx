@@ -47,7 +47,7 @@ const category = data.find(cat =>
               </div>
               {isOpen && (
                 <ul className="mt-2 text-sm">
-                  {category.subcategories.map((sub) => (
+                  {category.subcategories?.map((sub) => (
                     <li key={sub.slug} className="mb-1 categoryOpen">
                       <button
   className={`text-blue-600 hover:underline ${
