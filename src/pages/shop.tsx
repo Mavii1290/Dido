@@ -27,6 +27,8 @@ const ShopPage = () => {
 
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
+  
+
   // Load products on initial render or when subcategory changes
 useEffect(() => {
   const allProducts: Product[] = flattenAllProducts(shop_data);
@@ -73,16 +75,18 @@ useEffect(() => {
   }, []);
 
   // Handle category selection
-  const handleSubcategorySelect = (subcategory: Subcategory) => {
-    router.push(
-      {
-        pathname: "/shop",
-        query: { sub: subcategory.slug },
-      },
-      undefined,
-      { shallow: true }
-    );
-  };
+const handleSubcategorySelect = (slug: string) => {
+  setSelectedSubcategory(slug);
+  router.push(
+    {
+      pathname: "/shop",
+      query: { sub: slug },
+    },
+    undefined,
+    { shallow: true }
+  );
+};
+
 
   // Clear subcategory filter
   const handleClearFilter = () => {
@@ -129,7 +133,11 @@ useEffect(() => {
                   <ShopCategory
                     data={shop_data}
                     onSelect={(sub) => {
+                       if ("subcategories" in selected) {
                       handleSubcategorySelect(sub);
+                    } else {
+                      handleSubcategorySelect(selectedSubcategory.sub);
+    }
                       setShowDrawer(false);
                     }}
                   />

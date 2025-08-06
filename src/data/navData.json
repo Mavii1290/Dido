@@ -51,7 +51,7 @@
         },
         {
           "name": "FROZEN",
-          "link": "/shop?category=frozen",
+          "link": "/shop?sub=frozen",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
@@ -62,7 +62,7 @@
         },
         {
           "name": "SWEETS",
-          "link": "/shop?category=sweets",
+          "link": "/shop?sub=sweets",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
@@ -96,12 +96,26 @@
         },
         {
           "name": "PAPER GOODS",
-          "link": "/shop/papergoods",
+          "link": "/shop?sub=papergoods",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "PAPER GOODS",
-              "link": "/shop/papergoods/"
+              "link": "/shop?sub=papergoods"
+            }
+          ]
+        },{
+          "name": "NON-IMPORTED GOODS",
+          "link": "/shop?sub=nonimported",
+          "type": "dropdown",
+          "sub_dropdown_nav": [
+            {
+              "name": "NON-IMPORTED DAIRY",
+              "link": "/shop?sub=nonimported-dairy"
+            },
+                        {
+              "name": "NON-IMPORTED CHEESE",
+              "link": "/shop?sub=nonimported-cheese"
             }
           ]
         }

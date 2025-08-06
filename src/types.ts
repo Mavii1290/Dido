@@ -15,17 +15,24 @@ export interface Product {
   sub: string | string[];
 }
 
+export type Category =
+  | {
+      category: string;
+      slug: string;
+      subcategories?: Subcategory[];
+      products?: Product[];
+    }
+  | {
+      name: string;
+      slug: string;
+      products: Product[];
+    };
 export interface Subcategory {
   name: string;
   slug: string;
   products: Product[];
 }
 
-export interface Category {
-  category: string;
-  slug: string;
-  subcategories: Subcategory[];
-}
 
 export interface NavItem {
   nav_name: string;

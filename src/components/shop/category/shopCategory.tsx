@@ -58,3 +58,4 @@ const ShopCategory: React.FC<Props> = ({ data, onSelect, selectedSubcategorySlug
 };
 
 export default ShopCategory;
+

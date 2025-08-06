@@ -12,10 +12,13 @@ import Image from "next/image";
 const flattenProducts = (): Product[] => {
   const products: Product[] = [];
   shop_data.forEach((category) => {
-    category.subcategories.forEach((subcat) => {
-      products.push(...subcat.products);
+    category.subcategories?.forEach((subcat) => {
+      if (Array.isArray(subcat.products)) {
+        products.push(...products);
+      }
     });
-  });
+  }
+);
   return products;
 };
 
