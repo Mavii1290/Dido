@@ -36,10 +36,7 @@ const category = data.find(cat =>
                   className="flex-grow text-left font-semibold text-lg bg-gray-100 rounded hover:bg-gray-200"
                   onClick={() => toggleCategory(category.slug)}
                 >
-                  <span>
-  {'category' in category ? category.category : category.name}
-</span>
-
+                  {category.name}
                 </button>
                 <span className="text-gray-600 text-xl categories">
                   {isOpen ? "−" : "+"}
@@ -47,7 +44,7 @@ const category = data.find(cat =>
               </div>
               {isOpen && (
                 <ul className="mt-2 text-sm">
-                  {category.subcategories?.map((sub) => (
+                  {category.subcategories.map((sub) => (
                     <li key={sub.slug} className="mb-1 categoryOpen">
                       <button
   className={`text-blue-600 hover:underline ${

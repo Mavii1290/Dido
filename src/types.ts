@@ -15,7 +15,9 @@ export interface Product {
   sub: string | string[];
 }
 
-export type Category =
+
+
+export interface Category 
  {
       name: string;
       slug: string;
