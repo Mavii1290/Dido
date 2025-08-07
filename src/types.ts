@@ -17,6 +17,12 @@ export interface Product {
 
 
 
+export interface Subcategory {
+  name: string;
+  slug: string;
+  products: Product[];
+}
+
 export interface Category 
  {
       catagory: string;
@@ -24,12 +30,6 @@ export interface Category
       subcategories: Subcategory[];
       products: Product[];
     };
-export interface Subcategory {
-  name: string;
-  slug: string;
-  products: Product[];
-}
-
 
 export interface NavItem {
   nav_name: string;
