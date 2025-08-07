@@ -19,7 +19,7 @@ export interface Product {
 
 export interface Category 
  {
-      name: string;
+      catagory: string;
       slug: string;
       subcategories: Subcategory[];
       products: Product[];
