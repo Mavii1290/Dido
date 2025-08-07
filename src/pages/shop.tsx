@@ -32,6 +32,16 @@ const ShopPage = () => {
   // Load products on initial render or when subcategory changes
 useEffect(() => {
   const allProducts: Product[] = flattenAllProducts(shop_data);
+  function flattenAllProducts(data: Category[]): Product[] {
+  const all: Product[] = [];
+  data.forEach((cat) => {
+    cat.subcategories.forEach((sub) => {
+      all.push(...sub.products);
+    });
+  });
+  return all;
+}
+
 
   let filtered: Product[];
 
