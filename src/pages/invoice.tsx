@@ -144,7 +144,8 @@ const InvoiceApp = () => {
     setLoadError(null);
 
     try {
-      const appId: string = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+      const appId: string = process.env.NEXT_PUBLIC_CANVAS_APP_ID || 'default-app-id';
+
       // Collection path for private user data
       const invoicesCollectionRef: CollectionReference<DocumentData> = collection(db, 'artifacts', appId, 'users', userId, 'invoices');
 
@@ -291,7 +292,8 @@ const InvoiceApp = () => {
     };
 
     try {
-      const appId: string = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+      const appId: string = process.env.NEXT_PUBLIC_CANVAS_APP_ID || 'default-app-id';
+
       const invoicesCollectionRef: CollectionReference<DocumentData> = collection(db, 'artifacts', appId, 'users', userId, 'invoices');
       await addDoc(invoicesCollectionRef, invoiceData);
       showCustomAlert('Invoice saved successfully!');
