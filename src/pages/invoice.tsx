@@ -532,9 +532,9 @@ const selectedProduct: ShopItem | undefined = allProducts.find(p => p.id === pro
                             onChange={(e) => handleProductChange(index, e.target.value)}
                           >
                             <option value="">Select Product</option>
-                            {shopData.map((product) => (
+                            {flattenProducts().map((product) => (
                               <option key={product.id} value={product.id}>{product.name}</option>
-                            ))}
+                              ))}
                           </select>
                           <span className="print-only">{item.product || 'N/A'}</span>
                         </td>
