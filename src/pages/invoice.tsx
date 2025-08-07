@@ -80,6 +80,25 @@ const InvoiceApp = () => {
   // Ref for the invoice section to print
   const invoiceRef = useRef<HTMLDivElement>(null);
 
+const flattenProducts = (): ShopItem[] => {
+  const items: ShopItem[] = [];
+
+  shopData.forEach(category => {
+    category.subcategories.forEach(sub => {
+      sub.products.forEach(prod => {
+        items.push({
+          id: prod.id,
+          name: prod.product, // adjust based on your actual product structure
+          price: prod.price,  // make sure this is correct
+        });
+      });
+    });
+  });
+
+  return items;
+};
+
+
   // Company details (for the top-left corner)
   const companyLogoUrl= {Logo}
   const companyName: string = "Dido Distributions";
@@ -222,7 +241,8 @@ const InvoiceApp = () => {
   // --- Handlers for Invoice Form ---
   const handleProductChange = (index: number, productId: string) => {
     const updatedLineItems: LineItem[] = [...lineItems];
-    const selectedProduct: ShopItem | undefined = shopData.find(p => p.id === productId);
+const allProducts = flattenProducts();
+const selectedProduct: ShopItem | undefined = allProducts.find(p => p.id === productId);
     if (selectedProduct) {
       updatedLineItems[index] = {
         ...updatedLineItems[index],
