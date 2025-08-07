@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef, ChangeEvent, FormEvent } from 'reac
 import { initializeApp, FirebaseApp } from 'firebase/app';
 import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, Auth, User } from 'firebase/auth';
 import { getFirestore, collection, addDoc, onSnapshot, query, Firestore, CollectionReference, DocumentData } from 'firebase/firestore';
-
+import Image from "next/image";
 import shopData from "@/data/shop_data.json";
 
 // Type definitions for shopData and invoice structure
@@ -430,11 +430,12 @@ const selectedProduct: ShopItem | undefined = allProducts.find(p => p.id === pro
             <div className="flex flex-wrap justify-between items-start mb-8 gap-4">
               {/* Left Section: Logo and Company Info */}
               <div className="flex-shrink-0">
-                <img
-                  src={companyLogoUrl}
+                <Image
+                  src={Logo}
                   alt="Company Logo"
                   className="w-24 h-auto rounded-md mb-2"
-                  onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "https://placehold.co/100x50/000/fff?text=LOGO"; }}
+                  width={100}
+                  height={50}
                 />
                 <p className="text-sm font-semibold text-gray-800">{companyName}</p>
                 <p className="text-xs text-gray-600">{companyAddressLine2}</p>
