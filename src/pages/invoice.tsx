@@ -527,7 +527,8 @@ const selectedProduct: ShopItem | undefined = allProducts.find(p => p.id === pro
                         <td className="py-3 px-4">
                           <select
                             className="w-full px-2 py-1 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 no-print"
-                            value={shopData.find(p => p.name === item.product)?.id || ''}
+                            value={flattenProducts().find(p => p.name === item.product)?.id || ''}
+
                             onChange={(e) => handleProductChange(index, e.target.value)}
                           >
                             <option value="">Select Product</option>
