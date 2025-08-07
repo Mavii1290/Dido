@@ -496,7 +496,7 @@ const selectedProduct: ShopItem | undefined = allProducts.find(p => p.id === pro
                     <label htmlFor="customerAddress" className="block text-sm font-medium text-gray-700 mb-1">Address</label>
                     <textarea
                       id="customerAddress"
-                      rows="2"
+                      rows={2}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                       value={customerAddress}
                       onChange={(e) => setCustomerAddress(e.target.value)}
@@ -587,7 +587,7 @@ const selectedProduct: ShopItem | undefined = allProducts.find(p => p.id === pro
                 <label htmlFor="notes" className="block text-sm font-medium text-gray-700 mb-1 no-print">Notes / Terms</label>
                 <textarea
                   id="notes"
-                  rows="3"
+                  rows={3}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 no-print"
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
