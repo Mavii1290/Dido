@@ -15,8 +15,6 @@ export interface Product {
   sub: string | string[];
 }
 
-
-
 export interface Subcategory {
   name: string;
   slug: string;
@@ -25,7 +23,7 @@ export interface Subcategory {
 
 export interface Category 
  {
-      catagory: string;
+      category: string;
       slug: string;
       subcategories: Subcategory[];
       products: Product[];

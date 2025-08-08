@@ -2,15 +2,32 @@ import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-import shop_data from "@/data/shop_data.json";
+import shop_data_raw from "@/data/shop_data.json";
+
+// Transform shop_data to include 'products' property for each category
+const shop_data = shop_data_raw.map((cat) => ({
+	...cat,
+	products: cat.subcategories
+		? cat.subcategories.flatMap((sub) => sub.products)
+		: [],
+}));
 import RootLayout from "@/components/common/layout/RootLayout";
 import ShoppingGrid from "@/components/shop/grid/ShoppingGrid";
 import ShopCategory from "@/components/shop/category/shopCategory";
 import { Product, Subcategory, Category } from "@/types";
 import {
-	flattenAllProducts,
 	filterProductsBySubcategory,
 } from "@/lib/utils/productHelpers";
+
+function flattenAllProducts(data: Category[]): Product[] {
+	const all: Product[] = [];
+	data.forEach((cat) => {
+		cat.subcategories.forEach((sub) => {
+			all.push(...sub.products);
+		});
+	});
+	return all;
+}
 
 const ShopPage = () => {
 	const router = useRouter();
@@ -32,16 +49,6 @@ const ShopPage = () => {
 	// Load products on initial render or when subcategory changes
 	useEffect(() => {
 		const allProducts: Product[] = flattenAllProducts(shop_data);
-		function flattenAllProducts(data: Category[]): Product[] {
-			const all: Product[] = [];
-			data.forEach((cat) => {
-				cat.subcategories.forEach((sub) => {
-					all.push(...sub.products);
-				});
-			});
-			return all;
-		}
-
 		let filtered: Product[];
 
 		if (typeof sub === "string" && sub.length) {
@@ -84,12 +91,12 @@ const ShopPage = () => {
 	}, []);
 
 	// Handle category selection
-	const handleSubcategorySelect = (slug: string) => {
-		setSelectedSubcategory(slug);
+	const handleSubcategorySelect = (sub: Subcategory) => {
+		setSelectedSubcategory(sub.slug);
 		router.push(
 			{
 				pathname: "/shop",
-				query: { sub: slug },
+				query: { sub: sub.slug },
 			},
 			undefined,
 			{ shallow: true },
@@ -138,11 +145,7 @@ const ShopPage = () => {
 									<ShopCategory
 										data={shop_data}
 										onSelect={(sub) => {
-											if ("subcategories" in selected) {
-												handleSubcategorySelect(sub);
-											} else {
-												handleSubcategorySelect(selectedSubcategory.sub);
-											}
+											handleSubcategorySelect(sub);
 											setShowDrawer(false);
 										}}
 									/>

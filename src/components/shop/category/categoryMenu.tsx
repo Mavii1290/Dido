@@ -36,7 +36,7 @@ const category = data.find(cat =>
                   className="flex-grow text-left font-semibold text-lg bg-gray-100 rounded hover:bg-gray-200"
                   onClick={() => toggleCategory(category.slug)}
                 >
-                  {category.catagory}
+                  {category.category}
                 </button>
                 <span className="text-gray-600 text-xl categories">
                   {isOpen ? "−" : "+"}
