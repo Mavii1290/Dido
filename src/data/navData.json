@@ -81,16 +81,15 @@
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
-              "name": "JUICES",
-              "link": "/shop?sub=juices"
-            },
-            {
               "name": "SOFT DRINKS",
               "link": "/shop?sub=soft-drinks"
             },
             {
               "name": "TEA & COFFEE",
               "link": "/shop?sub=tea-coffee"
+            },            {
+              "name": "JUICES",
+              "link": "/shop?sub=juices"
             }
           ]
         },
@@ -115,6 +114,10 @@
             },
                         {
               "name": "NON-IMPORTED CHEESE",
+              "link": "/shop?sub=nonimported-cheese"
+            },
+                        {
+              "name": "NON-IMPORTED SEASONING & SEEDS",
               "link": "/shop?sub=nonimported-cheese"
             }
           ]
