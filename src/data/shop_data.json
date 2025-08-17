@@ -855,7 +855,7 @@
             "cost": 18,
             "btn_color": "primary",
             "preorder": "Preorder",
-            "sub": ["juice", "tea"]
+            "sub": ["juice", "tea", "softdrinks"]
           }, {
             "id": "san-benedetto-peach-bottle",
             "item_num": "B19",
@@ -870,7 +870,7 @@
             "cost": 9,
             "btn_color": "primary",
             "preorder": "Preorder",
-            "sub": ["juice", "tea"]
+            "sub": ["juice", "tea","softdrinks"]
           },{
             "id": "san-benedetto-lemon-can",
             "item_num": "B20",
@@ -885,7 +885,7 @@
             "cost": 18,
             "btn_color": "primary",
             "preorder": "Preorder",
-            "sub": ["juice", "tea"]
+            "sub": ["juice", "tea","softdrinks"]
           },{
             "id": "san-benedetto-lemon500",
             "item_num": "B20",
@@ -900,7 +900,7 @@
             "cost": 9,
             "btn_color": "primary",
             "preorder": "Preorder",
-            "sub": ["juice", "tea"]
+            "sub": ["juice", "tea","softdrinks"]
           },{
             "id": "manhattan-specials-vanilla",
             "item_num": "B16",
@@ -915,7 +915,7 @@
             "cost": 5.99,
             "btn_color": "primary",
             "preorder": "Preorder",
-            "sub": "juice"
+            "sub": ["juice", "softdrinks"]
           },{
             "id": "manhattan-specials-orange",
             "item_num": "B17",
@@ -930,7 +930,22 @@
             "cost": 5.99,
             "btn_color": "primary",
             "preorder": "Preorder",
-            "sub": "juice"
+            "sub": ["juice", "softdrinks"]
+          },{
+            "id": "manhattan-specials-gassosa",
+            "item_num": "B18",
+            "img": "/assets/imgs/dido/products/beverages/ms-gassosa.png",
+            "badge_color": "primary",
+            "size": "12oz",
+            "brand": "Manhattan Specials",
+            "product": "Lemon/Lime Soda",
+            "description": "Manhattan Special Gassosa Soda is a crisp, lemon-lime flavored Italian soda with a refreshing citrus taste. Lightly sweetened and effervescent, it’s the perfect pick-me-up for any occasion.",
+            "per_case": "12/12oz",
+            "price": 3.36,
+            "cost": 5.99,
+            "btn_color": "primary",
+            "preorder": "Preorder",
+            "sub": ["juice", "softdrinks"]
           }
         ]
       }
@@ -943,14 +958,31 @@
       {
         "name": "Paper Goods",
         "slug": "paper-goods",
-        "products": []
+        "products": [
+          {
+            "id": "Thank you",
+            "item_num": "CP01",
+            "img": "/assets/imgs/dido/products/paper-cleaning/thankyou.png",
+            "badge_color": "primary",
+            "size": "12\" x 22\"",
+            "brand": "Chanteclair Sgrassatore",
+            "product": "Superpotente Lavender",
+            "description": "The Chanteclair Universal Degreaser Lavander is a highly effective detergent, powerfully cleaning all types of dirt. Ideal for both domestic and professional use, it degreases, removes stains, and thoroughly cleans surfaces such as ovens, stoves, slicers, hoods, worktops, and mechanical parts. It's also great as a laundry pre-treatment.",
+            "per_case": "300/12\" x 22\"",
+            "price": 3.36,
+            "cost": 5.99,
+            "btn_color": "primary",
+            "preorder": "Preorder",
+            "sub": ["cleaning", "paper-goods"]
+          }
+        ]
       },
       {
         "name": "Cleaning",
         "slug": "cleaning",
         "products": [{
             "id": "chanteclair-Lavender",
-            "item_num": "CP01",
+            "item_num": "CP02",
             "img": "/assets/imgs/dido/products/paper-cleaning/sgras-lavendar.png",
             "badge_color": "primary",
             "size": "600ml",
@@ -1165,6 +1197,21 @@
            "product": "Whole Milk",
            "description": "Fairlife Whole Milk offers rich, creamy flavor with 50% more protein and 50% less sugar than regular milk. Ultra-filtered for freshness, it’s a delicious, nutrient-packed choice for any occasion.",
            "per_case": "12/32 oz",
+           "price": 3.36,
+           "cost": 5.99,
+           "btn_color": "primary",
+           "preorder": "Add to Cart",
+           "sub": ["nonimported-dairy", "nonimported-goods"]         
+         }, {
+           "id": "Mayo",
+           "item_num": "NID15",
+           "img": "/assets/imgs/dido/products/non-imported/dairy/mayo.png",
+           "badge_color": "primary",
+           "size": "1 Gallon",
+           "brand": "Hellmann's",
+           "product": "Real Mayonnaise",
+           "description": "Hellmann’s Real Mayonnaise is rich, creamy, and made with real, simple ingredients like eggs, oil, and vinegar. Perfect for sandwiches, salads, and dips, it adds delicious flavor to every bite.",
+           "per_case": "4/1 Gallon",
            "price": 3.36,
            "cost": 5.99,
            "btn_color": "primary",
