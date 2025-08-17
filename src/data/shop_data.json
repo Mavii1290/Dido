@@ -960,7 +960,7 @@
         "slug": "paper-goods",
         "products": [
           {
-            "id": "Thank you",
+            "id": "Thank-you",
             "item_num": "CP01",
             "img": "/assets/imgs/dido/products/paper-cleaning/thankyou.png",
             "badge_color": "primary",

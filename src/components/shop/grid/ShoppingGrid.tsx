@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import ProductCard from "../details/ProductCard";
 import { Product, Subcategory, Category } from "../../../types";
+import Link from "next/link";
 
 
 interface Props {
@@ -33,10 +34,11 @@ useEffect(() => {
     setCurrentPage(1);
   };
 
-  const handleProductClick = (product: Product) => {
-    router.push(`/product/${product.id}`);
-  };
-
+const handleProductClick = (product: Product) => {
+  const id = String(product.id);
+  // Explicit dynamic route form:
+  router.push({ pathname: "/products/[id]", query: { id } });
+};
   return (
     <section className="py-6">
       <div className="shop-grid max-w-7xl mx-auto px-4">
@@ -59,7 +61,12 @@ useEffect(() => {
         <div className="row g-3">
           {displayedProducts.map((product) => (
             <div key={product.id} className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
-              <ProductCard product={product} onClick={() => handleProductClick(product)} />
+             <Link
+        href={{ pathname: "/product/[id]", query: { id: String(product.id) } }}
+        className="block"
+      >
+        <ProductCard product={product} onClick={() => {}} />
+      </Link>
             </div>
           ))}
         </div>
