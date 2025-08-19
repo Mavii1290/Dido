@@ -4,6 +4,7 @@ import "../../public/assets/scss/master.scss";
 import "../styles/extra.css";
 import "../styles/globals.css";
 
+
 import type { AppProps } from "next/app";
 import { useEffect } from "react"; // Import useEffect
 
@@ -13,7 +14,7 @@ function App({ Component, pageProps }: AppProps) {
     if ("serviceWorker" in navigator) {
       // Register the service worker file located at the root of your public directory
       navigator.serviceWorker
-        .register("../../public/sw.js")
+        .register("/../../public/sw.js")
         .then((registration) => {
           console.log("Service Worker registration successful:", registration);
         })
