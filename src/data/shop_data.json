@@ -1052,7 +1052,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]          },
          {
            "id": "butter-blend",
-           "item_num": "NID05",
+           "item_num": "NID04",
            "img": "/assets/imgs/dido/products/non-imported/dairy/butterblend.png",
            "badge_color": "primary",
            "size": "1lb",
@@ -1068,7 +1068,7 @@
          },
          {
            "id": "breakstone",
-           "item_num": "NID06",
+           "item_num": "NID05",
            "img": "/assets/imgs/dido/products/non-imported/dairy/breakstone.png",
            "badge_color": "primary",
            "size": "8oz",
@@ -1084,7 +1084,7 @@
          },
          {
            "id": "sommermaid",
-           "item_num": "NID-07",
+           "item_num": "NID06",
            "img": "/assets/imgs/dido/products/non-imported/dairy/sommermaid.png",
            "badge_color": "primary",
            "size": "1lb",
@@ -1099,7 +1099,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]         
          },{
            "id": "nesquik",
-           "item_num": "NID08",
+           "item_num": "NID07",
            "img": "/assets/imgs/dido/products/non-imported/dairy/nesquik.png",
            "badge_color": "primary",
            "size": "12/14 oz",
@@ -1114,7 +1114,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]         
            }, {
            "id": "nesquik-strawberry",
-           "item_num": "NID09",
+           "item_num": "NID08",
            "img": "/assets/imgs/dido/products/non-imported/dairy/nesquik-straw.png",
            "badge_color": "primary",
            "size": "12/14 oz",
@@ -1129,7 +1129,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]         
            }, {
            "id": "nesquik-vanilla",
-           "item_num": "NID10",
+           "item_num": "NID09",
            "img": "/assets/imgs/dido/products/non-imported/dairy/nesquik-van.png",
            "badge_color": "primary",
            "size": "12/14 oz",
@@ -1144,7 +1144,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]         
          }, {
            "id": "coffee-mate-french-vanilla",
-           "item_num": "NID11",
+           "item_num": "NID10",
            "img": "/assets/imgs/dido/products/non-imported/dairy/coffee-mate-fv.png",
            "badge_color": "primary",
            "size": "6/16 oz",
@@ -1159,7 +1159,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]         
          }, {
            "id": "Farmland",
-           "item_num": "NID12",
+           "item_num": "NID11",
            "img": "/assets/imgs/dido/products/non-imported/dairy/farmland-half.png",
            "badge_color": "primary",
            "size": "12/32 oz",
@@ -1174,7 +1174,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]         
          }, {
            "id": "International Delight",
-           "item_num": "NID13",
+           "item_num": "NID12",
            "img": "/assets/imgs/dido/products/non-imported/dairy/international-delight-fv.png",
            "badge_color": "primary",
            "size": "12/32 oz",
@@ -1189,7 +1189,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]         
          }, {
            "id": "Fairlife",
-           "item_num": "NID14",
+           "item_num": "NID13",
            "img": "/assets/imgs/dido/products/non-imported/dairy/fairlife.png",
            "badge_color": "primary",
            "size": "12/32 oz",
@@ -1204,7 +1204,7 @@
            "sub": ["nonimported-dairy", "nonimported-goods"]         
          }, {
            "id": "Mayo",
-           "item_num": "NID15",
+           "item_num": "NID14",
            "img": "/assets/imgs/dido/products/non-imported/dairy/mayo.png",
            "badge_color": "primary",
            "size": "1 Gallon",
@@ -1226,7 +1226,7 @@
         "products": [
           {
             "id": "cheese-philly-30",
-            "item_num": "D-P30che",
+            "item_num": "NID15",
             "img": "/assets/imgs/dido/products/dairy/philly-30lb.png",
             "badge_color": "primary",
             "size": "30lb",
