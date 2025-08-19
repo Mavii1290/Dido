@@ -13,7 +13,7 @@ function App({ Component, pageProps }: AppProps) {
     if ("serviceWorker" in navigator) {
       // Register the service worker file located at the root of your public directory
       navigator.serviceWorker
-        .register("/sw.js")
+        .register("../../sw.js")
         .then((registration) => {
           console.log("Service Worker registration successful:", registration);
         })
