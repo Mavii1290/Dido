@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
 
 import shop_data_raw from "@/data/shop_data.json";
 
@@ -120,12 +119,7 @@ const ShopPage = () => {
 	const visibleProducts = sortedProducts.slice(0, visibleCount);
 
 	return (
-		<>
-			<Head>
-				<title>Products</title>
-				<meta name="description" content="Shop all products" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
+		<div>
 			<RootLayout header="header1" footer="footer1">
 				<main>
 					{/* === MOBILE FILTER BAR WITH DROPDOWN === */}
@@ -201,7 +195,7 @@ const ShopPage = () => {
 					</div>
 				</main>
 			</RootLayout>
-		</>
+		</div>
 	);
 };
 

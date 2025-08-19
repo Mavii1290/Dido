@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Head from "next/head";
 
 const CatalogPage = () => {
   useEffect(() => {
@@ -7,13 +6,9 @@ const CatalogPage = () => {
   }, []);
 
   return (
-    <>
-      <Head>
-        <title>Catalog</title>
-        <meta name="robots" content="noindex" />
-      </Head>
+    <div>
       <p>Redirecting to catalog...</p>
-    </>
+    </div>
   );
 };
 

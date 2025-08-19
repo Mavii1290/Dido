@@ -18,36 +18,3 @@ const Index: React.FC = () => {
 };
 
 export default Index;
-
-
-// import Dido from "./dido";
-// export default Dido;
-
-
-// import { useEffect } from "react";
-// import { useRouter } from "next/router";
-// import { PostHogProvider } from 'posthog-js/react';
-// import posthog from 'posthog-js';
-// import { Banner } from '@/Banner';
-
-// // Optional: wrap in layout only if needed
-// import { App } from './_app';
-
-// posthog.init("<ph_project_api_key>", {
-//   api_host: "https://us.i.posthog.com",
-// });
-
-// export default function IndexPage() {
-//   const router = useRouter();
-
-//   useEffect(() => {
-//     router.push("/dido"); // ✅ Client-side redirect
-//   }, [router]);
-
-//   return (
-//     <PostHogProvider client={posthog}>
-//       {/* This renders while redirect happens */}
-//       <Banner />
-//     </PostHogProvider>
-//   );
-// }

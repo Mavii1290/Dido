@@ -1,7 +1,6 @@
 // src/pages/product/[id].tsx  (or pages/product/[id].tsx if you don't use src/)
 import React from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import ProductGrid from "@/components/common/ProductGrid";
 import shop_data from "../../data/shop_data.json";
@@ -45,13 +44,7 @@ const ProductPage: React.FC = () => {
   }
 
   return (
-    <>
-      <Head>
-        <title>{product.product}</title>
-        <meta name="description" content={product.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
+    <div>
       <RootLayout header="header1" footer="footer1">
         <main className="max-w-6xl mx-auto py-10 px-4 product-id">
           {/* Image */}
@@ -89,7 +82,7 @@ const ProductPage: React.FC = () => {
           </div>
         </main>
       </RootLayout>
-    </>
+    </div>
   );
 };
 
