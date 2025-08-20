@@ -1,20 +1,25 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import React from "react";
+import RootLayout from "@/components/common/layout/RootLayout";
+import IndexHero from "@/components/hero/IndexHero";
+import Brand from "@/components/brand/Brand";
+import About from "@/components/about/AboutHero";
+import CTA from "@/components/cta/CTA";
+import { NextPage } from "next";
 
-const Index: React.FC = () => {
-  const router = useRouter();
+const Dido: NextPage = () => {
+  return (
+    <div>
 
-  useEffect(() => {
-    router.push("/dido");
-  }, [router]);
-
-  return (<div>
-        <div className="p-6">
-      <div className="bg-red-500 text-white p-4 md:bg-blue-500">
-        Tailwind Test: Red on mobile, Blue on desktop
-      </div>
+      <main>
+        <RootLayout header="header1" footer="footer1">
+          <IndexHero />
+          <Brand />
+          <About />
+          <CTA />
+        </RootLayout>
+      </main>
     </div>
-  </div>);
+  );
 };
 
-export default Index;
+export default Dido;
