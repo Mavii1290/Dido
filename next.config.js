@@ -5,6 +5,11 @@ const withPWA = require('next-pwa')({
     '!_next/static/chunks/pages/sw.js',
     '!_next/static/chunks/pages/workbox-*.js',
   ],
+  buildExcludes: [
+    /dynamic-css-manifest\.json$/,
+    /react-loadable-manifest\.json$/,
+    /_next\/static\/chunks\/pages\/_middleware.*js$/,
+  ],
 });
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
