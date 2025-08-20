@@ -123,30 +123,30 @@ const ShopPage = () => {
 			<RootLayout header="header1" footer="footer1">
 				<main>
 					{/* === MOBILE FILTER BAR WITH DROPDOWN === */}
-					<div className="mobile-filter-bar d-md-none">
-						<div style={{ position: "relative" }}>
-							<button className="mobile-btn btn-sm" onClick={toggleDrawer}>
-								Category
-							</button>
+<div className="mobile-filter-bar d-md-none">
+    <div style={{ position: "relative" }}>
+        <button className="mobile-btn btn-sm" onClick={toggleDrawer}>
+            Category
+        </button>
 
-							{showDrawer && (
-								<div className="shop-dropdown-panel">
-									<div className="text-end mb-2">
-										<button className="drop-down-x" onClick={toggleDrawer}>
-											X
-										</button>
-									</div>
-									<ShopCategory
-										data={shop_data}
-										onSelect={(sub) => {
-											handleSubcategorySelect(sub);
-											setShowDrawer(false);
-										}}
-									/>
-								</div>
-							)}
-						</div>
-					</div>
+        {showDrawer && (
+            <div className="shop-dropdown-panel">
+                <div className="text-end mb-2">
+                    <button className="drop-down-x" onClick={toggleDrawer}>
+                        X
+                    </button>
+                </div>
+                <ShopCategory
+                    data={shop_data}
+                    onSelect={(sub) => {
+                        handleSubcategorySelect(sub);
+                        setShowDrawer(false);
+                    }}
+                />
+            </div>
+        )}
+    </div>
+</div>
 
 					<div className="container">
 						<div className="row">
