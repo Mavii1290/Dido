@@ -1410,7 +1410,7 @@
           },
                     {
             "id": "cheese-philly-light-30",
-            "item_num": "D-P30Sche",
+            "item_num": "NID16",
             "img": "/assets/imgs/dido/products/dairy/phill-30lb-light.png",
             "badge_color": "primary",
             "size": "30lb",
@@ -1425,7 +1425,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "Temptee-Cheese",
-            "item_num": "D-Tche",
+            "item_num": "NID17",
             "img": "/assets/imgs/dido/products/dairy/temptee.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1440,7 +1440,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-light",
-            "item_num": "D-PLche",
+            "item_num": "NID18",
             "img": "/assets/imgs/dido/products/dairy/philly-light.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1455,7 +1455,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-soft",
-            "item_num": "D-Psche",
+            "item_num": "NID19",
             "img": "/assets/imgs/dido/products/dairy/philly-8oz.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1470,7 +1470,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-whipped",
-            "item_num": "D-PWche",
+            "item_num": "NID20",
             "img": "/assets/imgs/dido/products/dairy/philly-whipped.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1485,7 +1485,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-bars",
-            "item_num": "D-PBche",
+            "item_num": "NID21",
             "img": "/assets/imgs/dido/products/dairy/philly-bars.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1500,7 +1500,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-1oz",
-            "item_num": "D-P1che",
+            "item_num": "NID22",
             "img": "/assets/imgs/dido/products/dairy/philly-1oz.png",
             "badge_color": "primary",
             "size": "1oz",
