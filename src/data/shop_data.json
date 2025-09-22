@@ -1045,21 +1045,6 @@
             "preorder": "Preorder",
             "sub": "teacoffee"
           },{
-            "id": "La-dolce-vita",
-            "item_num": "B19",
-            "img": "/assets/imgs/dido/products/beverages/ladolcevita.png",
-            "badge_color": "primary",
-            "size": "300ml",
-            "brand": "La Dolce Vita",
-            "product": "Coffee Sparkling Soda",
-            "description": "This non-alcoholic coffee drink offers a unique experience, celebrating the aroma and richness of authentic Italian coffee. Made with carefully selected and expertly blended coffee beans, it provides a full and satisfying taste. Every sip is a journey into the world of coffee.",
-            "per_case": "24/300ml",
-            "price": 3.36,
-            "cost": 21,
-            "btn_color": "primary",
-            "preorder": "Preorder",
-            "sub": "teacoffee"
-          },{
             "id": "gustosa-nespresso",
             "item_num": "B20",
             "img": "/assets/imgs/dido/products/beverages/gustosa.png",
@@ -1213,7 +1198,7 @@
     "subcategories": [
       {
         "name": "Paper Goods",
-        "slug": "paper-goods",
+        "slug": "papergoods",
         "products": [
           {
             "id": "Thank-you",
@@ -1229,7 +1214,7 @@
             "cost": 5.99,
             "btn_color": "primary",
             "preorder": "Preorder",
-            "sub": ["cleaning", "paper-goods"]
+            "sub": ["cleaning", "papergoods"]
           }
         ]
       },
@@ -1250,7 +1235,7 @@
             "cost": 5.99,
             "btn_color": "primary",
             "preorder": "Preorder",
-            "sub": ["cleaning", "paper-goods"]
+            "sub": ["cleaning", "papergoods"]
           }]
       }]},
   {
@@ -1297,7 +1282,7 @@
            "img": "/assets/imgs/dido/products/non-imported/dairy/eggs-30dz.png",
            "badge_color": "primary",
            "size": "30 Dozen XL Loose",
-           "brand": "Nesquik",
+           "brand": "Egg",
            "product": "Extra-Large Eggs, 30 Dozen",
            "description": "Extra-Large Eggs, 30 Dozen Foam",
            "per_case": "30DZ",
@@ -1306,22 +1291,6 @@
            "btn_color": "primary",
            "preorder": "Add to Cart",
            "sub": ["nonimported-dairy", "nonimported-goods"]          },
-         {
-           "id": "butter-blend",
-           "item_num": "NID04",
-           "img": "/assets/imgs/dido/products/non-imported/dairy/butterblend.png",
-           "badge_color": "primary",
-           "size": "1lb",
-           "brand": "Butter Blend",
-           "product": "Butter Blend",
-           "description": "30/1lb Butter Sticks",
-           "per_case": "30/1lb",
-           "price": 3.36,
-           "cost": 5.99,
-           "btn_color": "primary",
-           "preorder": "Add to Cart",
-           "sub": ["nonimported-dairy", "nonimported-goods"]         
-         },
          {
            "id": "breakstone",
            "item_num": "NID05",
@@ -1481,8 +1450,24 @@
         "slug": "nonimported-cheese",
         "products": [
           {
-            "id": "cheese-philly-30",
+            "id": "cheese-philly-50",
             "item_num": "NID15",
+            "img": "/assets/imgs/dido/products/dairy/philly-50lbs.png",
+            "badge_color": "primary",
+            "size": "30lb",
+            "brand": "Philadelphia",
+            "product": "Cream Cheese 50lb Bar",
+            "description": "Philadelphia Cream Cheese bar, 50lb",
+            "per_case": "50lb",
+            "price": 3.36,
+            "cost": 5.99,
+            "btn_color": "primary",
+            "preorder": "Add to Cart",
+            "sub": ["nonimported-cheese", "nonimported-goods"]
+          },
+          {
+            "id": "cheese-philly-30",
+            "item_num": "NID16",
             "img": "/assets/imgs/dido/products/dairy/philly-30lb.png",
             "badge_color": "primary",
             "size": "30lb",
@@ -1498,7 +1483,7 @@
           },
                     {
             "id": "cheese-philly-light-30",
-            "item_num": "NID16",
+            "item_num": "NID17",
             "img": "/assets/imgs/dido/products/dairy/phill-30lb-light.png",
             "badge_color": "primary",
             "size": "30lb",
@@ -1513,7 +1498,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "Temptee-Cheese",
-            "item_num": "NID17",
+            "item_num": "NID18",
             "img": "/assets/imgs/dido/products/dairy/temptee.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1528,7 +1513,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-light",
-            "item_num": "NID18",
+            "item_num": "NID19",
             "img": "/assets/imgs/dido/products/dairy/philly-light.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1543,7 +1528,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-soft",
-            "item_num": "NID19",
+            "item_num": "NID20",
             "img": "/assets/imgs/dido/products/dairy/philly-8oz.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1558,7 +1543,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-whipped",
-            "item_num": "NID20",
+            "item_num": "NID21",
             "img": "/assets/imgs/dido/products/dairy/philly-whipped.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1573,7 +1558,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-bars",
-            "item_num": "NID21",
+            "item_num": "NID22",
             "img": "/assets/imgs/dido/products/dairy/philly-bars.png",
             "badge_color": "primary",
             "size": "8oz",
@@ -1588,7 +1573,7 @@
             "sub": ["nonimported-cheese", "nonimported-goods"]
           },{
             "id": "cheese-philly-1oz",
-            "item_num": "NID22",
+            "item_num": "NID23",
             "img": "/assets/imgs/dido/products/dairy/philly-1oz.png",
             "badge_color": "primary",
             "size": "1oz",

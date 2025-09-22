@@ -67,11 +67,15 @@
           "sub_dropdown_nav": [
             {
               "name": "DESSERTS",
-              "link": "/shop?sub=desserts"
+              "link": "/shop?sub=snacks"
             },
             {
               "name": "CHOCOLATE",
               "link": "/shop?sub=chocolate"
+            },
+            {
+              "name": "COOKES",
+              "link": "/shop?sub=cookies"
             }
           ]
         },
@@ -82,14 +86,14 @@
           "sub_dropdown_nav": [
             {
               "name": "SOFT DRINKS",
-              "link": "/shop?sub=soft-drinks"
+              "link": "/shop?sub=softdrinks"
             },
             {
               "name": "TEA & COFFEE",
-              "link": "/shop?sub=tea-coffee"
+              "link": "/shop?sub=teacoffee"
             },            {
               "name": "JUICES",
-              "link": "/shop?sub=juices"
+              "link": "/shop?sub=juice"
             }
           ]
         },
@@ -118,7 +122,7 @@
             },
                         {
               "name": "NON-IMPORTED SPICES & SEASONING",
-              "link": "/shop?sub=nonimported-cheese"
+              "link": "/shop?sub=nonimported-ss"
             }
           ]
         }
