@@ -1237,6 +1237,26 @@
             "preorder": "Preorder",
             "sub": ["cleaning", "papergoods"]
           }]
+      },
+       {
+        "name": "Miscellaneous",
+        "slug": "misc",
+        "products": [{
+            "id": "brioschi",
+            "item_num": "CP03",
+            "img": "/assets/imgs/dido/products/other/brioschi.png",
+            "badge_color": "primary",
+            "size": "250g",
+            "brand": "Bellanca",
+            "product": "Effervescente",
+            "description": "Bellanca Effervescent 250g is a dietary supplement that helps balance the body's pH and promotes digestion with ingredients like sodium bicarbonate, vitamin C, calcium, and magnesium. It supports the immune system, bone and teeth health, and normal muscle function.",
+            "per_case": "12/250g",
+            "price": 3.36,
+            "cost": 5.99,
+            "btn_color": "primary",
+            "preorder": "Preorder",
+            "sub": ["misc"]
+          }]
       }]},
   {
     "category": "Non Imported Goods",

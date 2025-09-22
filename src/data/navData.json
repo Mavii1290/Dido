@@ -98,13 +98,21 @@
           ]
         },
         {
-          "name": "PAPER GOODS",
+          "name": "PAPER GOODS & MISC",
           "link": "/shop?sub=papergoods",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
               "name": "PAPER GOODS",
-              "link": "/shop?sub=papergoods"
+              "link": "/shop?sub=paper-goods"
+            },
+              {
+              "name": "CLEANING",
+              "link": "/shop?sub=cleaning"
+            },
+            {
+              "name": "MISCELLANEOUS",
+              "link": "/shop?sub=misc"
             }
           ]
         },{
