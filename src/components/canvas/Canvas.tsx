@@ -97,7 +97,7 @@ const Canvas: React.FC<CanvasProps> = ({ bladeMode = null, ofCanvasArea }) => {
       <div className="offcanvas__body">
         <div className="offcanvas__left">
           <div className="offcanvas__logo">
-            <Link href="/dido">
+            <Link href="/">
               <Image
                 priority
                 style={{ width: "auto", height: "auto" }}
