@@ -7,7 +7,7 @@ import LogoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
 const LogoItem = () => {
   return (
     <div className="header__logo-2">
-      <Link href="/dido" className="logo-dark">
+      <Link href="/" className="logo-dark">
         <Image
           priority
           width={100}
@@ -16,7 +16,7 @@ const LogoItem = () => {
           alt="Site Logo Dark"
         />
       </Link>
-      <Link href="/dido" className="logo-light">
+      <Link href="/" className="logo-light">
         <Image
           priority
           width={100}
