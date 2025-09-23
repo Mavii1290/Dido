@@ -474,7 +474,7 @@
             "brand": "Imported",
             "product": "Ricotta & Chocolate Chip Cannoli Cream",
             "description": "Just when you thought our traditional cannoli cream couldn't get any better, we added mini chocolate chips! Like our classic ricotta cream, this chocolate chip filling is super smooth, sweet, and infused with notes of vanilla. Our delicious filling comes frozen in easy-to-use disposable pastry bags. Simply defrost, and you're ready to fill cannoli and more! Each case contains four 1.5 lb bags of cannoli cream.",
-            "per_case": "4/1.5lbs",
+            "per_case": "4 x 1.5lbs",
             "price": 3.36,
             "cost": 5.99,
             "btn_color": "primary",
@@ -1200,7 +1200,7 @@
             "per_case": "4/10 x 40ml",
             "price": 3.36,
             "cost": 36,
-            "btn_color": "primary",
+            "btn_color": "primary", 
             "preorder": "Preorder",
             "sub": "soft-drinks"
           }
