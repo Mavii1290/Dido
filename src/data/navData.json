@@ -26,15 +26,6 @@
             {
               "name": "PASTA",
               "link": "/shop?sub=pasta"
-            },
-            {
-              "name": "SPICES & SEASONING",
-              "link": "/shop?sub=spices"
-            }
-            ,
-            {
-              "name": "SYRUP, HONEY & SPREADS",
-              "link": "/shop?sub=syrup"
             }
           ]
         },

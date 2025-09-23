@@ -443,17 +443,7 @@
             "preorder": "Preorder",
             "sub": ["pantry-staples","sauce"]
           }
-        ]},
-      {
-        "name": "Spices & Seasoning",
-        "slug": "spices-and-seasoning",
-        "products": []
-      },
-      {
-        "name": "Syrup, Honey & Spreads",
-        "slug": "syrup-honey-and-spreads",
-        "products": []
-      }
+        ]}
     ]
   },
   {
@@ -464,11 +454,7 @@
         "name": "Dairy",
         "slug": "dairy",
         "products": []
-      },
-       {
-        "name": "Cheese",
-        "slug": "cheese",
-        "products": []}
+      }
     ]
   },
   {
@@ -1224,7 +1210,7 @@
   },
   {
     "category": "Paper Goods",
-    "slug": "paper-goods",
+    "slug": "papergoods",
     "subcategories": [
       {
         "name": "Paper Goods",
