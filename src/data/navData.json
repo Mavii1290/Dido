@@ -104,7 +104,7 @@
           "sub_dropdown_nav": [
             {
               "name": "PAPER GOODS",
-              "link": "/shop?sub=paper-goods"
+              "link": "/shop?sub=papergoods"
             },
               {
               "name": "CLEANING",
@@ -117,7 +117,7 @@
           ]
         },{
           "name": "NON-IMPORTED GOODS",
-          "link": "/shop?sub=nonimported",
+          "link": "/shop?sub=nonimported-dairy",
           "type": "dropdown",
           "sub_dropdown_nav": [
             {
