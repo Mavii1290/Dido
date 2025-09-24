@@ -37,6 +37,14 @@ const drawHeader = () => {
 	const logoWidth = 80;
 	const logoX = (doc.page.width - logoWidth) / 2;
 	const logoY = 30;
+	const sharp = require("sharp");
+
+async function getOptimizedImageBuffer(imgPath) {
+  return await sharp(imgPath)
+    .resize(200)       // resize width to ~200px
+    .jpeg({ quality: 70 }) // compress
+    .toBuffer();
+}
 
 	try {
 		doc.image(logoPath, logoX, logoY, { width: logoWidth });
@@ -153,14 +161,10 @@ shopData.forEach((category, categoryIndex) => {
 			try {
 				const imgPath = path.join(publicDir, product.img);
 				if (fs.existsSync(imgPath)) {
-					doc.image(
-						imgPath,
-						contentX + (contentWidth - IMAGE_WIDTH) / 2,
-						imageY,
-						{
-							width: IMAGE_WIDTH,
-						},
-					);
+					const buffer = await getOptimizedImageBuffer(imgPath);
+doc.image(buffer, contentX + (contentWidth - IMAGE_WIDTH) / 2, imageY, {
+  width: IMAGE_WIDTH,
+});
 				}
 			} catch (e) {
 				console.warn("⚠️ Image missing:", product.img);
