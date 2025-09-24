@@ -145,7 +145,7 @@ endTl.to(
                       <Link href="/shop">Products</Link>
                     </li>
                     <li>
-                      <Link href="/faq">Catalog</Link>
+                      <Link href="/catalog">Catalog</Link>
                     </li>
                     <li>
                       <Link href="/contact">Contact</Link>
