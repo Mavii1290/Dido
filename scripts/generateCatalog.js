@@ -3,7 +3,6 @@ const path = require("path");
 const PDFDocument = require("pdfkit");
 const sharp = require("sharp");
 
-// Wrap everything in an async function
 (async () => {
   // Paths
   const dataPath = path.join(__dirname, "../src/data/shop_data.json");
@@ -16,7 +15,7 @@ const sharp = require("sharp");
   const doc = new PDFDocument({ margin: 40, size: "A4" });
   doc.pipe(fs.createWriteStream(outputPath));
 
-  // Constants for main product grid
+  // Grid constants
   const IMAGE_WIDTH = 80;
   const CELL_WIDTH = 170;
   const CELL_HEIGHT = 200;
@@ -24,25 +23,25 @@ const sharp = require("sharp");
   const margin = doc.page.margins.left;
   const usableWidth = pageWidth - margin * 2;
   const COLUMNS = 3;
-  const MAX_CELLS_PER_PAGE = 9; // 3x3 grid
+  const MAX_CELLS_PER_PAGE = 9;
 
   let cellsRenderedOnPage = 0;
 
-  // --- Helper: Compress images ---
+  // --- Compress & flatten image (white background) ---
   async function getOptimizedImageBuffer(imgPath) {
     if (!fs.existsSync(imgPath)) return null;
     return await sharp(imgPath)
       .resize(200) // Resize width
+      .flatten({ background: { r: 255, g: 255, b: 255 } }) // White background
       .jpeg({ quality: 70 }) // Compress
       .toBuffer();
   }
 
-  // --- Draw header with logo ---
+  // --- Draw header ---
   async function drawHeader() {
     const logoWidth = 80;
     const logoX = (doc.page.width - logoWidth) / 2;
     const logoY = 30;
-
     try {
       const logoBuffer = await getOptimizedImageBuffer(logoPath);
       if (logoBuffer) doc.image(logoBuffer, logoX, logoY, { width: logoWidth });
@@ -60,7 +59,7 @@ const sharp = require("sharp");
     doc.y = doc.page.margins.top + 50;
   }
 
-  // --- Check and add new page for product ---
+  // --- Check for new page ---
   async function checkAndAddNewPageForProduct(rowY) {
     if (cellsRenderedOnPage === MAX_CELLS_PER_PAGE || (rowY + CELL_HEIGHT > doc.page.height - 60 && cellsRenderedOnPage > 0)) {
       await addNewPage();
@@ -78,16 +77,15 @@ const sharp = require("sharp");
   doc.moveDown(0.5);
   cellsRenderedOnPage = 0;
 
-  // --- Main grid ---
+  // --- Main product grid ---
   for (const category of shopData) {
     const validSubcategories = category.subcategories.filter(sub => sub.products && sub.products.length > 0);
     if (validSubcategories.length === 0) continue;
 
     for (const sub of validSubcategories) {
       const headerHeightEstimate = 30;
-      const spaceNeededForSubcategoryBlock = headerHeightEstimate + CELL_HEIGHT;
-
-      if (cellsRenderedOnPage === MAX_CELLS_PER_PAGE || doc.y + spaceNeededForSubcategoryBlock > doc.page.height - doc.page.margins.bottom) {
+      const spaceNeeded = headerHeightEstimate + CELL_HEIGHT;
+      if (cellsRenderedOnPage === MAX_CELLS_PER_PAGE || doc.y + spaceNeeded > doc.page.height - doc.page.margins.bottom) {
         await addNewPage();
       }
 
@@ -99,7 +97,6 @@ const sharp = require("sharp");
 
       for (const product of sub.products) {
         rowY = await checkAndAddNewPageForProduct(rowY);
-
         if (cellsRenderedOnPage === 0 && col !== 0) col = 0;
 
         const x = margin + col * CELL_WIDTH;
@@ -141,10 +138,9 @@ const sharp = require("sharp");
     }
   }
 
-  // --- Optional summary table (can remove to reduce size further) ---
+  // --- Optional summary table ---
   const allProducts = [];
   shopData.forEach(cat => cat.subcategories.forEach(sub => sub.products?.forEach(p => allProducts.push(p))));
-
   if (doc.y > doc.page.margins.top + 50 || cellsRenderedOnPage > 0 || doc.page.content.length === 0) {
     doc.addPage();
     await drawHeader();
@@ -206,5 +202,5 @@ const sharp = require("sharp");
   }
 
   doc.end();
-  console.log("✅ PDF catalog generated with compressed images and summary table.");
+  console.log("✅ PDF catalog generated with white background for transparent images.");
 })();
