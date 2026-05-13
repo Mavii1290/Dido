@@ -11,10 +11,7 @@ import 'swiper/css';
 import 'swiper/css/navigation'; // If you want navigation arrows
 import 'swiper/css/pagination'; // If you want pagination dots
 
-// Import required modules
-// *** FIX STARTS HERE ***
-import { Autoplay, Navigation, Pagination } from "swiper"; // Import modules directly from 'swiper'
-// *** FIX ENDS HERE ***
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 // Your brand images
 import Kinder from "../../../public/assets/imgs/dido/brands/Kinder.png";
