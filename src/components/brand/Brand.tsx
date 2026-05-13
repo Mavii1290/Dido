@@ -13,7 +13,7 @@ import 'swiper/css/pagination'; // If you want pagination dots
 
 // Import required modules
 // *** FIX STARTS HERE ***
-import { Autoplay, Navigation, Pagination } from 'swiper'; // Import modules directly from 'swiper'
+import { Autoplay, Navigation, Pagination } from "swiper"; // Import modules directly from 'swiper'
 // *** FIX ENDS HERE ***
 
 // Your brand images
